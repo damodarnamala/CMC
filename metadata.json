@@ -2,5 +2,7 @@
   "name": "Crystolyte Media Creations",
   "description": "Premier Indian film production house founded by producers Prasad Nekuri and Praneeth Nekuri. Debut feature film IIT KRISHNAMURTHY streaming on Amazon Prime Video and YouTube.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
