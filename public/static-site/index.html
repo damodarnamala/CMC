@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#08090d] text-slate-100 selection:bg-amber-400 selection:text-black">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crystolyte Media Creations (CMC) | Indian Feature Film Production</title>
+  
+  <meta name="description" content="Crystolyte Media Creations (CMC), founded by producers Prasad Nekuri and Praneeth Nekuri. Debut feature film IIT KRISHNAMURTHY streaming on Amazon Prime Video and YouTube." />
+  <meta property="og:title" content="Crystolyte Media Creations (CMC) | Indian Feature Film Production" />
+  <meta property="og:description" content="Dedicated to producing high-quality Telugu feature films with compelling stories, strong emotional depth, and cinematic excellence." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Hyperframes Engine Stylesheet & Main Style -->
+  <link rel="stylesheet" href="./css/hyperframes.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#08090d',
+            noir: '#0e1117',
+            surfaceCard: '#131824',
+            surfaceHover: '#182030',
+            gold: {
+              400: '#fbbf24',
+              500: '#e6af2e',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            cinzelDeco: ['"Cinzel Decorative"', 'serif'],
+            syne: ['Syne', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-sans antialiased text-slate-200 ambient-glow min-h-screen">
+
+  <!-- Top Bar -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#08090d]/85 backdrop-blur-2xl border-b border-white/5 transition-all">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+      
+      <!-- Studio Brand Logo -->
+      <a href="#hero" class="flex items-center space-x-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 via-surfaceCard to-obsidian border border-amber-500/40 flex items-center justify-center shadow-lg group-hover:border-amber-400 group-hover:scale-105 transition-all duration-300">
+          <span class="font-cinzel text-lg font-black text-amber-400">CMC</span>
+        </div>
+        <div>
+          <div class="font-cinzel text-lg font-bold tracking-wider text-white group-hover:text-amber-400 transition-colors flex items-center gap-1.5 leading-tight">
+            CRYSTOLYTE
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+          </div>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-slate-400 block font-medium">
+            Media Creations
+          </span>
+        </div>
+      </a>
+
+      <!-- Clean Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-wider font-semibold text-slate-300">
+        <a href="#about" class="hover:text-amber-400 transition-colors">Studio</a>
+        <a href="#feature-film" class="hover:text-amber-400 transition-colors">Feature Film</a>
+        <a href="#leadership" class="hover:text-amber-400 transition-colors">Producers</a>
+        <a href="#slate" class="hover:text-amber-400 transition-colors">Projects in Development</a>
+      </nav>
+
+      <!-- Mobile Drawer Toggle -->
+      <div class="md:hidden flex items-center">
+        <button id="mobileNavToggle" aria-label="Toggle navigation menu" class="p-2 text-slate-300 hover:text-amber-400">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden md:hidden bg-surfaceCard/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4 text-sm font-medium">
+      <a href="#about" class="block py-2 text-slate-200 hover:text-amber-400 mobile-drawer-link">Studio Ethos</a>
+      <a href="#feature-film" class="block py-2 text-slate-200 hover:text-amber-400 mobile-drawer-link">Feature Film (IIT Krishnamurthy)</a>
+      <a href="#leadership" class="block py-2 text-slate-200 hover:text-amber-400 mobile-drawer-link">Producers & Leadership</a>
+      <a href="#slate" class="block py-2 text-slate-200 hover:text-amber-400 mobile-drawer-link">Projects in Development</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-32 pb-24 px-6 sm:px-10 overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      
+      <!-- Studio Category Label -->
+      <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-surfaceCard/90 border border-amber-500/30 backdrop-blur-md mb-8">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span class="text-xs uppercase tracking-widest text-amber-300 font-semibold">
+          Indian Feature Film Production House
+        </span>
+      </div>
+
+      <!-- Hyperframes Tilted Snap Title -->
+      <div class="hyperframes-stage mb-4 block">
+        <h1 id="heroMainTitle" class="tilted-text-item font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.08]">
+          CRYSTOLYTE <br/>
+          <span class="gold-text-gradient">MEDIA CREATIONS</span>
+        </h1>
+      </div>
+
+      <!-- Hyperframes Clean Text Scramble Tagline -->
+      <div class="my-6">
+        <p id="heroScrambleTagline" class="text-base sm:text-xl md:text-2xl font-semibold tracking-wider text-amber-400 font-syne uppercase" data-scramble="REDEFINING TELUGU CINEMA WITH EXCELLENCE">
+          REDEFINING TELUGU CINEMA WITH EXCELLENCE
+        </p>
+      </div>
+
+      <!-- Studio Summary Narrative -->
+      <p class="max-w-2xl mx-auto text-slate-300 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-10">
+        Founded by producers <strong class="text-white font-medium">Prasad Nekuri</strong> and <strong class="text-white font-medium">Praneeth Nekuri</strong>. Dedicated to producing high-quality Telugu feature films with compelling stories, strong emotional depth, and cinematic excellence.
+      </p>
+
+      <!-- Core Navigation Actions -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
+        <a href="#slate" class="btn-gold w-full sm:w-1/2 py-4 shadow-xl">
+          <i class="fa-solid fa-film text-sm"></i>
+          <span>Explore Feature Slate</span>
+        </a>
+
+        <button onclick="launchYouTubePlayer()" class="btn-youtube w-full sm:w-1/2 py-4 shadow-xl flex items-center justify-center gap-2.5 text-xs font-bold uppercase tracking-wider cursor-pointer">
+          <i class="fa-brands fa-youtube text-base"></i>
+          <span>Watch on YouTube</span>
+        </button>
+      </div>
+
+      <!-- Quick Feature Anchors -->
+      <div class="mt-16 pt-10 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+        <div class="p-4 rounded-xl glass-panel">
+          <span class="text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Debut Feature</span>
+          <span class="font-cinzel text-base font-bold text-white block">IIT Krishnamurthy</span>
+          <span class="text-xs text-slate-400">Dir. S. Sreevardhan</span>
+        </div>
+
+        <div class="p-4 rounded-xl glass-panel">
+          <span class="text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Global Streaming</span>
+          <span class="font-cinzel text-base font-bold text-white block">Dual Platform</span>
+          <span class="text-xs text-slate-400">Prime Video & YouTube</span>
+        </div>
+
+        <div class="p-4 rounded-xl glass-panel">
+          <span class="text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Leadership</span>
+          <span class="font-cinzel text-base font-bold text-white block">Prasad & Praneeth</span>
+          <span class="text-xs text-slate-400">Producers & Founders</span>
+        </div>
+
+        <div class="p-4 rounded-xl glass-panel">
+          <span class="text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Expansion</span>
+          <span class="font-cinzel text-base font-bold text-white block">Production-2</span>
+          <span class="text-xs text-slate-400">Feature Drama</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Studio About Section -->
+  <section id="about" class="py-24 relative z-10 border-t border-white/5 bg-noir/40">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div class="lg:col-span-6">
+          <div class="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            <span class="w-5 h-px bg-amber-400"></span>
+            <span class="scramble-on-scroll" data-scramble="ABOUT THE PRODUCTION HOUSE">ABOUT THE PRODUCTION HOUSE</span>
+          </div>
+
+          <div class="hyperframes-stage mb-4">
+            <h2 class="tilted-text-item scroll-tilt font-cinzel text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+              CRAFTING STORIES WITH <br/>
+              <span class="gold-text-gradient">CINEMATIC EXCELLENCE</span>
+            </h2>
+          </div>
+
+          <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+            Crystolyte Media Creations (CMC) is an Indian film production company founded by Prasad Nekuri and Praneeth Nekuri, who serve as the producers of the company. Dedicated to producing high-quality Telugu feature films, the company focuses on delivering compelling stories with strong emotional depth, commercial appeal, and cinematic excellence.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="glass-panel p-8 sm:p-10 border-l-4 border-l-amber-500">
+            <h3 class="font-cinzel text-xl font-bold text-white mb-3">Our Vision</h3>
+            <p class="text-slate-300 text-sm leading-relaxed font-light mb-6">
+              With a commitment to innovative storytelling, emerging talent, and high production values, Crystolyte Media Creations aims to create films that resonate with audiences in India and worldwide. The company continues to expand its slate of feature films while building a strong brand recognized for quality cinema and creative excellence.
+            </p>
+            <div class="flex flex-wrap items-center gap-6 text-xs text-slate-400 font-medium">
+              <span class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Narrative Rigor</span>
+              <span class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Contemporary Color Science</span>
+              <span class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> New Directorial Voices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-8 hyperframe-card">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h4 class="font-cinzel text-lg font-bold text-white mb-2.5">Innovative Storytelling</h4>
+          <p class="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+            Championing smart, original screenplays with high-concept hooks, relatable human motivations, and gripping pacing.
+          </p>
+        </div>
+
+        <div class="glass-panel p-8 hyperframe-card">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <h4 class="font-cinzel text-lg font-bold text-white mb-2.5">High Production Values</h4>
+          <p class="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+            Deploying premier cinematography, disciplined technical execution, and meticulous sound engineering for maximum fidelity.
+          </p>
+        </div>
+
+        <div class="glass-panel p-8 hyperframe-card">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-6">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h4 class="font-cinzel text-lg font-bold text-white mb-2.5">Emerging Talent Platform</h4>
+          <p class="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+            Actively cultivating a collaborative environment for fresh screenwriters, breakthrough directors, and rising actors.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Debut Feature: IIT Krishnamurthy -->
+  <section id="feature-film" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <div class="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            <span class="w-5 h-px bg-amber-400"></span>
+            <span class="scramble-on-scroll" data-scramble="DEBUT FEATURE ARCHIVE">DEBUT FEATURE ARCHIVE</span>
+          </div>
+
+          <div class="hyperframes-stage">
+            <h2 class="tilted-text-item scroll-tilt font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
+              IIT KRISHNAMURTHY
+            </h2>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="https://www.primevideo.com/detail/0QSWDMWNHLP89N38ABP7KL3MXJ" target="_blank" rel="noopener noreferrer" 
+             class="px-4 py-1.5 rounded-full text-xs font-semibold bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 flex items-center gap-2 hover:bg-[#00a8e1]/25 transition-colors">
+            <i class="fa-brands fa-amazon"></i> Prime Video Worldwide
+          </a>
+          <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 flex items-center gap-2">
+            <i class="fa-brands fa-youtube"></i> 4K Full Feature
+          </span>
+          <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+            Mystery Thriller
+          </span>
+        </div>
+      </div>
+
+      <!-- Feature Card -->
+      <div class="glass-panel overflow-hidden border border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <!-- Poster / Still Presentation -->
+          <div class="lg:col-span-5 relative min-h-[380px] lg:min-h-[560px] bg-black overflow-hidden flex flex-col justify-end p-8">
+            <img src="https://img.youtube.com/vi/_nKFH-wbwtE/maxresdefault.jpg" 
+                 alt="IIT Krishnamurthy Official Feature Poster" 
+                 class="absolute inset-0 w-full h-full object-cover opacity-75 hover:scale-105 transition-transform duration-700">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+
+            <div class="relative z-10">
+              <span class="px-3 py-1 rounded-md bg-amber-400 text-obsidian text-[10px] font-bold uppercase tracking-widest inline-block mb-3">
+                Official Feature Debut
+              </span>
+              <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">IIT KRISHNAMURTHY</h3>
+              <p class="text-xs text-slate-300 font-medium">Directed by S. Sreevardhan • Produced by Prasad & Praneeth Nekuri</p>
+              
+              <div class="mt-4 flex items-center gap-3 text-xs font-mono text-slate-300">
+                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded border border-white/10">Full Length</span>
+                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded border border-white/10">4K UHD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Film Data & Story Context -->
+          <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6 text-xs">
+                <div>
+                  <span class="text-slate-400 uppercase tracking-wider block text-[10px]">Production House</span>
+                  <span class="font-cinzel text-sm font-bold text-white">Crystolyte Media Creations</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-slate-400 uppercase tracking-wider block text-[10px]">Release Channels</span>
+                  <span class="font-bold text-[#38bdf8]">Prime Video & YouTube</span>
+                </div>
+              </div>
+
+              <h4 class="text-xs uppercase tracking-wider text-amber-400 font-bold mb-3">Film Synopsis</h4>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-8">
+                The production house made its debut with <strong class="text-white font-medium">IIT KRISHNA MURTHY</strong>, directed by S. Sreevardhan, establishing its presence in the Telugu film industry. An intelligent student arrives in Hyderabad in search of his missing uncle, only to find himself entangled in a labyrinth of corporate deception and police intrigue where every clue unravels more questions than answers.
+              </p>
+
+              <!-- Cast & Crew Data Matrix -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-xs border-y border-white/10 py-6 mb-8">
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Director</span>
+                  <span class="text-white font-semibold text-sm">S. Sreevardhan</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Producers</span>
+                  <span class="text-amber-400 font-semibold text-sm">Prasad & Praneeth Nekuri</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Lead Cast</span>
+                  <span class="text-white font-medium">Prudhvi Dandamudi</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Female Lead</span>
+                  <span class="text-white font-medium">Maira Doshi</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Key Ensemble</span>
+                  <span class="text-white font-medium">Vinay Varma, Banerjee, Satya</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Music Score</span>
+                  <span class="text-white font-medium">Naresh Kumaran</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Watch On: YouTube | Prime Buttons Only -->
+            <div>
+              <span class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold block mb-3">
+                Watch on:
+              </span>
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <!-- YouTube Button -->
+                <button onclick="launchYouTubePlayer()" 
+                        class="btn-youtube">
+                  <i class="fa-brands fa-youtube text-base"></i>
+                  <span>YouTube</span>
+                </button>
+
+                <!-- Prime Video Button -->
+                <a href="https://www.primevideo.com/detail/0QSWDMWNHLP89N38ABP7KL3MXJ" target="_blank" rel="noopener noreferrer" 
+                   class="btn-prime">
+                  <i class="fa-brands fa-amazon text-base"></i>
+                  <span>Prime Video</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Leadership & Producers -->
+  <section id="leadership" class="py-24 relative z-10 border-t border-white/5 bg-noir/40">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+          <span class="w-5 h-px bg-amber-400"></span>
+          <span class="scramble-on-scroll" data-scramble="LEADERSHIP & PRODUCERS">LEADERSHIP & PRODUCERS</span>
+          <span class="w-5 h-px bg-amber-400"></span>
+        </div>
+
+        <div class="hyperframes-stage mb-3">
+          <h2 class="tilted-text-item scroll-tilt font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
+            THE PRODUCERS
+          </h2>
+        </div>
+
+        <p class="text-slate-400 text-sm font-light">
+          Crystolyte Media Creations is founded and led by Prasad Nekuri and Praneeth Nekuri, who serve as the producers of the company.
+        </p>
+      </div>
+
+      <!-- Producer Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Producer 1: Prasad Nekuri -->
+        <div class="glass-panel p-8 sm:p-10 flex flex-col justify-between hyperframe-card">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-surfaceCard border border-amber-500/30 flex items-center justify-center font-cinzel font-bold text-2xl text-amber-400 shadow-md">
+                PN
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">
+                Producer & Founder
+              </span>
+            </div>
+
+            <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
+              Prasad Nekuri
+            </h3>
+            <span class="text-xs uppercase tracking-wider text-slate-400 block mb-6 font-medium">
+              Crystolyte Media Creations
+            </span>
+
+            <p class="text-slate-300 text-sm font-light leading-relaxed mb-8">
+              As co-founder and producer at Crystolyte Media Creations, Prasad Nekuri oversees executive strategy, film production operations, and project financing. His focus on production integrity and disciplined execution ensures that every project meets high theatrical and streaming benchmarks.
+            </p>
+
+            <div class="p-4 rounded-xl bg-obsidian/70 border border-white/5 space-y-2 text-xs text-slate-300 mb-8">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-clapperboard text-amber-400"></i>
+                <span>Produced Debut Feature: <strong class="text-white">IIT Krishnamurthy</strong></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-chart-line text-amber-400"></i>
+                <span>Production Strategy & Financial Planning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-white/5 text-xs text-slate-400 font-medium">
+            <span>CMC Production Desk • Hyderabad</span>
+          </div>
+        </div>
+
+        <!-- Producer 2: Praneeth Nekuri -->
+        <div class="glass-panel p-8 sm:p-10 flex flex-col justify-between hyperframe-card border-amber-500/30">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-surfaceCard border border-amber-500/30 flex items-center justify-center font-cinzel font-bold text-2xl text-amber-400 shadow-md">
+                PN
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">
+                Producer & Founder
+              </span>
+            </div>
+
+            <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
+              Praneeth Nekuri
+            </h3>
+            <span class="text-xs uppercase tracking-wider text-slate-400 block mb-6 font-medium">
+              Crystolyte Media Creations
+            </span>
+
+            <p class="text-slate-300 text-sm font-light leading-relaxed mb-8">
+              Co-founder and producer at Crystolyte Media Creations, Praneeth Nekuri leads creative development, screenplay curation, and strategic collaborations. He is dedicated to championing progressive concepts, modern visual aesthetics, and emerging talents across Telugu cinema.
+            </p>
+
+            <div class="p-4 rounded-xl bg-obsidian/70 border border-white/5 space-y-2 text-xs text-slate-300 mb-8">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-clapperboard text-amber-400"></i>
+                <span>Produced Debut Feature: <strong class="text-white">IIT Krishnamurthy</strong></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-satellite-dish text-amber-400"></i>
+                <span>Creative Slate & OTT Distribution</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verified Social Channels for Praneeth Nekuri -->
+          <div class="pt-6 border-t border-white/5">
+            <span class="text-[11px] uppercase tracking-wider text-slate-400 block mb-3 font-semibold">
+              Connect with Praneeth Nekuri:
+            </span>
+            <div class="flex flex-wrap gap-2.5">
+              <a href="http://linkedin.com/in/praneeth-nekuri" target="_blank" rel="noopener noreferrer" 
+                 class="px-3.5 py-2 rounded-xl bg-surfaceCard hover:bg-[#0077b5]/20 border border-white/10 hover:border-[#0077b5]/60 text-xs text-slate-200 hover:text-white transition-all flex items-center gap-2">
+                <i class="fa-brands fa-linkedin text-[#0077b5]"></i>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://www.instagram.com/praneethnekuri/" target="_blank" rel="noopener noreferrer" 
+                 class="px-3.5 py-2 rounded-xl bg-surfaceCard hover:bg-[#E1306C]/20 border border-white/10 hover:border-[#E1306C]/60 text-xs text-slate-200 hover:text-white transition-all flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-[#E1306C]"></i>
+                <span>Instagram</span>
+              </a>
+
+              <a href="https://m.facebook.com/profile.php?id=100003239927433&__n=K" target="_blank" rel="noopener noreferrer" 
+                 class="px-3.5 py-2 rounded-xl bg-surfaceCard hover:bg-[#1877F2]/20 border border-white/10 hover:border-[#1877F2]/60 text-xs text-slate-200 hover:text-white transition-all flex items-center gap-2">
+                <i class="fa-brands fa-facebook text-[#1877F2]"></i>
+                <span>Facebook</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects in Development: Only Production-2 Drama -->
+  <section id="slate" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+          <span class="w-5 h-px bg-amber-400"></span>
+          <span class="scramble-on-scroll" data-scramble="UPCOMING CMC VENTURE">UPCOMING CMC VENTURE</span>
+        </div>
+
+        <div class="hyperframes-stage mb-3">
+          <h2 class="tilted-text-item scroll-tilt font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
+            PROJECTS IN DEVELOPMENT
+          </h2>
+        </div>
+
+        <p class="text-slate-400 text-sm font-light leading-relaxed">
+          Following its acclaimed debut feature IIT Krishnamurthy, Crystolyte Media Creations is currently in active pre-production for its second feature film venture.
+        </p>
+      </div>
+
+      <!-- Single Movie Spotlight: Production-2 Drama -->
+      <div class="max-w-4xl mx-auto">
+        <div class="glass-panel p-8 sm:p-12 relative overflow-hidden group">
+          
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
+            <div class="flex items-center gap-3">
+              <span class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-black">
+                Production-2
+              </span>
+              <span class="text-xs uppercase tracking-wider font-semibold text-amber-300">
+                Genre: Drama
+              </span>
+            </div>
+            <span class="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              In Active Pre-Production
+            </span>
+          </div>
+
+          <div class="mb-6">
+            <h3 class="font-cinzel text-2xl sm:text-4xl font-extrabold text-white mb-2">
+              Production-2 <span class="text-amber-400 font-light">| Drama</span>
+            </h3>
+            <span class="text-xs uppercase tracking-widest text-slate-400 block font-medium">
+              Crystolyte Media Creations • Second Feature Presentation
+            </span>
+          </div>
+
+          <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-8 max-w-3xl">
+            Following the acclaimed debut feature IIT Krishnamurthy, Crystolyte Media Creations is currently in active pre-production for its prestigious second venture: Production-2, an emotionally resonant and high-concept Drama crafted with exceptional cinematic depth and commercial appeal.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 rounded-2xl bg-[#08090d]/80 border border-white/5 text-xs text-slate-300 mb-8">
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Genre</span>
+              <span class="font-semibold text-white text-sm">Drama</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Current Stage</span>
+              <span class="font-semibold text-amber-400 text-sm">Screenplay & Pre-Production</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block mb-1">Theatrical Scope</span>
+              <span class="font-semibold text-white text-sm">Theatrical & Global OTT</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-slate-400 gap-4 pt-4 border-t border-white/5">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-clapperboard text-amber-400"></i>
+              <span>Producers: <strong class="text-white">Prasad Nekuri & Praneeth Nekuri</strong></span>
+            </div>
+            <div class="text-amber-400 font-semibold font-mono tracking-wider">
+              CMC Slate • Production-2
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian border-t border-white/5 pt-16 pb-12 z-10 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        
+        <div class="md:col-span-5">
+          <div class="flex items-center space-x-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-cinzel font-bold text-amber-400 text-base">
+              CMC
+            </div>
+            <span class="font-cinzel text-lg font-bold text-white tracking-wider">
+              CRYSTOLYTE MEDIA CREATIONS
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-6 font-light">
+            Founded by <strong>Prasad Nekuri</strong> and <strong>Praneeth Nekuri</strong>. Producers of the acclaimed Telugu feature film <em>IIT Krishnamurthy</em>. Committed to cinematic excellence and compelling storytelling.
+          </p>
+          <div class="text-xs text-slate-400 space-y-1.5 font-light">
+            <p><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i> Hyderabad, Telangana, India</p>
+            <p><i class="fa-solid fa-envelope text-amber-400 mr-2"></i> info@crystolytemedia.com</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-xs uppercase tracking-wider text-amber-400 mb-4 font-bold">Studio Navigation</h4>
+          <div class="flex flex-col space-y-3 text-xs">
+            <a href="#about" class="text-slate-300 hover:text-amber-400 transition-colors">Studio Ethos</a>
+            <a href="#feature-film" class="text-slate-300 hover:text-amber-400 transition-colors">IIT Krishnamurthy</a>
+            <a href="#leadership" class="text-slate-300 hover:text-amber-400 transition-colors">Producers</a>
+            <a href="#slate" class="text-slate-300 hover:text-amber-400 transition-colors">Production-2 (Drama)</a>
+          </div>
+        </div>
+
+        <div class="md:col-span-4">
+          <h4 class="text-xs uppercase tracking-wider text-amber-400 mb-4 font-bold">Leadership Channels</h4>
+          <p class="text-xs text-slate-400 mb-3 font-light">Verified channels for Producer Praneeth Nekuri:</p>
+          <div class="flex flex-col space-y-2 text-xs">
+            <a href="http://linkedin.com/in/praneeth-nekuri" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2">
+              <i class="fa-brands fa-linkedin text-[#0077b5]"></i> linkedin.com/in/praneeth-nekuri
+            </a>
+            <a href="https://www.instagram.com/praneethnekuri/" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2">
+              <i class="fa-brands fa-instagram text-[#E1306C]"></i> instagram.com/praneethnekuri
+            </a>
+            <a href="https://m.facebook.com/profile.php?id=100003239927433&__n=K" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2">
+              <i class="fa-brands fa-facebook text-[#1877F2]"></i> facebook.com/praneethnekuri
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; <span id="yearVal">2026</span> Crystolyte Media Creations (CMC). All rights reserved.
+        </div>
+        <div>
+          <a href="#hero" class="hover:text-amber-400 transition-colors">Back to top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- YouTube Cinema Modal -->
+  <div id="moviePlayerModal" class="cinema-modal">
+    <div class="relative w-full max-w-5xl bg-noir rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+      <!-- Top Modal Bar -->
+      <div class="flex items-center justify-between px-6 py-4 bg-obsidian border-b border-white/10">
+        <div class="flex items-center gap-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+          <h4 class="font-cinzel text-sm sm:text-base font-bold text-slate-100 tracking-wider">IIT KRISHNAMURTHY (4K CINEMA STREAM)</h4>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.primevideo.com/detail/0QSWDMWNHLP89N38ABP7KL3MXJ" target="_blank" rel="noopener noreferrer" 
+             class="text-xs text-[#38bdf8] hover:underline hidden sm:inline-flex items-center gap-1.5">
+            <i class="fa-brands fa-amazon"></i> Prime Video
+          </a>
+          <a href="https://www.youtube.com/watch?v=_nKFH-wbwtE" target="_blank" rel="noopener noreferrer" 
+             class="text-xs text-amber-400 hover:underline hidden sm:inline-flex items-center gap-1.5">
+            YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+          <button onclick="closeYouTubePlayer()" class="text-slate-400 hover:text-white text-xl p-1 transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Responsive 16:9 Iframe Container -->
+      <div class="relative w-full aspect-video bg-black">
+        <iframe 
+          id="ytPlayerIframe"
+          class="w-full h-full border-0"
+          src=""
+          title="IIT Krishnamurthy Full Movie"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/hyperframes.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+</html>

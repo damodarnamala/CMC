@@ -1,0 +1,166 @@
+/**
+ * Stylesheet: Crystolyte Media Creations (CMC)
+ * Premium Feature Film Production House
+ */
+
+:root {
+  --bg-obsidian: #08090d;
+  --bg-noir: #0e1117;
+  --bg-card: rgba(19, 24, 36, 0.72);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(230, 175, 46, 0.35);
+  --color-gold: #fbbf24;
+  --color-gold-deep: #b47814;
+  --color-prime-blue: #00a8e1;
+  --color-yt-red: #ff0033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-obsidian);
+  color: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-obsidian);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Atmospheric Ambient Lights */
+.ambient-glow {
+  background: 
+    radial-gradient(circle at 50% 12%, rgba(230, 175, 46, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 85% 45%, rgba(0, 168, 225, 0.06) 0%, transparent 55%),
+    radial-gradient(circle at 15% 82%, rgba(255, 0, 51, 0.05) 0%, transparent 50%);
+}
+
+/* Luxury Gold Metallic Typography */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #fde68a 35%, #e6af2e 70%, #b47814 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Surface */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-gold);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px -10px rgba(230, 175, 46, 0.2);
+}
+
+/* Prime Video Launch Button */
+.btn-prime {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: linear-gradient(135deg, #00A8E1 0%, #007EA7 50%, #005F7F 100%);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 6px 20px -3px rgba(0, 168, 225, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-prime:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 168, 225, 0.6);
+  filter: brightness(1.08);
+}
+
+/* YouTube Launch Button */
+.btn-youtube {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: linear-gradient(135deg, #FF0033 0%, #D4002B 50%, #99001F 100%);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 80, 110, 0.35);
+  box-shadow: 0 6px 20px -3px rgba(255, 0, 51, 0.38);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-youtube:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 0, 51, 0.55);
+  filter: brightness(1.08);
+}
+
+/* Gold Action Button */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #e6af2e 50%, #b47814 100%);
+  color: #08090d;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 6px 20px -3px rgba(230, 175, 46, 0.35);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(230, 175, 46, 0.55);
+  filter: brightness(1.06);
+}
+
+/* Modal Overlay */
+.cinema-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.cinema-modal.active {
+  display: flex;
+  animation: modalFadeIn 0.25s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
