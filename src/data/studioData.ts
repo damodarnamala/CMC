@@ -15,6 +15,7 @@ export const FEATURE_FILM: FilmDetails = {
   title: "IIT KRISHNAMURTHY",
   tagline: "Every Equation Has An Unknown Variable",
   director: "S. Sreevardhan",
+  directorInstagram: "https://www.instagram.com/mr.sreevardhan/",
   producers: ["Prasad Nekuri", "Praneeth Nekuri"],
   cast: {
     hero: "Prudhvi Dandamudi",
@@ -54,6 +55,7 @@ export const PRODUCERS: ProducerProfile[] = [
     designation: "Creative Development & Talent Curation",
     company: "Crystolyte Media Creations",
     initials: "PN",
+    photo: "/praneeth.png",
     bio: "Co-founder and producer at Crystolyte Media Creations, Praneeth Nekuri leads creative development, screenplay curation, and strategic collaborations. He is dedicated to championing progressive concepts, modern visual aesthetics, and emerging talents across Telugu cinema.",
     highlights: [
       "Produced Debut Feature: IIT Krishnamurthy",
@@ -74,6 +76,7 @@ export const DIRECTOR: DirectorProfile = {
   role: "Film Director",
   filmTitle: "IIT Krishnamurthy",
   initials: "SS",
+  instagram: "https://www.instagram.com/mr.sreevardhan/",
   bio: "Visionary filmmaker who made his directorial debut with Crystolyte Media Creations' acclaimed thriller IIT Krishnamurthy. Renowned for suspense orchestration, crisp editing pacing, and grounded character portrayals in modern Telugu cinema.",
   highlights: [
     "Directorial Debut: IIT Krishnamurthy",

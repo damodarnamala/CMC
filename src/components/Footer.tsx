@@ -57,12 +57,12 @@ export const Footer: React.FC = () => {
 
           <div className="md:col-span-4">
             <h4 className="text-xs uppercase tracking-wider text-amber-400 mb-4 font-bold">
-              Leadership Channels
+              Team & Leadership Channels
             </h4>
-            <p className="text-xs text-slate-400 mb-3 font-light">
-              Verified channels for Producer Praneeth Nekuri:
+            <p className="text-xs text-slate-400 mb-2 font-light">
+              Producer Praneeth Nekuri:
             </p>
-            <div className="flex flex-col space-y-2 text-xs">
+            <div className="flex flex-col space-y-2 text-xs mb-4">
               <a
                 href={praneeth.socialLinks?.linkedin}
                 target="_blank"
@@ -89,6 +89,21 @@ export const Footer: React.FC = () => {
               >
                 <i className="fa-brands fa-facebook text-[#1877F2]" />
                 <span>facebook.com/praneethnekuri</span>
+              </a>
+            </div>
+
+            <p className="text-xs text-slate-400 mb-2 font-light">
+              Director S. Sreevardhan (IIT Krishnamurthy):
+            </p>
+            <div className="flex flex-col space-y-2 text-xs">
+              <a
+                href="https://www.instagram.com/mr.sreevardhan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2"
+              >
+                <i className="fa-brands fa-instagram text-[#E1306C]" />
+                <span>instagram.com/mr.sreevardhan</span>
               </a>
             </div>
           </div>

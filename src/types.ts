@@ -15,6 +15,7 @@ export interface FilmDetails {
   title: string;
   tagline: string;
   director: string;
+  directorInstagram?: string;
   producers: string[];
   cast: {
     hero: string;
@@ -39,6 +40,7 @@ export interface ProducerProfile {
   designation: string;
   company: string;
   initials: string;
+  photo?: string;
   bio: string;
   highlights: string[];
   location: string;
@@ -56,4 +58,5 @@ export interface DirectorProfile {
   initials: string;
   bio: string;
   highlights: string[];
+  instagram?: string;
 }

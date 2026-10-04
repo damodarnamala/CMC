@@ -105,17 +105,9 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-32 pb-24 px-6 sm:px-10 overflow-hidden">
-    <div class="max-w-5xl mx-auto text-center relative z-10">
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 sm:pt-32 pb-20 sm:pb-24 px-4 sm:px-8 md:px-10 overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10 w-full">
       
-      <!-- Studio Category Label -->
-      <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-surfaceCard/90 border border-amber-500/30 backdrop-blur-md mb-8">
-        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-        <span class="text-xs uppercase tracking-widest text-amber-300 font-semibold">
-          Indian Feature Film Production House
-        </span>
-      </div>
-
       <!-- Hyperframes Tilted Snap Title -->
       <div class="hyperframes-stage mb-4 block">
         <h1 id="heroMainTitle" class="tilted-text-item font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.08]">
@@ -281,6 +273,10 @@
           <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 flex items-center gap-2">
             <i class="fa-brands fa-youtube"></i> 4K Full Feature
           </span>
+          <a href="https://www.instagram.com/mr.sreevardhan/" target="_blank" rel="noopener noreferrer"
+             class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E1306C]/15 text-pink-300 border border-[#E1306C]/30 flex items-center gap-1.5 hover:bg-[#E1306C]/25 transition-colors">
+            <i class="fa-brands fa-instagram text-[#E1306C]"></i> Dir. Sreevardhan
+          </a>
           <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
             Mystery Thriller
           </span>
@@ -292,7 +288,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12">
           
           <!-- Poster / Still Presentation -->
-          <div class="lg:col-span-5 relative min-h-[380px] lg:min-h-[560px] bg-black overflow-hidden flex flex-col justify-end p-8">
+          <div class="lg:col-span-5 relative min-h-[340px] sm:min-h-[380px] lg:min-h-[560px] bg-black overflow-hidden flex flex-col justify-end p-6 sm:p-8">
             <img src="https://img.youtube.com/vi/_nKFH-wbwtE/maxresdefault.jpg" 
                  alt="IIT Krishnamurthy Official Feature Poster" 
                  class="absolute inset-0 w-full h-full object-cover opacity-75 hover:scale-105 transition-transform duration-700">
@@ -304,7 +300,14 @@
                 Official Feature Debut
               </span>
               <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">IIT KRISHNAMURTHY</h3>
-              <p class="text-xs text-slate-300 font-medium">Directed by S. Sreevardhan • Produced by Prasad & Praneeth Nekuri</p>
+              <p class="text-xs text-slate-300 font-medium flex items-center gap-1.5 flex-wrap">
+                <span>Directed by</span>
+                <a href="https://www.instagram.com/mr.sreevardhan/" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-white underline decoration-amber-400/50 inline-flex items-center gap-1">
+                  <span>S. Sreevardhan</span>
+                  <i class="fa-brands fa-instagram text-[#E1306C] text-[11px]"></i>
+                </a>
+                <span>• Produced by Prasad & Praneeth Nekuri</span>
+              </p>
               
               <div class="mt-4 flex items-center gap-3 text-xs font-mono text-slate-300">
                 <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded border border-white/10">Full Length</span>
@@ -336,7 +339,10 @@
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-xs border-y border-white/10 py-6 mb-8">
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Director</span>
-                  <span class="text-white font-semibold text-sm">S. Sreevardhan</span>
+                  <a href="https://www.instagram.com/mr.sreevardhan/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-amber-400 font-semibold text-sm inline-flex items-center gap-1.5 transition-colors group">
+                    <span>S. Sreevardhan</span>
+                    <i class="fa-brands fa-instagram text-[#E1306C] text-xs group-hover:scale-125 transition-transform"></i>
+                  </a>
                 </div>
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Producers</span>
@@ -460,8 +466,8 @@
         <div class="glass-panel p-8 sm:p-10 flex flex-col justify-between hyperframe-card border-amber-500/30">
           <div>
             <div class="flex items-center justify-between mb-6">
-              <div class="w-16 h-16 rounded-2xl bg-surfaceCard border border-amber-500/30 flex items-center justify-center font-cinzel font-bold text-2xl text-amber-400 shadow-md">
-                PN
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-xl bg-surfaceCard shrink-0 relative group/photo">
+                <img src="./praneeth.png" alt="Praneeth Nekuri - Producer & Founder" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onerror="this.src='./praneeth.jpg'">
               </div>
               <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">
                 Producer & Founder
@@ -643,9 +649,9 @@
         </div>
 
         <div class="md:col-span-4">
-          <h4 class="text-xs uppercase tracking-wider text-amber-400 mb-4 font-bold">Leadership Channels</h4>
-          <p class="text-xs text-slate-400 mb-3 font-light">Verified channels for Producer Praneeth Nekuri:</p>
-          <div class="flex flex-col space-y-2 text-xs">
+          <h4 class="text-xs uppercase tracking-wider text-amber-400 mb-4 font-bold">Team & Leadership Channels</h4>
+          <p class="text-xs text-slate-400 mb-2 font-light">Producer Praneeth Nekuri:</p>
+          <div class="flex flex-col space-y-2 text-xs mb-4">
             <a href="http://linkedin.com/in/praneeth-nekuri" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2">
               <i class="fa-brands fa-linkedin text-[#0077b5]"></i> linkedin.com/in/praneeth-nekuri
             </a>
@@ -654,6 +660,13 @@
             </a>
             <a href="https://m.facebook.com/profile.php?id=100003239927433&__n=K" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2">
               <i class="fa-brands fa-facebook text-[#1877F2]"></i> facebook.com/praneethnekuri
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-400 mb-2 font-light">Director S. Sreevardhan (IIT Krishnamurthy):</p>
+          <div class="flex flex-col space-y-2 text-xs">
+            <a href="https://www.instagram.com/mr.sreevardhan/" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2">
+              <i class="fa-brands fa-instagram text-[#E1306C]"></i> instagram.com/mr.sreevardhan
             </a>
           </div>
         </div>

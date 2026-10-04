@@ -6,12 +6,14 @@ interface FeatureFilmSpotlightProps {
 }
 
 export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOpenCinemaModal }) => {
+  const directorInsta = FEATURE_FILM.directorInstagram || "https://www.instagram.com/mr.sreevardhan/";
+
   return (
-    <section id="feature-film" className="py-24 relative z-10">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10">
+    <section id="feature-film" className="py-16 sm:py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
             <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
               <span className="w-5 h-px bg-amber-400" />
@@ -26,19 +28,28 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
           </div>
 
           {/* Badges / Metrics */}
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             <a
               href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-1.5 rounded-full text-xs font-semibold bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 flex items-center gap-2 hover:bg-[#00a8e1]/25 transition-colors"
+              className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 flex items-center gap-1.5 hover:bg-[#00a8e1]/25 transition-colors"
             >
               <i className="fa-brands fa-amazon" /> Prime Video Worldwide
             </a>
-            <span className="px-4 py-1.5 rounded-full text-xs font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 flex items-center gap-2">
+            <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 flex items-center gap-1.5">
               <i className="fa-brands fa-youtube" /> 4K Full Feature
             </span>
-            <span className="px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+            <a
+              href={directorInsta}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E1306C]/15 text-pink-300 border border-[#E1306C]/30 flex items-center gap-1.5 hover:bg-[#E1306C]/25 transition-colors"
+              title="Director S. Sreevardhan Instagram"
+            >
+              <i className="fa-brands fa-instagram text-[#E1306C]" /> Dir. Sreevardhan
+            </a>
+            <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
               {FEATURE_FILM.genre}
             </span>
           </div>
@@ -49,7 +60,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
           <div className="grid grid-cols-1 lg:grid-cols-12">
             
             {/* Cinematic Image Frame */}
-            <div className="lg:col-span-5 relative min-h-[380px] lg:min-h-[560px] bg-black overflow-hidden flex flex-col justify-end p-8 group">
+            <div className="lg:col-span-5 relative min-h-[300px] sm:min-h-[380px] lg:min-h-[560px] bg-black overflow-hidden flex flex-col justify-end p-6 sm:p-8 group">
               <img
                 src="https://img.youtube.com/vi/_nKFH-wbwtE/maxresdefault.jpg"
                 alt="IIT Krishnamurthy Official Feature Poster"
@@ -67,15 +78,25 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
                   IIT KRISHNAMURTHY
                 </h3>
-                <p className="text-xs text-slate-300 font-medium">
-                  Directed by {FEATURE_FILM.director} • Produced by {FEATURE_FILM.producers.join(' & ')}
+                <p className="text-xs text-slate-300 font-medium flex items-center gap-1.5 flex-wrap">
+                  <span>Directed by</span>
+                  <a
+                    href={directorInsta}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-amber-400 hover:text-white underline decoration-amber-400/50 inline-flex items-center gap-1"
+                  >
+                    <span>{FEATURE_FILM.director}</span>
+                    <i className="fa-brands fa-instagram text-[#E1306C] text-[11px]" />
+                  </a>
+                  <span>• Produced by {FEATURE_FILM.producers.join(' & ')}</span>
                 </p>
                 
-                <div className="mt-4 flex items-center gap-3 text-xs font-mono text-slate-300">
-                  <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded border border-white/10">
+                <div className="mt-4 flex items-center gap-2.5 sm:gap-3 text-xs font-mono text-slate-300">
+                  <span className="bg-black/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded border border-white/10">
                     {FEATURE_FILM.duration}
                   </span>
-                  <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded border border-white/10">
+                  <span className="bg-black/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded border border-white/10">
                     {FEATURE_FILM.resolution}
                   </span>
                 </div>
@@ -83,7 +104,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
             </div>
 
             {/* Feature Film Data & Story Context */}
-            <div className="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between">
+            <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6 text-xs">
                   <div>
@@ -97,15 +118,24 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 </div>
 
                 <h4 className="text-xs uppercase tracking-wider text-amber-400 font-bold mb-3">Film Synopsis</h4>
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-8">
+                <p className="text-slate-300 text-xs sm:text-base leading-relaxed font-light mb-8">
                   {FEATURE_FILM.synopsis}
                 </p>
 
                 {/* Cast & Crew Data Matrix */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 text-xs border-y border-white/10 py-6 mb-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6 text-xs border-y border-white/10 py-6 mb-8">
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Director</span>
-                    <span className="text-white font-semibold text-sm">{FEATURE_FILM.director}</span>
+                    <a
+                      href={directorInsta}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-amber-400 font-semibold text-sm inline-flex items-center gap-1.5 transition-colors group/dir"
+                      title="Director S. Sreevardhan on Instagram"
+                    >
+                      <span>{FEATURE_FILM.director}</span>
+                      <i className="fa-brands fa-instagram text-[#E1306C] text-xs group-hover/dir:scale-125 transition-transform" />
+                    </a>
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Producers</span>
@@ -130,16 +160,16 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 </div>
               </div>
 
-              {/* Watch On: YouTube | Prime Buttons Only */}
+              {/* Watch On: YouTube | Prime Buttons Only (Mobile Touch Friendly) */}
               <div>
                 <span className="text-[11px] uppercase tracking-widest text-slate-400 font-semibold block mb-3">
                   Watch on:
                 </span>
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                   {/* YouTube Button */}
                   <button
                     onClick={onOpenCinemaModal}
-                    className="btn-launch-yt px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 cursor-pointer shadow-lg"
+                    className="btn-launch-yt w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 cursor-pointer shadow-lg min-h-[46px]"
                   >
                     <i className="fa-brands fa-youtube text-base" />
                     <span>YouTube</span>
@@ -150,7 +180,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-launch-prime px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-lg"
+                    className="btn-launch-prime w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-lg min-h-[46px]"
                   >
                     <i className="fa-brands fa-amazon text-base" />
                     <span>Prime Video</span>
