@@ -57,19 +57,10 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
         />
 
         {/* Top Badges Overlay */}
-        <div className="relative z-10 p-4 sm:p-5 flex items-center justify-between w-full bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none">
+        <div className="relative z-10 p-4 sm:p-5 flex items-center justify-start w-full bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 border border-white/15 backdrop-blur-md text-[10px] uppercase tracking-widest text-amber-400 font-bold shadow-lg">
             <Sparkles className="w-3 h-3 text-amber-400 animate-pulse" />
             <span>{currentPoster.tag}</span>
-          </div>
-
-          <div className="text-right">
-            <span className="font-cinzel font-black text-amber-400 text-xs sm:text-sm tracking-widest block drop-shadow">
-              CMC
-            </span>
-            <span className="text-[7px] uppercase tracking-[0.2em] text-slate-300 font-sans block">
-              Official Release
-            </span>
           </div>
         </div>
 

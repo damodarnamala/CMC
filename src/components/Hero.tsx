@@ -64,13 +64,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal }) => {
 
       <div className="max-w-5xl mx-auto text-center relative z-10 w-full flex flex-col items-center">
         
-        {/* Official 3D Metallic Golden CMC Logo Showcase */}
+        {/* Official 3D Metallic Golden CMC Logo Showcase with Animated Gold Border (Vertically Aligned on Top) */}
         <div className="mb-6 sm:mb-8 transition-transform duration-700 hover:scale-[1.03]">
-          <CMCLogo size="md" showSubtitle={true} className="filter drop-shadow-[0_15px_35px_rgba(212,175,55,0.3)]" />
+          <div className="gold-animated-border-frame">
+            <div className="gold-animated-border-content px-6 py-4 sm:px-8 sm:py-5">
+              <CMCLogo size="md" showSubtitle={true} className="filter drop-shadow-[0_15px_35px_rgba(212,175,55,0.4)]" />
+            </div>
+          </div>
         </div>
 
-        {/* Hyperframes Theatrical Title in Cinzel (Matching Writer & Director Sreevardhan font) */}
-        <div className="jitter-perspective mb-4 sm:mb-6 block max-w-4xl mx-auto">
+        {/* Hyperframes Theatrical Title in Cinzel (Vertically Aligned Below Logo, Centered) */}
+        <div className="jitter-perspective mb-4 sm:mb-6 block max-w-4xl mx-auto text-center">
           <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.16em] sm:tracking-[0.24em] leading-[1.25] uppercase transition-transform duration-500 hover:scale-[1.01]">
             CRYSTOLYTE <br />
             <span className="gold-luxury-text tracking-[0.18em] sm:tracking-[0.26em]">MEDIA CREATIONS</span>

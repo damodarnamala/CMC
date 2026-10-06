@@ -49,6 +49,68 @@
   border-image: linear-gradient(to bottom right, rgba(251, 191, 36, 0.5), rgba(230, 175, 46, 0.1), rgba(255, 255, 255, 0.05)) 1;
 }
 
+/* ======================================================== */
+/* Animated Gold Border Effect for Main CMC Logo            */
+/* ======================================================== */
+@keyframes gold-border-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gold-shimmer-pulse {
+  0%, 100% {
+    box-shadow: 0 0 25px -4px rgba(230, 175, 46, 0.35), 0 0 10px rgba(251, 191, 36, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 45px 4px rgba(251, 191, 36, 0.7), 0 0 20px rgba(255, 236, 160, 0.5);
+  }
+}
+
+.gold-animated-border-frame {
+  position: relative;
+  border-radius: 1.75rem;
+  padding: 2.5px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: gold-shimmer-pulse 4s ease-in-out infinite;
+}
+
+.gold-animated-border-frame::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(212, 175, 55, 0.1) 40deg,
+    #f59e0b 80deg,
+    #ffd700 110deg,
+    #fff7d1 135deg,
+    #d4af37 160deg,
+    transparent 200deg,
+    rgba(212, 175, 55, 0.1) 240deg,
+    #f59e0b 280deg,
+    #ffd700 310deg,
+    #fff7d1 335deg,
+    transparent 360deg
+  );
+  animation: gold-border-spin 5s linear infinite;
+}
+
+.gold-animated-border-content {
+  position: relative;
+  z-index: 10;
+  border-radius: calc(1.75rem - 2.5px);
+  background: radial-gradient(circle at 50% 50%, rgba(18, 22, 32, 0.96) 0%, rgba(7, 9, 13, 0.98) 100%);
+  padding: 1.25rem 2.25rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Hyperframes / Jitter 3D Perspective Wrapper */
 .jitter-perspective {
   perspective: 1200px;

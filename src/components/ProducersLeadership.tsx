@@ -34,11 +34,12 @@ export const ProducersLeadership: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           
           {/* ======================================================== */}
-          {/* Producer 1: Prasad Nekuri (Updated Photo & Dot Bullets)  */}
+          {/* Producer 1: Prasad Nekuri                                */}
           {/* ======================================================== */}
           <div className="glass-card rounded-3xl p-6 sm:p-9 flex flex-col justify-between border-amber-500/25 relative group hover:border-amber-400/50 transition-all duration-300">
             <div>
-              <div className="flex items-center justify-between gap-4 mb-6">
+              {/* Header: Photo on Left, Name & Info on Right */}
+              <div className="flex items-center gap-4 sm:gap-5 mb-6">
                 
                 {/* Prasad Nekuri Portrait Photo */}
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-xl bg-slate-900 shrink-0 relative group/photo">
@@ -66,17 +67,22 @@ export const ProducersLeadership: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                 </div>
 
-                <span className="px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider text-right">
-                  {prasad.role}
-                </span>
-              </div>
+                {/* Name, Badge & Studio Title Moved Right to the Image */}
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1.5">
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider inline-block">
+                      {prasad.role}
+                    </span>
+                  </div>
+                  <h3 className="font-cinzel text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-wide leading-tight truncate">
+                    {prasad.name}
+                  </h3>
+                  <span className="text-xs uppercase tracking-wider text-slate-400 block font-medium mt-0.5">
+                    {prasad.company}
+                  </span>
+                </div>
 
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
-                {prasad.name}
-              </h3>
-              <span className="text-xs uppercase tracking-wider text-slate-400 block mb-5 sm:mb-6 font-medium">
-                {prasad.company}
-              </span>
+              </div>
 
               <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
                 {prasad.bio}
@@ -100,7 +106,7 @@ export const ProducersLeadership: React.FC = () => {
           </div>
 
           {/* ======================================================== */}
-          {/* Producer 2: Praneeth Nekuri (With Photo & Dot Bullets)   */}
+          {/* Producer 2: Praneeth Nekuri                              */}
           {/* ======================================================== */}
           <div className="glass-card rounded-3xl p-6 sm:p-9 flex flex-col justify-between border-amber-500/35 relative group hover:border-amber-400/50 transition-all duration-300">
             <div className="absolute top-4 right-4 z-20">
@@ -111,7 +117,8 @@ export const ProducersLeadership: React.FC = () => {
             </div>
 
             <div>
-              <div className="flex items-center justify-between gap-4 mb-6">
+              {/* Header: Photo on Left, Name & Info on Right */}
+              <div className="flex items-center gap-4 sm:gap-5 mb-6">
                 
                 {/* Praneeth Nekuri Portrait Photo */}
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-xl bg-slate-900 shrink-0 relative group/photo">
@@ -139,17 +146,22 @@ export const ProducersLeadership: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                 </div>
 
-                <span className="px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider text-right">
-                  {praneeth.role}
-                </span>
-              </div>
+                {/* Name, Badge & Studio Title Moved Right to the Image */}
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1.5">
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider inline-block">
+                      {praneeth.role}
+                    </span>
+                  </div>
+                  <h3 className="font-cinzel text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-wide leading-tight truncate">
+                    {praneeth.name}
+                  </h3>
+                  <span className="text-xs uppercase tracking-wider text-slate-400 block font-medium mt-0.5">
+                    {praneeth.company}
+                  </span>
+                </div>
 
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
-                {praneeth.name}
-              </h3>
-              <span className="text-xs uppercase tracking-wider text-slate-400 block mb-5 sm:mb-6 font-medium">
-                {praneeth.company}
-              </span>
+              </div>
 
               <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
                 {praneeth.bio}

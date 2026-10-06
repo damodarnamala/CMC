@@ -106,9 +106,13 @@
   <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 sm:pt-32 pb-20 sm:pb-24 px-4 sm:px-8 md:px-10 overflow-hidden">
     <div class="max-w-5xl mx-auto text-center relative z-10 w-full flex flex-col items-center">
       
-      <!-- Official Golden CMC Creative Works Logo -->
-      <div class="mb-6 sm:mb-8 transition-transform duration-500 hover:scale-105">
-        <img src="./logo.png" alt="CMC Creative Works Logo" class="h-20 sm:h-28 w-auto object-contain drop-shadow-[0_15px_35px_rgba(212,175,55,0.35)]">
+      <!-- Official Golden CMC Creative Works Logo with Animated Gold Border -->
+      <div class="mb-6 sm:mb-8 transition-transform duration-700 hover:scale-[1.03]">
+        <div class="gold-animated-border-frame">
+          <div class="gold-animated-border-content">
+            <img src="./logo.png" alt="CMC Creative Works Logo" class="h-20 sm:h-28 w-auto object-contain drop-shadow-[0_15px_35px_rgba(212,175,55,0.4)]">
+          </div>
+        </div>
       </div>
 
       <!-- Hyperframes Tilted Snap Title (Matching Sreevardhan Cinzel font) -->
@@ -299,15 +303,11 @@
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#070b10]/85 to-[#070b10]"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#05080b] via-[#05080b]/75 to-transparent"></div>
 
-            <!-- Top Poster Header: CMC Studio Logo -->
-            <div class="relative z-10 flex items-start justify-between w-full">
+            <!-- Top Poster Header -->
+            <div class="relative z-10 flex items-start justify-start w-full">
               <span class="px-2.5 py-1 rounded-md bg-black/70 border border-white/10 text-amber-400 text-[10px] font-bold uppercase tracking-widest inline-block">
                 Official First Look
               </span>
-              <div class="text-right">
-                <span class="font-cinzel font-black text-amber-400 text-sm tracking-widest block">CMC</span>
-                <span class="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-sans block">CRYSTOLYTE MEDIA CREATIONS</span>
-              </div>
             </div>
 
             <!-- Poster Taglines: MISSING & A CORPORATE CRIME -->
@@ -535,7 +535,6 @@
             <div class="relative aspect-[2/3] w-full overflow-hidden bg-black">
               <img src="./p1.png" alt="First Look Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">First Look (P1)</span>
-              <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">CMC</span>
             </div>
             <div class="p-4 border-t border-white/5 flex flex-col justify-between flex-1">
               <div>
@@ -556,7 +555,6 @@
             <div class="relative aspect-[2/3] w-full overflow-hidden bg-black">
               <img src="./p2.png" alt="Theatrical Release Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">Theatrical Poster (P2)</span>
-              <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">CMC</span>
             </div>
             <div class="p-4 border-t border-white/5 flex flex-col justify-between flex-1">
               <div>
@@ -577,7 +575,6 @@
             <div class="relative aspect-[2/3] w-full overflow-hidden bg-black">
               <img src="./p3.png" alt="Key Art Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">Key Art (P3)</span>
-              <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">CMC</span>
             </div>
             <div class="p-4 border-t border-white/5 flex flex-col justify-between flex-1">
               <div>
@@ -626,21 +623,24 @@
         <!-- Producer 1: Prasad Nekuri -->
         <div class="glass-panel p-8 sm:p-10 flex flex-col justify-between hyperframe-card border-amber-500/25">
           <div>
-            <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-5 mb-6">
               <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-xl bg-surfaceCard shrink-0 relative group/photo">
                 <img src="./prasad_nekuri.png" alt="Prasad Nekuri - Producer & Founder" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onerror="this.src='./prasad_nekuri.jpg'">
               </div>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">
-                Producer & Founder
-              </span>
+              <div class="min-w-0 flex-1">
+                <div class="mb-1.5">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider inline-block">
+                    Producer & Founder
+                  </span>
+                </div>
+                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-wide leading-tight truncate">
+                  Prasad Nekuri
+                </h3>
+                <span class="text-xs uppercase tracking-wider text-slate-400 block font-medium mt-0.5">
+                  Crystolyte Media Creations
+                </span>
+              </div>
             </div>
-
-            <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
-              Prasad Nekuri
-            </h3>
-            <span class="text-xs uppercase tracking-wider text-slate-400 block mb-6 font-medium">
-              Crystolyte Media Creations
-            </span>
 
             <p class="text-slate-300 text-sm font-light leading-relaxed mb-8">
               As co-founder and producer at Crystolyte Media Creations, Prasad Nekuri oversees executive strategy, film production operations, and project financing. His focus on production integrity and disciplined execution ensures that every project meets high theatrical and streaming benchmarks.
@@ -670,21 +670,24 @@
         <!-- Producer 2: Praneeth Nekuri -->
         <div class="glass-panel p-8 sm:p-10 flex flex-col justify-between hyperframe-card border-amber-500/35">
           <div>
-            <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-5 mb-6">
               <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-xl bg-surfaceCard shrink-0 relative group/photo">
                 <img src="./praneeth.png" alt="Praneeth Nekuri - Producer & Founder" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onerror="this.src='./praneeth.jpg'">
               </div>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider">
-                Producer & Founder
-              </span>
+              <div class="min-w-0 flex-1">
+                <div class="mb-1.5">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-wider inline-block">
+                    Producer & Founder
+                  </span>
+                </div>
+                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-wide leading-tight truncate">
+                  Praneeth Nekuri
+                </h3>
+                <span class="text-xs uppercase tracking-wider text-slate-400 block font-medium mt-0.5">
+                  Crystolyte Media Creations
+                </span>
+              </div>
             </div>
-
-            <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
-              Praneeth Nekuri
-            </h3>
-            <span class="text-xs uppercase tracking-wider text-slate-400 block mb-6 font-medium">
-              Crystolyte Media Creations
-            </span>
 
             <p class="text-slate-300 text-sm font-light leading-relaxed mb-8">
               Co-founder and producer at Crystolyte Media Creations, Praneeth Nekuri leads creative development, screenplay curation, and strategic collaborations. He is dedicated to championing progressive concepts, modern visual aesthetics, and emerging talents across Telugu cinema.

@@ -347,13 +347,6 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                       {poster.tag}
                     </span>
                   </div>
-
-                  {/* Studio Badge */}
-                  <div className="absolute top-3 right-3 z-10">
-                    <span className="px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">
-                      CMC
-                    </span>
-                  </div>
                 </div>
 
                 {/* Poster Caption */}
