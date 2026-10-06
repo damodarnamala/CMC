@@ -4,17 +4,39 @@
  * Static Site Interactive Handlers
  */
 
-const YOUTUBE_STREAM_URL = "https://www.youtube.com/embed/_nKFH-wbwtE?autoplay=1&rel=0";
+const DEFAULT_VIDEO_ID = "ez6iLxDgdBU"; // Official Trailer
 
-// Video Modal Management
-function launchYouTubePlayer() {
+// Video Modal Management with Dynamic Switching
+function launchVideoPlayer(videoId = DEFAULT_VIDEO_ID, title = "Official Media Release") {
   const modal = document.getElementById('moviePlayerModal');
   const iframe = document.getElementById('ytPlayerIframe');
+  const modalTitle = document.getElementById('modalVideoTitle');
+  
   if (modal && iframe) {
-    iframe.src = YOUTUBE_STREAM_URL;
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    if (modalTitle) {
+      modalTitle.textContent = title;
+    }
+    
+    // Highlight active switcher button
+    document.querySelectorAll('.modal-switcher-btn').forEach(btn => {
+      if (btn.getAttribute('data-video-id') === videoId) {
+        btn.classList.add('bg-amber-400', 'text-black', 'border-amber-400');
+        btn.classList.remove('bg-surfaceCard', 'text-slate-300', 'border-white/10');
+      } else {
+        btn.classList.remove('bg-amber-400', 'text-black', 'border-amber-400');
+        btn.classList.add('bg-surfaceCard', 'text-slate-300', 'border-white/10');
+      }
+    });
+
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
+}
+
+// Backward compatibility helper
+function launchYouTubePlayer() {
+  launchVideoPlayer(DEFAULT_VIDEO_ID, "IIT KRISHNAMURTHY (Official Trailer)");
 }
 
 function closeYouTubePlayer() {

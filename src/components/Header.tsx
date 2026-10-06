@@ -1,33 +1,34 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { CMCLogo } from './CMCLogo.tsx';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[#08090d]/90 backdrop-blur-2xl border-b border-white/5 transition-all">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10 h-20 flex items-center justify-between">
         
-        {/* Zone 1: Brand Wordmark */}
-        <a href="#hero" className="flex items-center space-x-3.5 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 via-slate-900 to-[#08090d] border border-amber-500/40 flex items-center justify-center shadow-lg group-hover:border-amber-400 group-hover:scale-105 transition-all duration-300">
-            <span className="font-cinzel text-base font-black text-amber-400 tracking-wider">CMC</span>
+        {/* Zone 1: Official CMC Brand Logo */}
+        <a href="#hero" className="flex items-center space-x-3 group">
+          <div className="py-1">
+            <CMCLogo size="sm" showSubtitle={false} className="w-16 sm:w-20 group-hover:scale-105 transition-transform" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-cinzel text-lg font-bold tracking-wider text-white group-hover:text-amber-400 transition-colors flex items-center gap-1.5 leading-tight">
+          <div className="flex flex-col border-l border-white/15 pl-3">
+            <span className="font-cinzel text-sm sm:text-base font-bold tracking-wider text-white group-hover:text-amber-400 transition-colors flex items-center gap-1 leading-tight">
               CRYSTOLYTE
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
             </span>
-            <span className="text-[9px] tracking-[0.25em] uppercase text-slate-400 font-medium">
-              Media Creations
+            <span className="text-[8px] sm:text-[9px] tracking-[0.28em] uppercase text-amber-400/90 font-semibold font-cinzel">
+              Creative Works
             </span>
           </div>
         </a>
 
         {/* Zone 2: Navigation Links */}
-        <nav className="hidden md:flex items-center space-x-8 text-xs uppercase tracking-wider font-semibold text-slate-300">
+        <nav className="hidden md:flex items-center space-x-7 text-xs uppercase tracking-wider font-semibold text-slate-300">
           <a href="#about" className="hover:text-amber-400 transition-colors">Studio</a>
-          <a href="#feature-film" className="hover:text-amber-400 transition-colors">Feature Film</a>
+          <a href="#feature-film" className="hover:text-amber-400 transition-colors">IIT Krishnamurthy</a>
           <a href="#leadership" className="hover:text-amber-400 transition-colors">Producers</a>
           <a href="#slate" className="hover:text-amber-400 transition-colors">Projects in Development</a>
         </nav>

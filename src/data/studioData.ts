@@ -2,6 +2,7 @@ import { FilmDetails, ProducerProfile, DirectorProfile, SlateProject } from '../
 
 export const STUDIO_INFO = {
   name: "Crystolyte Media Creations",
+  brandName: "CMC Creative Works",
   acronym: "CMC",
   location: "Hyderabad, Telangana, India",
   email: "info@crystolytemedia.com",
@@ -13,14 +14,27 @@ export const STUDIO_INFO = {
 
 export const FEATURE_FILM: FilmDetails = {
   title: "IIT KRISHNAMURTHY",
-  tagline: "Every Equation Has An Unknown Variable",
+  teluguTitle: "IIT కృష్ణమూర్తి",
+  tagline: "A Corporate Crime • Non Recognised Sector",
   director: "S. Sreevardhan",
   directorInstagram: "https://www.instagram.com/mr.sreevardhan/",
   producers: ["Prasad Nekuri", "Praneeth Nekuri"],
   cast: {
     hero: "Prudhvi Dandamudi",
     heroine: "Maira Doshi",
-    ensemble: ["Vinay Varma", "Banerjee", "Satya", "Bharath Reddy"]
+    ensemble: ["Vinay Varma", "Banerjee", "Satya", "Bharath Reddy", "Anand Bharathi"]
+  },
+  crew: {
+    musicDirector: "Naresh Kumaran",
+    dop: "Yesu",
+    editor: "Anil Kumar P",
+    publicityDesign: "BSP Roy",
+    colorist: "Raja Srinivas Mamidi",
+    lyrics: "Ramanjhaneyulu Sankarpu",
+    lineProducer: "LV Vasuki",
+    executiveProducer: "Tati Ashwin",
+    productionController: "Anand Kumar",
+    soundDesign: "Aravind Menon"
   },
   musicDirector: "Naresh Kumaran",
   releasePlatforms: {
@@ -28,10 +42,82 @@ export const FEATURE_FILM: FilmDetails = {
     youtubeVideoId: "_nKFH-wbwtE",
     youtubeWatchUrl: "https://www.youtube.com/watch?v=_nKFH-wbwtE"
   },
-  genre: "Mystery / Crime Investigation Thriller",
+  videos: [
+    {
+      id: "trailer",
+      title: "Official Trailer",
+      category: "Trailer",
+      youtubeId: "ez6iLxDgdBU",
+      watchUrl: "https://www.youtube.com/watch?v=ez6iLxDgdBU",
+      thumbnailUrl: "https://img.youtube.com/vi/ez6iLxDgdBU/maxresdefault.jpg",
+      description: "Official Telugu Trailer released on Telugu FilmNagar. Uncovering the mystery of a missing uncle in Hyderabad.",
+      badge: "Official Trailer",
+      duration: "2m 14s"
+    },
+    {
+      id: "teaser",
+      title: "Official Teaser",
+      category: "Teaser",
+      youtubeId: "XfDvmgAZmX4",
+      watchUrl: "https://www.youtube.com/watch?v=XfDvmgAZmX4",
+      thumbnailUrl: "https://img.youtube.com/vi/XfDvmgAZmX4/maxresdefault.jpg",
+      description: "The gripping First Look Teaser presenting the corporate crime premise and investigative intrigue.",
+      badge: "First Look Teaser",
+      duration: "1m 18s"
+    },
+    {
+      id: "song-megham",
+      title: "Megham Tho Megham (Video Song)",
+      category: "Song",
+      youtubeId: "5IAPAGizJ9Y",
+      watchUrl: "https://www.youtube.com/watch?v=5IAPAGizJ9Y&list=RD5IAPAGizJ9Y&start_radio=1",
+      thumbnailUrl: "https://img.youtube.com/vi/5IAPAGizJ9Y/maxresdefault.jpg",
+      description: "Melodious chartbuster sung by Yazin Nizar, penned by Ramanjhaneyulu Sankarpu, music by Naresh Kumaran (Saregama Telugu).",
+      badge: "Official Video Song",
+      duration: "3m 45s"
+    },
+    {
+      id: "full-movie",
+      title: "Full Feature Film (4K UHD)",
+      category: "Full Movie",
+      youtubeId: "_nKFH-wbwtE",
+      watchUrl: "https://www.youtube.com/watch?v=_nKFH-wbwtE",
+      thumbnailUrl: "https://img.youtube.com/vi/_nKFH-wbwtE/maxresdefault.jpg",
+      description: "Complete full-length 4K UHD streaming presentation of IIT Krishnamurthy with crystal clear audio.",
+      badge: "Full Movie 4K",
+      duration: "2h 08m"
+    }
+  ],
+  posters: [
+    {
+      id: "poster-1",
+      title: "First Look Poster",
+      subtitle: "A Corporate Crime • Missing Saturday Evening",
+      src: "./p1.png",
+      alt: "IIT Krishnamurthy First Look Official Poster",
+      tag: "First Look"
+    },
+    {
+      id: "poster-2",
+      title: "Theatrical Release Poster",
+      subtitle: "Directed by Sreevardhan • Produced by Prasad Nekuri",
+      src: "./p2.png",
+      alt: "IIT Krishnamurthy Theatrical Release Poster",
+      tag: "Theatrical Poster"
+    },
+    {
+      id: "poster-3",
+      title: "Investigative Key Art",
+      subtitle: "Mystery Thriller • Official Presentation",
+      src: "./p3.png",
+      alt: "IIT Krishnamurthy Key Art Poster",
+      tag: "Key Art"
+    }
+  ],
+  genre: "Mystery / Corporate Crime Thriller",
   duration: "2h 08m",
   resolution: "4K UHD Cinema Stream",
-  synopsis: "The production house made its debut with IIT KRISHNA MURTHY, directed by S. Sreevardhan, establishing its presence in the Telugu film industry. An intelligent student arrives in Hyderabad in search of his missing uncle, only to find himself entangled in a labyrinth of corporate deception and police intrigue where every clue unravels more questions than answers."
+  synopsis: "The production house made its debut with IIT KRISHNAMURTHY, directed by S. Sreevardhan, establishing its presence in the Telugu film industry. An intelligent student arrives in Hyderabad in search of his missing uncle, only to find himself entangled in a labyrinth of corporate deception and police intrigue where every clue unravels more questions than answers."
 };
 
 export const PRODUCERS: ProducerProfile[] = [

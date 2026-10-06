@@ -1,8 +1,10 @@
 import React from 'react';
+import { Play, Sparkles, Film, Music, ShieldCheck, Clapperboard, ExternalLink } from 'lucide-react';
 import { FEATURE_FILM } from '../data/studioData.ts';
+import { OfficialMoviePoster } from './OfficialMoviePoster.tsx';
 
 interface FeatureFilmSpotlightProps {
-  onOpenCinemaModal: () => void;
+  onOpenCinemaModal: (videoId?: string) => void;
 }
 
 export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOpenCinemaModal }) => {
@@ -17,7 +19,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
           <div>
             <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
               <span className="w-5 h-px bg-amber-400" />
-              <span>DEBUT FEATURE ARCHIVE</span>
+              <span>OFFICIAL DEBUT FEATURE & MEDIA ARCHIVE</span>
             </div>
 
             <div className="jitter-perspective">
@@ -25,6 +27,9 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 {FEATURE_FILM.title}
               </h2>
             </div>
+            <p className="text-slate-400 text-xs sm:text-sm mt-1 font-mono tracking-wider">
+              {FEATURE_FILM.teluguTitle} • {FEATURE_FILM.tagline}
+            </p>
           </div>
 
           {/* Badges / Metrics */}
@@ -37,9 +42,12 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
             >
               <i className="fa-brands fa-amazon" /> Prime Video Worldwide
             </a>
-            <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 flex items-center gap-1.5">
+            <button
+              onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
+              className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 flex items-center gap-1.5 hover:bg-[#ff0033]/25 transition-colors"
+            >
               <i className="fa-brands fa-youtube" /> 4K Full Feature
-            </span>
+            </button>
             <a
               href={directorInsta}
               target="_blank"
@@ -55,55 +63,22 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
           </div>
         </div>
 
-        {/* Feature Presentation Card */}
-        <div className="glass-card rounded-3xl overflow-hidden border border-white/10">
-          <div className="grid grid-cols-1 lg:grid-cols-12">
+        {/* Feature Presentation Card & Official Poster Showcase */}
+        <div className="glass-card rounded-3xl overflow-hidden border border-white/10 mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
             
-            {/* Cinematic Image Frame */}
-            <div className="lg:col-span-5 relative min-h-[300px] sm:min-h-[380px] lg:min-h-[560px] bg-black overflow-hidden flex flex-col justify-end p-6 sm:p-8 group">
-              <img
-                src="https://img.youtube.com/vi/_nKFH-wbwtE/maxresdefault.jpg"
-                alt="IIT Krishnamurthy Official Feature Poster"
-                className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+            {/* Left: Authentic Official Poster Display */}
+            <div className="lg:col-span-5 p-4 sm:p-6 lg:p-8 flex items-center justify-center bg-black/60">
+              <OfficialMoviePoster
+                className="w-full max-w-md mx-auto"
+                onPlayTrailer={() => onOpenCinemaModal('ez6iLxDgdBU')}
+                onPlayTeaser={() => onOpenCinemaModal('XfDvmgAZmX4')}
+                onPlaySong={() => onOpenCinemaModal('5IAPAGizJ9Y')}
+                onPlayFullMovie={() => onOpenCinemaModal('_nKFH-wbwtE')}
               />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08090d] via-[#08090d]/40 to-transparent" />
-
-              {/* Crisp Corner Details */}
-              <div className="relative z-10">
-                <span className="px-3 py-1 rounded-md bg-amber-400 text-black text-[10px] font-bold uppercase tracking-widest inline-block mb-3">
-                  Official Feature Debut
-                </span>
-                <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
-                  IIT KRISHNAMURTHY
-                </h3>
-                <p className="text-xs text-slate-300 font-medium flex items-center gap-1.5 flex-wrap">
-                  <span>Directed by</span>
-                  <a
-                    href={directorInsta}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-amber-400 hover:text-white underline decoration-amber-400/50 inline-flex items-center gap-1"
-                  >
-                    <span>{FEATURE_FILM.director}</span>
-                    <i className="fa-brands fa-instagram text-[#E1306C] text-[11px]" />
-                  </a>
-                  <span>• Produced by {FEATURE_FILM.producers.join(' & ')}</span>
-                </p>
-                
-                <div className="mt-4 flex items-center gap-2.5 sm:gap-3 text-xs font-mono text-slate-300">
-                  <span className="bg-black/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded border border-white/10">
-                    {FEATURE_FILM.duration}
-                  </span>
-                  <span className="bg-black/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded border border-white/10">
-                    {FEATURE_FILM.resolution}
-                  </span>
-                </div>
-              </div>
             </div>
 
-            {/* Feature Film Data & Story Context */}
+            {/* Right: Feature Film Data, Story Context & Key Links */}
             <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6 text-xs">
@@ -112,67 +87,108 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     <span className="font-cinzel text-sm font-bold text-white">Crystolyte Media Creations</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-slate-400 uppercase tracking-wider block text-[10px]">Release Channels</span>
-                    <span className="font-bold text-[#38bdf8]">Prime Video & YouTube</span>
+                    <span className="text-slate-400 uppercase tracking-wider block text-[10px]">Global Distribution</span>
+                    <span className="font-bold text-[#38bdf8]">Prime Video & YouTube (4K)</span>
                   </div>
                 </div>
 
-                <h4 className="text-xs uppercase tracking-wider text-amber-400 font-bold mb-3">Film Synopsis</h4>
-                <p className="text-slate-300 text-xs sm:text-base leading-relaxed font-light mb-8">
+                <div className="mb-4">
+                  <span className="px-3 py-1 rounded-md bg-amber-400 text-black text-[10px] font-bold uppercase tracking-widest inline-block mb-2">
+                    Official Feature Debut
+                  </span>
+                  <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
+                    IIT KRISHNAMURTHY <span className="text-slate-400 text-lg font-normal">({FEATURE_FILM.teluguTitle})</span>
+                  </h3>
+                  <p className="text-xs text-amber-400 font-mono">
+                    # A 3 D S U C A • A Corporate Crime • Non Recognised Sector
+                  </p>
+                </div>
+
+                <h4 className="text-xs uppercase tracking-wider text-amber-400 font-bold mb-2">Film Synopsis</h4>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-light mb-6">
                   {FEATURE_FILM.synopsis}
                 </p>
 
-                {/* Cast & Crew Data Matrix */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6 text-xs border-y border-white/10 py-6 mb-8">
+                {/* Cast & Crew Matrix from Official Billing Block */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5 text-xs border-y border-white/10 py-5 mb-6">
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Director</span>
+                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Writer & Director</span>
                     <a
                       href={directorInsta}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white hover:text-amber-400 font-semibold text-sm inline-flex items-center gap-1.5 transition-colors group/dir"
+                      className="text-white hover:text-amber-400 font-semibold text-xs inline-flex items-center gap-1.5 transition-colors group/dir"
                       title="Director S. Sreevardhan on Instagram"
                     >
                       <span>{FEATURE_FILM.director}</span>
                       <i className="fa-brands fa-instagram text-[#E1306C] text-xs group-hover/dir:scale-125 transition-transform" />
                     </a>
                   </div>
+
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Producers</span>
-                    <span className="text-amber-400 font-semibold text-sm">{FEATURE_FILM.producers.join(' & ')}</span>
+                    <span className="text-amber-400 font-semibold text-xs">{FEATURE_FILM.producers.join(' & ')}</span>
                   </div>
+
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Lead Cast</span>
-                    <span className="text-white font-medium">{FEATURE_FILM.cast.hero}</span>
+                    <span className="text-white font-medium text-xs">{FEATURE_FILM.cast.hero}</span>
                   </div>
+
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Female Lead</span>
-                    <span className="text-white font-medium">{FEATURE_FILM.cast.heroine}</span>
+                    <span className="text-white font-medium text-xs">{FEATURE_FILM.cast.heroine}</span>
                   </div>
+
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Key Ensemble</span>
-                    <span className="text-white font-medium">{FEATURE_FILM.cast.ensemble.join(', ')}</span>
+                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Music Director</span>
+                    <span className="text-white font-medium text-xs">{FEATURE_FILM.musicDirector}</span>
                   </div>
+
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Music Score</span>
-                    <span className="text-white font-medium">{FEATURE_FILM.musicDirector}</span>
+                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Cinematography (DOP)</span>
+                    <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.dop}</span>
+                  </div>
+
+                  <div>
+                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Editor</span>
+                    <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.editor}</span>
+                  </div>
+
+                  <div>
+                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Publicity Design</span>
+                    <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.publicityDesign}</span>
+                  </div>
+
+                  <div>
+                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Colorist</span>
+                    <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.colorist}</span>
                   </div>
                 </div>
               </div>
 
-              {/* Watch On: YouTube | Prime Buttons Only (Mobile Touch Friendly) */}
+              {/* Primary Direct Actions */}
               <div>
                 <span className="text-[11px] uppercase tracking-widest text-slate-400 font-semibold block mb-3">
-                  Watch on:
+                  Watch Online:
                 </span>
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                  {/* YouTube Button */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {/* Trailer Button */}
                   <button
-                    onClick={onOpenCinemaModal}
-                    className="btn-launch-yt w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 cursor-pointer shadow-lg min-h-[46px]"
+                    onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
+                    className="btn-gold px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
+                  >
+                    <Play className="w-3.5 h-3.5 fill-black" />
+                    <span>Watch Trailer</span>
+                  </button>
+
+                  {/* YouTube Full Movie Button */}
+                  <button
+                    onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
+                    className="btn-launch-yt px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
                   >
                     <i className="fa-brands fa-youtube text-base" />
-                    <span>YouTube</span>
+                    <span>Full Movie 4K</span>
                   </button>
 
                   {/* Prime Video Button */}
@@ -180,7 +196,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-launch-prime w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-lg min-h-[46px]"
+                    className="btn-launch-prime px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-lg min-h-[46px]"
                   >
                     <i className="fa-brands fa-amazon text-base" />
                     <span>Prime Video</span>
@@ -190,6 +206,182 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
 
             </div>
 
+          </div>
+        </div>
+
+        {/* ======================================================== */}
+        {/* NEW SECTION: Complete Media Gallery (All 4 Video Links)  */}
+        {/* ======================================================== */}
+        <div>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 gap-3">
+            <div>
+              <span className="text-amber-400 text-xs font-semibold uppercase tracking-widest block mb-1">
+                CINEMATIC RELEASES
+              </span>
+              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
+                Trailers, Teasers & Music
+              </h3>
+            </div>
+            <p className="text-slate-400 text-xs max-w-md font-light">
+              Click any release to stream directly inside the high-definition theater modal.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {FEATURE_FILM.videos.map((vid) => (
+              <div
+                key={vid.id}
+                onClick={() => onOpenCinemaModal(vid.youtubeId)}
+                className="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
+              >
+                {/* Video Thumbnail */}
+                <div className="relative aspect-video w-full overflow-hidden bg-black">
+                  <img
+                    src={vid.thumbnailUrl}
+                    alt={vid.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                  
+                  {/* Category Pill */}
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md text-amber-300 border border-white/10">
+                      {vid.badge}
+                    </span>
+                  </div>
+
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-amber-400/90 group-hover:bg-amber-400 text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                      <Play className="w-5 h-5 fill-black translate-x-0.5" />
+                    </div>
+                  </div>
+
+                  {/* Duration Badge */}
+                  {vid.duration && (
+                    <div className="absolute bottom-2.5 right-2.5 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono text-slate-300 border border-white/10">
+                      {vid.duration}
+                    </div>
+                  )}
+                </div>
+
+                {/* Card Content */}
+                <div className="p-4 flex flex-col justify-between flex-1">
+                  <div>
+                    <h4 className="font-cinzel text-sm sm:text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1.5 leading-snug">
+                      {vid.title}
+                    </h4>
+                    <p className="text-slate-400 text-xs font-light line-clamp-2 leading-relaxed mb-4">
+                      {vid.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      <span>Stream Now</span>
+                      <Play className="w-3 h-3 fill-amber-400" />
+                    </span>
+                    <a
+                      href={vid.watchUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-slate-400 hover:text-white p-1"
+                      title="Open in YouTube"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ======================================================== */}
+        {/* NEW SECTION: Official Theatrical Posters Gallery (P1, P2, P3) */}
+        {/* ======================================================== */}
+        <div className="mt-16 sm:mt-20 pt-12 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-3">
+            <div>
+              <span className="text-amber-400 text-xs font-semibold uppercase tracking-widest block mb-1">
+                OFFICIAL ARTWORK & PUBLICITY
+              </span>
+              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
+                Theatrical Posters Gallery
+              </h3>
+            </div>
+            <p className="text-slate-400 text-xs max-w-md font-light">
+              High-resolution promotional key art and first look posters for IIT Krishnamurthy.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            {FEATURE_FILM.posters.map((poster) => (
+              <div
+                key={poster.id}
+                className="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 transition-all duration-500 group flex flex-col justify-between"
+              >
+                {/* Poster Image Frame */}
+                <div className="relative aspect-[2/3] w-full overflow-hidden bg-[#070b10]">
+                  <img
+                    src={poster.src}
+                    alt={poster.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (!img.dataset.retried) {
+                        img.dataset.retried = 'true';
+                        img.src = poster.src.replace('./', '/');
+                      }
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
+                  
+                  {/* Badge */}
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">
+                      {poster.tag}
+                    </span>
+                  </div>
+
+                  {/* Studio Badge */}
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">
+                      CMC
+                    </span>
+                  </div>
+                </div>
+
+                {/* Poster Caption */}
+                <div className="p-4 sm:p-5 flex flex-col justify-between flex-1 border-t border-white/5">
+                  <div>
+                    <h4 className="font-cinzel text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1">
+                      {poster.title}
+                    </h4>
+                    <p className="text-slate-400 text-xs font-light">
+                      {poster.subtitle}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 mt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span>Official Cinema Art</span>
+                    <a
+                      href={poster.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-400 hover:text-white inline-flex items-center gap-1 text-[11px] hover:underline"
+                    >
+                      <span>Full Resolution</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -15,6 +15,12 @@ import { CinemaModal } from './components/CinemaModal.tsx';
 
 export default function App() {
   const [cinemaModalOpen, setCinemaModalOpen] = useState(false);
+  const [activeVideoId, setActiveVideoId] = useState<string>('ez6iLxDgdBU');
+
+  const handleOpenCinema = (videoId: string = 'ez6iLxDgdBU') => {
+    setActiveVideoId(videoId);
+    setCinemaModalOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-[#08090d] text-slate-100 selection:bg-amber-400 selection:text-black">
@@ -24,15 +30,15 @@ export default function App() {
       <main>
         {/* Kinetic Hero Section with Hyperframes 3D Motion */}
         <Hero
-          onOpenCinemaModal={() => setCinemaModalOpen(true)}
+          onOpenCinemaModal={handleOpenCinema}
         />
 
         {/* Studio Ethos & Vision */}
         <AboutStudio />
 
-        {/* Debut Feature Spotlight: IIT Krishnamurthy */}
+        {/* Debut Feature Spotlight: IIT Krishnamurthy with Official Poster & Videos */}
         <FeatureFilmSpotlight
-          onOpenCinemaModal={() => setCinemaModalOpen(true)}
+          onOpenCinemaModal={handleOpenCinema}
         />
 
         {/* The Producers & Director Leadership */}
@@ -45,9 +51,10 @@ export default function App() {
       {/* Global Footer */}
       <Footer />
 
-      {/* Interactive 4K Cinema Player Modal */}
+      {/* Interactive 4K Cinema Player Modal with Multi-Video Switching */}
       <CinemaModal
         isOpen={cinemaModalOpen}
+        initialVideoId={activeVideoId}
         onClose={() => setCinemaModalOpen(false)}
       />
     </div>

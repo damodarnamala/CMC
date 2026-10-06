@@ -1,5 +1,6 @@
 import React from 'react';
 import { STUDIO_INFO, PRODUCERS } from '../data/studioData.ts';
+import { CMCLogo } from './CMCLogo.tsx';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -7,18 +8,13 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-[#08090d] border-t border-white/5 pt-16 pb-12 z-10 relative">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-12 mb-16">
           
           <div className="md:col-span-5">
-            <div className="flex items-center space-x-3 mb-5">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-cinzel font-bold text-amber-400 text-base">
-                {STUDIO_INFO.acronym}
-              </div>
-              <span className="font-cinzel text-lg font-bold text-white tracking-wider">
-                {STUDIO_INFO.name.toUpperCase()}
-              </span>
+            <div className="mb-5">
+              <CMCLogo size="sm" showSubtitle={true} className="items-start" />
             </div>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm mb-6 font-light">
               Founded by <strong>Prasad Nekuri</strong> and <strong>Praneeth Nekuri</strong>. Producers of the acclaimed Telugu feature film <em>IIT Krishnamurthy</em>. Committed to cinematic excellence and compelling storytelling.
@@ -44,7 +40,7 @@ export const Footer: React.FC = () => {
                 Studio Ethos
               </a>
               <a href="#feature-film" className="text-slate-300 hover:text-amber-400 transition-colors">
-                IIT Krishnamurthy
+                IIT Krishnamurthy (Poster & Media)
               </a>
               <a href="#slate" className="text-slate-300 hover:text-amber-400 transition-colors">
                 Development Slate
@@ -112,7 +108,7 @@ export const Footer: React.FC = () => {
 
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <div>
-            &copy; {currentYear} {STUDIO_INFO.name} ({STUDIO_INFO.acronym}). All rights reserved.
+            &copy; {currentYear} {STUDIO_INFO.name} ({STUDIO_INFO.brandName}). All rights reserved.
           </div>
           <div>
             <a href="#hero" className="hover:text-amber-400 transition-colors">

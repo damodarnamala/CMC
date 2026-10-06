@@ -63,17 +63,15 @@
     <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
       
       <!-- Studio Brand Logo -->
-      <a href="#hero" class="flex items-center space-x-3.5 group">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 via-surfaceCard to-obsidian border border-amber-500/40 flex items-center justify-center shadow-lg group-hover:border-amber-400 group-hover:scale-105 transition-all duration-300">
-          <span class="font-cinzel text-lg font-black text-amber-400">CMC</span>
-        </div>
-        <div>
-          <div class="font-cinzel text-lg font-bold tracking-wider text-white group-hover:text-amber-400 transition-colors flex items-center gap-1.5 leading-tight">
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <img src="./logo.png" alt="CMC Creative Works" class="h-10 sm:h-11 w-auto object-contain drop-shadow-[0_4px_16px_rgba(212,175,55,0.35)] group-hover:scale-105 transition-transform">
+        <div class="border-l border-white/15 pl-3">
+          <div class="font-cinzel text-base font-bold tracking-wider text-white group-hover:text-amber-400 transition-colors flex items-center gap-1 leading-tight">
             CRYSTOLYTE
             <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
           </div>
-          <span class="text-[10px] tracking-[0.25em] uppercase text-slate-400 block font-medium">
-            Media Creations
+          <span class="text-[9px] tracking-[0.25em] uppercase text-amber-400/90 block font-semibold font-cinzel">
+            Creative Works
           </span>
         </div>
       </a>
@@ -106,8 +104,13 @@
 
   <!-- Hero Section -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 sm:pt-32 pb-20 sm:pb-24 px-4 sm:px-8 md:px-10 overflow-hidden">
-    <div class="max-w-5xl mx-auto text-center relative z-10 w-full">
+    <div class="max-w-5xl mx-auto text-center relative z-10 w-full flex flex-col items-center">
       
+      <!-- Official Golden CMC Creative Works Logo -->
+      <div class="mb-6 sm:mb-8 transition-transform duration-500 hover:scale-105">
+        <img src="./logo.png" alt="CMC Creative Works Logo" class="h-20 sm:h-28 w-auto object-contain drop-shadow-[0_15px_35px_rgba(212,175,55,0.35)]">
+      </div>
+
       <!-- Hyperframes Tilted Snap Title -->
       <div class="hyperframes-stage mb-4 block">
         <h1 id="heroMainTitle" class="tilted-text-item font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.08]">
@@ -278,46 +281,76 @@
             <i class="fa-brands fa-instagram text-[#E1306C]"></i> Dir. Sreevardhan
           </a>
           <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
-            Mystery Thriller
+            Mystery / Corporate Crime
           </span>
         </div>
       </div>
 
-      <!-- Feature Card -->
-      <div class="glass-panel overflow-hidden border border-white/10">
+      <!-- Feature Card with Official Poster & Story Context -->
+      <div class="glass-panel overflow-hidden border border-white/10 mb-12">
         <div class="grid grid-cols-1 lg:grid-cols-12">
           
-          <!-- Poster / Still Presentation -->
-          <div class="lg:col-span-5 relative min-h-[340px] sm:min-h-[380px] lg:min-h-[560px] bg-black overflow-hidden flex flex-col justify-end p-6 sm:p-8">
-            <img src="https://img.youtube.com/vi/_nKFH-wbwtE/maxresdefault.jpg" 
+          <!-- Poster / Still Presentation (Faithfully Styled to the Uploaded Poster) -->
+          <div class="lg:col-span-5 relative min-h-[460px] lg:min-h-[600px] bg-[#070b10] overflow-hidden flex flex-col justify-between p-6 sm:p-8">
+            <img src="https://img.youtube.com/vi/ez6iLxDgdBU/maxresdefault.jpg" 
                  alt="IIT Krishnamurthy Official Feature Poster" 
-                 class="absolute inset-0 w-full h-full object-cover opacity-75 hover:scale-105 transition-transform duration-700">
+                 class="absolute inset-0 w-full h-full object-cover object-left opacity-35 filter contrast-125 hover:scale-105 transition-transform duration-1000">
 
-            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#070b10]/85 to-[#070b10]"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#05080b] via-[#05080b]/75 to-transparent"></div>
 
-            <div class="relative z-10">
-              <span class="px-3 py-1 rounded-md bg-amber-400 text-obsidian text-[10px] font-bold uppercase tracking-widest inline-block mb-3">
-                Official Feature Debut
+            <!-- Top Poster Header: CMC Studio Logo -->
+            <div class="relative z-10 flex items-start justify-between w-full">
+              <span class="px-2.5 py-1 rounded-md bg-black/70 border border-white/10 text-amber-400 text-[10px] font-bold uppercase tracking-widest inline-block">
+                Official First Look
               </span>
-              <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">IIT KRISHNAMURTHY</h3>
-              <p class="text-xs text-slate-300 font-medium flex items-center gap-1.5 flex-wrap">
-                <span>Directed by</span>
-                <a href="https://www.instagram.com/mr.sreevardhan/" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-white underline decoration-amber-400/50 inline-flex items-center gap-1">
-                  <span>S. Sreevardhan</span>
-                  <i class="fa-brands fa-instagram text-[#E1306C] text-[11px]"></i>
-                </a>
-                <span>• Produced by Prasad & Praneeth Nekuri</span>
-              </p>
-              
-              <div class="mt-4 flex items-center gap-3 text-xs font-mono text-slate-300">
-                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded border border-white/10">Full Length</span>
-                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded border border-white/10">4K UHD</span>
+              <div class="text-right">
+                <span class="font-cinzel font-black text-amber-400 text-sm tracking-widest block">CMC</span>
+                <span class="text-[7px] uppercase tracking-[0.2em] text-slate-400 font-sans block">CRYSTOLYTE MEDIA CREATIONS</span>
               </div>
             </div>
+
+            <!-- Poster Taglines: MISSING & A CORPORATE CRIME -->
+            <div class="relative z-10 my-auto py-6 space-y-3">
+              <div>
+                <div class="text-2xl sm:text-3xl md:text-4xl font-black tracking-[0.2em] text-[#58a6c8] uppercase font-sans">
+                  M I S S I N G
+                </div>
+                <div class="text-[9px] uppercase tracking-[0.2em] text-[#7ebed9] font-medium">
+                  LAST SEEN SATURDAY EVENING
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <div class="text-lg sm:text-xl md:text-2xl font-extrabold tracking-[0.14em] text-[#4f95b5] uppercase font-sans">
+                  A CORPORATE CRIME
+                </div>
+                <div class="text-[8px] uppercase tracking-[0.25em] text-[#73acc5] font-semibold">
+                  NON RECOGNISED SECTOR
+                </div>
+              </div>
+            </div>
+
+            <!-- Poster Bottom: Telugu Title & Billing Block -->
+            <div class="relative z-10 pt-3 border-t border-white/10 space-y-2">
+              <div class="text-center">
+                <span class="text-[9px] font-mono tracking-[0.5em] text-slate-300 font-bold block mb-0.5"># A 3 D S U C A</span>
+                <h3 class="font-cinzel text-2xl sm:text-3xl font-black text-white leading-tight">IIT KRISHNAMURTHY</h3>
+                <span class="text-base text-slate-200 font-bold tracking-wider block">IIT కృష్ణమూర్తి</span>
+                <span class="text-[9px] uppercase tracking-[0.25em] text-amber-400 font-bold block mt-1">WRITTEN & DIRECTED BY SREEVARDHAN</span>
+              </div>
+
+              <div class="text-[7px] leading-tight text-slate-300 text-center font-sans tracking-wider border-t border-white/5 pt-2 space-y-0.5">
+                <div>PRODUCED BY <strong class="text-white">PRASAD NEKURI</strong> • MUSIC <strong class="text-white">NARESH KUMARAN</strong> • DOP <strong class="text-white">YESU</strong></div>
+                <div class="text-slate-400">EDITED BY ANIL KUMAR P • PUBLICITY DESIGN BSP ROY • COLORIST RAJA SRINIVAS MAMIDI</div>
+                <div class="text-slate-400">LYRICS RAMANJHANEYULU SANKARPU • LINE PRODUCER LV VASUKI • EXECUTIVE PRODUCER TATI ASHWIN</div>
+              </div>
+            </div>
+
           </div>
 
           <!-- Feature Film Data & Story Context -->
-          <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between">
+          <div class="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6 text-xs">
                 <div>
@@ -326,63 +359,70 @@
                 </div>
                 <div class="text-right">
                   <span class="text-slate-400 uppercase tracking-wider block text-[10px]">Release Channels</span>
-                  <span class="font-bold text-[#38bdf8]">Prime Video & YouTube</span>
+                  <span class="font-bold text-[#38bdf8]">Prime Video & YouTube (4K)</span>
                 </div>
               </div>
 
               <h4 class="text-xs uppercase tracking-wider text-amber-400 font-bold mb-3">Film Synopsis</h4>
-              <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-8">
-                The production house made its debut with <strong class="text-white font-medium">IIT KRISHNA MURTHY</strong>, directed by S. Sreevardhan, establishing its presence in the Telugu film industry. An intelligent student arrives in Hyderabad in search of his missing uncle, only to find himself entangled in a labyrinth of corporate deception and police intrigue where every clue unravels more questions than answers.
+              <p class="text-slate-300 text-sm leading-relaxed font-light mb-6">
+                The production house made its debut with <strong class="text-white font-medium">IIT KRISHNAMURTHY</strong>, directed by S. Sreevardhan, establishing its presence in the Telugu film industry. An intelligent student arrives in Hyderabad in search of his missing uncle, only to find himself entangled in a labyrinth of corporate deception and police intrigue where every clue unravels more questions than answers.
               </p>
 
               <!-- Cast & Crew Data Matrix -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-xs border-y border-white/10 py-6 mb-8">
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5 text-xs border-y border-white/10 py-5 mb-6">
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Director</span>
-                  <a href="https://www.instagram.com/mr.sreevardhan/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-amber-400 font-semibold text-sm inline-flex items-center gap-1.5 transition-colors group">
+                  <a href="https://www.instagram.com/mr.sreevardhan/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-amber-400 font-semibold text-xs inline-flex items-center gap-1.5 transition-colors group">
                     <span>S. Sreevardhan</span>
                     <i class="fa-brands fa-instagram text-[#E1306C] text-xs group-hover:scale-125 transition-transform"></i>
                   </a>
                 </div>
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Producers</span>
-                  <span class="text-amber-400 font-semibold text-sm">Prasad & Praneeth Nekuri</span>
+                  <span class="text-amber-400 font-semibold text-xs">Prasad & Praneeth Nekuri</span>
                 </div>
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Lead Cast</span>
-                  <span class="text-white font-medium">Prudhvi Dandamudi</span>
+                  <span class="text-white font-medium text-xs">Prudhvi Dandamudi</span>
                 </div>
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Female Lead</span>
-                  <span class="text-white font-medium">Maira Doshi</span>
+                  <span class="text-white font-medium text-xs">Maira Doshi</span>
                 </div>
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Key Ensemble</span>
-                  <span class="text-white font-medium">Vinay Varma, Banerjee, Satya</span>
+                  <span class="text-white font-medium text-xs">Vinay Varma, Banerjee, Satya</span>
                 </div>
                 <div>
                   <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Music Score</span>
-                  <span class="text-white font-medium">Naresh Kumaran</span>
+                  <span class="text-white font-medium text-xs">Naresh Kumaran</span>
                 </div>
               </div>
             </div>
 
-            <!-- Watch On: YouTube | Prime Buttons Only -->
+            <!-- Primary Video Actions -->
             <div>
               <span class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold block mb-3">
-                Watch on:
+                Watch Official Releases:
               </span>
-              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <!-- YouTube Button -->
-                <button onclick="launchYouTubePlayer()" 
-                        class="btn-youtube">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <!-- Trailer Button -->
+                <button onclick="launchVideoPlayer('ez6iLxDgdBU', 'IIT KRISHNAMURTHY (Official Trailer)')" 
+                        class="btn-gold py-3 px-4 rounded-xl text-xs uppercase font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]">
+                  <i class="fa-solid fa-play text-xs"></i>
+                  <span>Watch Trailer</span>
+                </button>
+
+                <!-- YouTube Full Movie Button -->
+                <button onclick="launchVideoPlayer('_nKFH-wbwtE', 'IIT KRISHNAMURTHY (4K Full Movie)')" 
+                        class="btn-youtube py-3 px-4 rounded-xl text-xs uppercase font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]">
                   <i class="fa-brands fa-youtube text-base"></i>
-                  <span>YouTube</span>
+                  <span>Full Movie 4K</span>
                 </button>
 
                 <!-- Prime Video Button -->
                 <a href="https://www.primevideo.com/detail/0QSWDMWNHLP89N38ABP7KL3MXJ" target="_blank" rel="noopener noreferrer" 
-                   class="btn-prime">
+                   class="btn-prime py-3 px-4 rounded-xl text-xs uppercase font-bold flex items-center justify-center gap-2 shadow-lg min-h-[46px]">
                   <i class="fa-brands fa-amazon text-base"></i>
                   <span>Prime Video</span>
                 </a>
@@ -391,6 +431,167 @@
 
           </div>
 
+        </div>
+      </div>
+
+      <!-- Media Releases Gallery Grid (Trailer, Teaser, Song, Full Movie) -->
+      <div>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
+          <div>
+            <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest block mb-0.5">CINEMATIC RELEASES</span>
+            <h3 class="font-cinzel text-2xl font-bold text-white">Trailers, Teasers & Songs</h3>
+          </div>
+          <p class="text-slate-400 text-xs font-light">Click any release to watch inside the theater player.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Item 1: Trailer -->
+          <div onclick="launchVideoPlayer('ez6iLxDgdBU', 'IIT KRISHNAMURTHY (Official Trailer)')"
+               class="glass-panel p-3 rounded-2xl border border-white/10 hover:border-amber-400/50 transition-all cursor-pointer group flex flex-col justify-between">
+            <div class="relative aspect-video rounded-xl overflow-hidden bg-black mb-3">
+              <img src="https://img.youtube.com/vi/ez6iLxDgdBU/maxresdefault.jpg" alt="Trailer Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center transition-colors">
+                <div class="w-10 h-10 rounded-full bg-amber-400 text-black flex items-center justify-center shadow-lg">
+                  <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                </div>
+              </div>
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-[9px] uppercase font-bold tracking-wider text-amber-300">Official Trailer</span>
+            </div>
+            <div>
+              <h4 class="font-cinzel text-sm font-bold text-white group-hover:text-amber-400 transition-colors mb-1">Official Trailer</h4>
+              <p class="text-slate-400 text-xs font-light line-clamp-2">The official Telugu theatrical trailer released on Telugu FilmNagar.</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Teaser -->
+          <div onclick="launchVideoPlayer('XfDvmgAZmX4', 'IIT KRISHNAMURTHY (First Look Teaser)')"
+               class="glass-panel p-3 rounded-2xl border border-white/10 hover:border-amber-400/50 transition-all cursor-pointer group flex flex-col justify-between">
+            <div class="relative aspect-video rounded-xl overflow-hidden bg-black mb-3">
+              <img src="https://img.youtube.com/vi/XfDvmgAZmX4/maxresdefault.jpg" alt="Teaser Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center transition-colors">
+                <div class="w-10 h-10 rounded-full bg-amber-400 text-black flex items-center justify-center shadow-lg">
+                  <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                </div>
+              </div>
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-[9px] uppercase font-bold tracking-wider text-amber-300">First Look Teaser</span>
+            </div>
+            <div>
+              <h4 class="font-cinzel text-sm font-bold text-white group-hover:text-amber-400 transition-colors mb-1">First Look Teaser</h4>
+              <p class="text-slate-400 text-xs font-light line-clamp-2">First Look Teaser introducing the missing uncle investigation.</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Video Song -->
+          <div onclick="launchVideoPlayer('5IAPAGizJ9Y', 'Megham Tho Megham (Official Video Song)')"
+               class="glass-panel p-3 rounded-2xl border border-white/10 hover:border-amber-400/50 transition-all cursor-pointer group flex flex-col justify-between">
+            <div class="relative aspect-video rounded-xl overflow-hidden bg-black mb-3">
+              <img src="https://img.youtube.com/vi/5IAPAGizJ9Y/maxresdefault.jpg" alt="Song Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center transition-colors">
+                <div class="w-10 h-10 rounded-full bg-amber-400 text-black flex items-center justify-center shadow-lg">
+                  <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                </div>
+              </div>
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-[9px] uppercase font-bold tracking-wider text-pink-300">Video Song</span>
+            </div>
+            <div>
+              <h4 class="font-cinzel text-sm font-bold text-white group-hover:text-amber-400 transition-colors mb-1">Megham Tho Megham</h4>
+              <p class="text-slate-400 text-xs font-light line-clamp-2">Sung by Yazin Nizar, music by Naresh Kumaran (Saregama Telugu).</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Full Movie -->
+          <div onclick="launchVideoPlayer('_nKFH-wbwtE', 'IIT KRISHNAMURTHY (4K Full Movie)')"
+               class="glass-panel p-3 rounded-2xl border border-white/10 hover:border-amber-400/50 transition-all cursor-pointer group flex flex-col justify-between">
+            <div class="relative aspect-video rounded-xl overflow-hidden bg-black mb-3">
+              <img src="https://img.youtube.com/vi/_nKFH-wbwtE/maxresdefault.jpg" alt="Full Movie Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center transition-colors">
+                <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg">
+                  <i class="fa-brands fa-youtube text-base"></i>
+                </div>
+              </div>
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-[9px] uppercase font-bold tracking-wider text-red-400">Full 4K Movie</span>
+            </div>
+            <div>
+              <h4 class="font-cinzel text-sm font-bold text-white group-hover:text-amber-400 transition-colors mb-1">Full Movie (4K)</h4>
+              <p class="text-slate-400 text-xs font-light line-clamp-2">Complete 2hr 08m mystery film in 4K resolution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Official Theatrical Posters Gallery (P1, P2, P3) -->
+      <div class="mt-16 pt-12 border-t border-white/10">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-2">
+          <div>
+            <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest block mb-0.5">OFFICIAL ARTWORK & PUBLICITY</span>
+            <h3 class="font-cinzel text-2xl font-bold text-white">Theatrical Posters Gallery</h3>
+          </div>
+          <p class="text-slate-400 text-xs font-light">High-resolution promotional key art and first look posters for IIT Krishnamurthy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <!-- Poster 1 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 transition-all duration-300 group flex flex-col justify-between">
+            <div class="relative aspect-[2/3] w-full overflow-hidden bg-black">
+              <img src="./p1.png" alt="First Look Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">First Look (P1)</span>
+              <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">CMC</span>
+            </div>
+            <div class="p-4 border-t border-white/5 flex flex-col justify-between flex-1">
+              <div>
+                <h4 class="font-cinzel text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1">First Look Poster</h4>
+                <p class="text-slate-400 text-xs font-light">A Corporate Crime • Missing Saturday Evening</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400">
+                <span>Official Cinema Art</span>
+                <a href="./p1.png" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white inline-flex items-center gap-1 text-[11px]">
+                  Full Resolution <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster 2 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 transition-all duration-300 group flex flex-col justify-between">
+            <div class="relative aspect-[2/3] w-full overflow-hidden bg-black">
+              <img src="./p2.png" alt="Theatrical Release Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">Theatrical Poster (P2)</span>
+              <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">CMC</span>
+            </div>
+            <div class="p-4 border-t border-white/5 flex flex-col justify-between flex-1">
+              <div>
+                <h4 class="font-cinzel text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1">Theatrical Release Poster</h4>
+                <p class="text-slate-400 text-xs font-light">Directed by Sreevardhan • Produced by Prasad Nekuri</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400">
+                <span>Official Cinema Art</span>
+                <a href="./p2.png" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white inline-flex items-center gap-1 text-[11px]">
+                  Full Resolution <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster 3 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 transition-all duration-300 group flex flex-col justify-between">
+            <div class="relative aspect-[2/3] w-full overflow-hidden bg-black">
+              <img src="./p3.png" alt="Key Art Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">Key Art (P3)</span>
+              <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[9px] font-bold font-cinzel bg-amber-500 text-black shadow">CMC</span>
+            </div>
+            <div class="p-4 border-t border-white/5 flex flex-col justify-between flex-1">
+              <div>
+                <h4 class="font-cinzel text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1">Investigative Key Art</h4>
+                <p class="text-slate-400 text-xs font-light">Mystery Thriller • Official Presentation</p>
+              </div>
+              <div class="pt-3 mt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400">
+                <span>Official Cinema Art</span>
+                <a href="./p3.png" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white inline-flex items-center gap-1 text-[11px]">
+                  Full Resolution <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -621,13 +822,8 @@
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
         
         <div class="md:col-span-5">
-          <div class="flex items-center space-x-3 mb-5">
-            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-cinzel font-bold text-amber-400 text-base">
-              CMC
-            </div>
-            <span class="font-cinzel text-lg font-bold text-white tracking-wider">
-              CRYSTOLYTE MEDIA CREATIONS
-            </span>
+          <div class="mb-5">
+            <img src="./logo.png" alt="CMC Creative Works" class="h-12 w-auto object-contain drop-shadow-[0_4px_16px_rgba(212,175,55,0.3)]">
           </div>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-6 font-light">
             Founded by <strong>Prasad Nekuri</strong> and <strong>Praneeth Nekuri</strong>. Producers of the acclaimed Telugu feature film <em>IIT Krishnamurthy</em>. Committed to cinematic excellence and compelling storytelling.
@@ -685,23 +881,22 @@
     </div>
   </footer>
 
-  <!-- YouTube Cinema Modal -->
+  <!-- YouTube Cinema Modal with Multi-Video Switcher -->
   <div id="moviePlayerModal" class="cinema-modal">
     <div class="relative w-full max-w-5xl bg-noir rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
       <!-- Top Modal Bar -->
-      <div class="flex items-center justify-between px-6 py-4 bg-obsidian border-b border-white/10">
+      <div class="flex items-center justify-between px-5 sm:px-6 py-4 bg-obsidian border-b border-white/10">
         <div class="flex items-center gap-3">
           <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
-          <h4 class="font-cinzel text-sm sm:text-base font-bold text-slate-100 tracking-wider">IIT KRISHNAMURTHY (4K CINEMA STREAM)</h4>
+          <div>
+            <h4 class="font-cinzel text-sm sm:text-base font-bold text-slate-100 tracking-wider">IIT KRISHNAMURTHY MEDIA VAULT</h4>
+            <span id="modalVideoTitle" class="text-[10px] text-amber-400 font-mono tracking-wide block">Official Trailer</span>
+          </div>
         </div>
         <div class="flex items-center gap-4">
           <a href="https://www.primevideo.com/detail/0QSWDMWNHLP89N38ABP7KL3MXJ" target="_blank" rel="noopener noreferrer" 
              class="text-xs text-[#38bdf8] hover:underline hidden sm:inline-flex items-center gap-1.5">
             <i class="fa-brands fa-amazon"></i> Prime Video
-          </a>
-          <a href="https://www.youtube.com/watch?v=_nKFH-wbwtE" target="_blank" rel="noopener noreferrer" 
-             class="text-xs text-amber-400 hover:underline hidden sm:inline-flex items-center gap-1.5">
-            YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
           </a>
           <button onclick="closeYouTubePlayer()" class="text-slate-400 hover:text-white text-xl p-1 transition-colors">
             <i class="fa-solid fa-xmark"></i>
@@ -715,10 +910,39 @@
           id="ytPlayerIframe"
           class="w-full h-full border-0"
           src=""
-          title="IIT Krishnamurthy Full Movie"
+          title="IIT Krishnamurthy Media Player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
+      </div>
+
+      <!-- Video Selector Bar -->
+      <div class="bg-[#08090d] border-t border-white/10 p-3 sm:p-4">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <button onclick="launchVideoPlayer('ez6iLxDgdBU', 'Official Trailer')" data-video-id="ez6iLxDgdBU"
+                  class="modal-switcher-btn p-2 rounded-xl border border-white/10 bg-surfaceCard text-left text-xs font-semibold text-slate-300 hover:border-amber-400/50 transition-colors">
+            <span class="text-[9px] uppercase tracking-wider block text-amber-400 mb-0.5">Official Trailer</span>
+            <span class="truncate block">Trailer (2m 14s)</span>
+          </button>
+
+          <button onclick="launchVideoPlayer('XfDvmgAZmX4', 'First Look Teaser')" data-video-id="XfDvmgAZmX4"
+                  class="modal-switcher-btn p-2 rounded-xl border border-white/10 bg-surfaceCard text-left text-xs font-semibold text-slate-300 hover:border-amber-400/50 transition-colors">
+            <span class="text-[9px] uppercase tracking-wider block text-amber-400 mb-0.5">Teaser</span>
+            <span class="truncate block">Teaser (1m 18s)</span>
+          </button>
+
+          <button onclick="launchVideoPlayer('5IAPAGizJ9Y', 'Megham Tho Megham (Video Song)')" data-video-id="5IAPAGizJ9Y"
+                  class="modal-switcher-btn p-2 rounded-xl border border-white/10 bg-surfaceCard text-left text-xs font-semibold text-slate-300 hover:border-amber-400/50 transition-colors">
+            <span class="text-[9px] uppercase tracking-wider block text-pink-400 mb-0.5">Video Song</span>
+            <span class="truncate block">Megham Tho Megham</span>
+          </button>
+
+          <button onclick="launchVideoPlayer('_nKFH-wbwtE', 'IIT KRISHNAMURTHY (Full 4K Movie)')" data-video-id="_nKFH-wbwtE"
+                  class="modal-switcher-btn p-2 rounded-xl border border-white/10 bg-surfaceCard text-left text-xs font-semibold text-slate-300 hover:border-amber-400/50 transition-colors">
+            <span class="text-[9px] uppercase tracking-wider block text-red-400 mb-0.5">Full Feature</span>
+            <span class="truncate block">4K UHD Full Movie</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
