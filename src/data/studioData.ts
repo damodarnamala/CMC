@@ -86,6 +86,17 @@ export const FEATURE_FILM: FilmDetails = {
       description: "Complete full-length 4K UHD streaming presentation of IIT Krishnamurthy with crystal clear audio.",
       badge: "Full Movie 4K",
       duration: "2h 08m"
+    },
+    {
+      id: "award-golden-cape",
+      title: "Golden Cape Awards 2021 Winner Segment",
+      category: "Award",
+      youtubeId: "xxfSpP6yxT4",
+      watchUrl: "https://www.youtube.com/watch?v=xxfSpP6yxT4",
+      thumbnailUrl: "https://img.youtube.com/vi/xxfSpP6yxT4/maxresdefault.jpg",
+      description: "IIT Krishnamurthy movie wins The Nail Byting Category Award at the prestigious Golden Cape Awards 2021 (Telugu Cinema).",
+      badge: "Award Winner",
+      duration: "3m 38s"
     }
   ],
   posters: [

@@ -14,7 +14,7 @@ export interface SlateProject {
 export interface VideoMediaItem {
   id: string;
   title: string;
-  category: 'Trailer' | 'Teaser' | 'Song' | 'Full Movie';
+  category: 'Trailer' | 'Teaser' | 'Song' | 'Full Movie' | 'Award' | string;
   youtubeId: string;
   watchUrl: string;
   thumbnailUrl: string;

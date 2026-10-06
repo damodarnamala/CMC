@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Sparkles, Film, Music, ShieldCheck, Clapperboard, ExternalLink } from 'lucide-react';
+import { Play, Sparkles, Film, Music, ShieldCheck, Clapperboard, ExternalLink, Trophy, Award, Medal } from 'lucide-react';
 import { FEATURE_FILM } from '../data/studioData.ts';
 import { OfficialMoviePoster } from './OfficialMoviePoster.tsx';
 
@@ -375,6 +375,182 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* ======================================================== */}
+        {/* NEW SECTION: Awards, Accolades & SIIMA Nominations       */}
+        {/* ======================================================== */}
+        <div className="mt-16 sm:mt-20 pt-12 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-3">
+            <div>
+              <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-1">
+                <Trophy className="w-4 h-4 text-amber-400" />
+                <span>ACCOLADES & INDUSTRY RECOGNITION</span>
+              </div>
+              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
+                Awards & SIIMA Nominations
+              </h3>
+            </div>
+            <p className="text-slate-400 text-xs max-w-md font-light">
+              Celebrating premier honors, festival victories, and prestigious nominations for IIT Krishnamurthy.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+            
+            {/* Card 1: Golden Cape Awards 2021 Winner */}
+            <div className="lg:col-span-6 glass-card rounded-2xl p-6 sm:p-8 border border-amber-500/30 flex flex-col justify-between hover:border-amber-400/60 transition-all duration-300 relative group">
+              <div className="absolute top-4 right-4">
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 inline-flex items-center gap-1.5 shadow-md">
+                  <Trophy className="w-3.5 h-3.5 text-amber-400" />
+                  Winner
+                </span>
+              </div>
+
+              <div>
+                <span className="text-[11px] font-semibold tracking-wider uppercase text-amber-400/90 block mb-1">
+                  Golden Cape Awards 2021
+                </span>
+                <h4 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
+                  The Nail Biting Category Award
+                </h4>
+                <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                  <strong className="text-white font-medium">IIT Krishnamurthy</strong> won the prestigious <strong className="text-amber-300 font-semibold">Nail Byting Category Award</strong> at the <strong className="text-white font-medium">Golden Cape Awards 2021 | Telugu Cinema</strong>, honoring the film's gripping tension, intricate suspense, and cinematic storytelling.
+                </p>
+
+                {/* Video Card for Award Presentation */}
+                <div
+                  onClick={() => onOpenCinemaModal('xxfSpP6yxT4')}
+                  className="rounded-xl overflow-hidden border border-white/10 hover:border-amber-400/50 bg-[#070b10] group/vid cursor-pointer transition-all mb-4 relative shadow-lg"
+                >
+                  <div className="relative aspect-video w-full overflow-hidden bg-black">
+                    <img
+                      src="https://img.youtube.com/vi/xxfSpP6yxT4/maxresdefault.jpg"
+                      alt="IIT Krishnamurthy Movie Wins The Nail Byting Category Award | Golden Cape Awards 2021 | Telugu Cinema"
+                      className="w-full h-full object-cover group-hover/vid:scale-105 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        if (!img.dataset.retried) {
+                          img.dataset.retried = 'true';
+                          img.src = 'https://img.youtube.com/vi/xxfSpP6yxT4/hqdefault.jpg';
+                        }
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                    
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/10 flex items-center gap-1.5 shadow">
+                        <Play className="w-2.5 h-2.5 fill-amber-300" />
+                        Award Feature
+                      </span>
+                    </div>
+
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-amber-400/90 group-hover/vid:bg-amber-400 text-black flex items-center justify-center shadow-xl group-hover/vid:scale-110 transition-transform">
+                        <Play className="w-5 h-5 fill-black translate-x-0.5" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3.5 bg-[#0a0e16] border-t border-white/5 flex items-center justify-between">
+                    <div className="min-w-0 pr-3">
+                      <p className="text-xs font-semibold text-white truncate group-hover/vid:text-amber-400 transition-colors">
+                        IIT Krishnamurthy Movie Wins The Nail Byting Category Award | Golden Cape Awards 2021
+                      </p>
+                      <span className="text-[10px] text-slate-400 font-mono">Telugu Cinema • Watch Video</span>
+                    </div>
+                    <a
+                      href="https://www.youtube.com/watch?v=xxfSpP6yxT4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-slate-400 hover:text-white p-1"
+                      title="Open on YouTube"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                <button
+                  onClick={() => onOpenCinemaModal('xxfSpP6yxT4')}
+                  className="flex items-center gap-1.5 hover:underline cursor-pointer"
+                >
+                  <Play className="w-3.5 h-3.5 fill-amber-400" />
+                  <span>Stream Award Segment</span>
+                </button>
+                <span className="text-slate-400 text-[11px]">Golden Cape Awards 2021</span>
+              </div>
+            </div>
+
+            {/* Card 2: 9th SIIMA Awards Nominee */}
+            <div className="lg:col-span-6 glass-card rounded-2xl p-6 sm:p-8 border border-sky-500/30 flex flex-col justify-between hover:border-sky-400/60 transition-all duration-300 relative group">
+              <div className="absolute top-4 right-4">
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sky-500/20 text-sky-400 border border-sky-500/30 inline-flex items-center gap-1.5 shadow-md">
+                  <Medal className="w-3.5 h-3.5 text-sky-400" />
+                  SIIMA Nominee
+                </span>
+              </div>
+
+              <div>
+                <span className="text-[11px] font-semibold tracking-wider uppercase text-sky-400/90 block mb-1">
+                  9th South Indian International Movie Awards
+                </span>
+                <h4 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
+                  Best Debut Actor (Telugu)
+                </h4>
+                <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                  <strong className="text-white font-medium">Dandamudi Pruthvi</strong> was nominated for the <strong className="text-sky-300 font-semibold">Best Debut Actor (Telugu)</strong> award at the <strong className="text-white font-medium">9th South Indian International Movie Awards (SIIMA)</strong> for his role in the 2020 Telugu mystery film <em className="text-slate-200">IIT Krishnamurthy</em>.
+                </p>
+
+                {/* Nominee Details Card with Dot Bullet Points */}
+                <div className="rounded-xl bg-[#08090d]/90 border border-white/10 p-5 mb-4">
+                  <h5 className="font-cinzel text-xs font-bold text-amber-400 uppercase tracking-widest mb-3.5 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                    <span>Nominee Details</span>
+                  </h5>
+                  <div className="space-y-3 text-xs sm:text-sm">
+                    <div className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+                      <span className="leading-snug text-slate-200">
+                        <strong className="text-white font-semibold">Actor:</strong> Dandamudi Pruthvi (playing Krishnamurthy)
+                      </span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+                      <span className="leading-snug text-slate-200">
+                        <strong className="text-white font-semibold">Category:</strong> Best Debut Actor (Telugu)
+                      </span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+                      <span className="leading-snug text-slate-200">
+                        <strong className="text-white font-semibold">Film:</strong> IIT Krishnamurthy (directed by Sreevardhan)
+                      </span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+                      <span className="leading-snug text-slate-200">
+                        <strong className="text-white font-semibold">Award Event:</strong> 9th SIIMA Awards
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-sky-400 font-semibold">
+                <span className="flex items-center gap-1.5 text-slate-300">
+                  <Award className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Pan-South Indian Cinema Recognition</span>
+                </span>
+                <span className="text-slate-400 text-[11px]">9th SIIMA Awards</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
