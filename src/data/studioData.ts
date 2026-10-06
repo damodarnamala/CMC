@@ -127,6 +127,7 @@ export const PRODUCERS: ProducerProfile[] = [
     designation: "Executive Production & Finance",
     company: "Crystolyte Media Creations",
     initials: "PN",
+    photo: "./prasad_nekuri.png",
     bio: "As co-founder and producer at Crystolyte Media Creations, Prasad Nekuri oversees executive strategy, film production operations, and project financing. His focus on production integrity and disciplined execution ensures that every project meets high theatrical and streaming benchmarks.",
     highlights: [
       "Produced Debut Feature: IIT Krishnamurthy",
@@ -141,7 +142,7 @@ export const PRODUCERS: ProducerProfile[] = [
     designation: "Creative Development & Talent Curation",
     company: "Crystolyte Media Creations",
     initials: "PN",
-    photo: "/praneeth.png",
+    photo: "./praneeth.png",
     bio: "Co-founder and producer at Crystolyte Media Creations, Praneeth Nekuri leads creative development, screenplay curation, and strategic collaborations. He is dedicated to championing progressive concepts, modern visual aesthetics, and emerging talents across Telugu cinema.",
     highlights: [
       "Produced Debut Feature: IIT Krishnamurthy",

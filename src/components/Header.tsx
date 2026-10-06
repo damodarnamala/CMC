@@ -15,12 +15,12 @@ export const Header: React.FC = () => {
             <CMCLogo size="sm" showSubtitle={false} className="w-16 sm:w-20 group-hover:scale-105 transition-transform" />
           </div>
           <div className="flex flex-col border-l border-white/15 pl-3">
-            <span className="font-cinzel text-sm sm:text-base font-bold tracking-wider text-white group-hover:text-amber-400 transition-colors flex items-center gap-1 leading-tight">
+            <span className="font-cinzel text-sm sm:text-base font-bold tracking-[0.16em] text-white group-hover:text-amber-400 transition-colors flex items-center gap-1 leading-tight uppercase">
               CRYSTOLYTE
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
             </span>
-            <span className="text-[8px] sm:text-[9px] tracking-[0.28em] uppercase text-amber-400/90 font-semibold font-cinzel">
-              Creative Works
+            <span className="text-[8px] sm:text-[9px] tracking-[0.26em] uppercase text-amber-400/90 font-bold font-cinzel">
+              Media Creations
             </span>
           </div>
         </a>

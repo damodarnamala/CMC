@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Film, Play, Sparkles } from 'lucide-react';
+import { Film, Play } from 'lucide-react';
 import { STUDIO_INFO, FEATURE_FILM } from '../data/studioData.ts';
 import { CMCLogo } from './CMCLogo.tsx';
 
@@ -69,11 +69,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal }) => {
           <CMCLogo size="md" showSubtitle={true} className="filter drop-shadow-[0_15px_35px_rgba(212,175,55,0.3)]" />
         </div>
 
-        {/* Hyperframes 3D Tilted Snap Title */}
-        <div className="jitter-perspective mb-3 sm:mb-4 block">
-          <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.08] transition-transform duration-500 hover:scale-[1.01]">
+        {/* Hyperframes Theatrical Title in Cinzel (Matching Writer & Director Sreevardhan font) */}
+        <div className="jitter-perspective mb-4 sm:mb-6 block max-w-4xl mx-auto">
+          <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.16em] sm:tracking-[0.24em] leading-[1.25] uppercase transition-transform duration-500 hover:scale-[1.01]">
             CRYSTOLYTE <br />
-            <span className="gold-luxury-text">MEDIA CREATIONS</span>
+            <span className="gold-luxury-text tracking-[0.18em] sm:tracking-[0.26em]">MEDIA CREATIONS</span>
           </h1>
         </div>
 
