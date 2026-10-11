@@ -1,11 +1,27 @@
+export type AppRoute =
+  | 'home'
+  | 'studio'
+  | 'productions'
+  | 'productions/iit-krishnamurthy'
+  | 'slate'
+  | 'music'
+  | 'ip-rights'
+  | 'leadership'
+  | 'newsroom'
+  | 'partnerships'
+  | 'contact';
+
 export interface SlateProject {
   id: string;
   title: string;
+  internalCode?: string;
   genre: string;
-  category: 'drama' | 'action' | 'romance' | 'commercial' | string;
-  status: string;
+  format: string;
+  category: 'drama' | 'action' | 'thriller' | 'series' | string;
+  status: 'In Development' | 'Pre-Production' | 'In Production' | 'Packaging';
   stage: string;
   synopsis: string;
+  confidentialOverview?: string;
   scope: string;
   musicStyle: string;
   timeline: string;
@@ -59,6 +75,7 @@ export interface FilmDetails {
   musicDirector: string;
   releasePlatforms: {
     primeVideoUrl: string;
+    ahaVideoUrl: string;
     youtubeVideoId: string;
     youtubeWatchUrl: string;
   };
@@ -68,6 +85,13 @@ export interface FilmDetails {
   duration: string;
   resolution: string;
   synopsis: string;
+  awards?: {
+    title: string;
+    event: string;
+    year: string;
+    details: string[];
+    videoUrl?: string;
+  }[];
 }
 
 export interface ProducerProfile {
@@ -78,6 +102,7 @@ export interface ProducerProfile {
   initials: string;
   photo?: string;
   bio: string;
+  executiveFocus: string;
   highlights: string[];
   location: string;
   socialLinks?: {
@@ -92,7 +117,52 @@ export interface DirectorProfile {
   role: string;
   filmTitle: string;
   initials: string;
+  photo?: string;
+  expertise?: string;
   bio: string;
   highlights: string[];
   instagram?: string;
+}
+
+export interface NewsArticle {
+  id: string;
+  title: string;
+  category: 'Company News' | 'Productions' | 'Casting' | 'Partnerships' | 'Distribution' | 'Festivals';
+  date: string;
+  readTime: string;
+  summary: string;
+  content: string[];
+  verifiedSource?: string;
+  linkText?: string;
+  linkUrl?: string;
+}
+
+export interface MusicTrack {
+  id: string;
+  title: string;
+  category: 'Soundtrack' | 'Original Score' | 'Independent Release' | 'Single';
+  artist: string;
+  composer: string;
+  duration: string;
+  featuredFilm?: string;
+  description: string;
+  streamingUrl?: string;
+  youtubeId?: string;
+}
+
+export interface IpRightsPillar {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  status: string;
+  keyAssets: string[];
+}
+
+export interface PartnershipCategory {
+  id: string;
+  title: string;
+  scope: string;
+  description: string;
+  targetPartners: string[];
 }

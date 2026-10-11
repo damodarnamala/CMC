@@ -208,6 +208,37 @@
   filter: brightness(1.08);
 }
 
+/* Aha Video Launch Button */
+.btn-launch-aha {
+  position: relative;
+  background: linear-gradient(135deg, #FF671F 0%, #E65100 50%, #BF360C 100%);
+  color: #ffffff;
+  font-weight: 700;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px -3px rgba(255, 103, 31, 0.4);
+  border: 1px solid rgba(255, 140, 66, 0.4);
+}
+.btn-launch-aha::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-launch-aha:hover::after {
+  left: 140%;
+}
+.btn-launch-aha:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 103, 31, 0.6);
+  filter: brightness(1.08);
+}
+
 /* Gold Action Button */
 .btn-gold-luxury {
   background: linear-gradient(135deg, #fbbf24 0%, #e6af2e 50%, #b47814 100%);

@@ -1,119 +1,183 @@
 import React from 'react';
-import { STUDIO_INFO, PRODUCERS } from '../data/studioData.ts';
 import { CMCLogo } from './CMCLogo.tsx';
+import { STUDIO_INFO } from '../data/studioData.ts';
+import { AppRoute } from '../types.ts';
+import { Mail, MapPin, ShieldAlert, ArrowUpRight } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (route: AppRoute) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const currentYear = new Date().getFullYear();
-  const praneeth = PRODUCERS[1];
+
+  const handleNav = (route: AppRoute) => {
+    if (onNavigate) {
+      onNavigate(route);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
-    <footer className="bg-[#08090d] border-t border-white/5 pt-16 pb-12 z-10 relative">
+    <footer className="bg-[#050608] border-t border-white/10 text-slate-400 relative z-10 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-12 mb-16">
+        {/* Top Grid: Brand & Institutional Hubs */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 pb-14 border-b border-white/10">
           
-          <div className="md:col-span-5">
-            <div className="mb-5">
-              <CMCLogo size="sm" showSubtitle={true} className="items-start" />
+          {/* Brand Info */}
+          <div className="lg:col-span-4 space-y-4">
+            <div className="flex items-center space-x-3">
+              <CMCLogo size="sm" showSubtitle={false} className="w-16" />
+              <div className="flex flex-col border-l border-white/15 pl-3">
+                <span className="font-cinzel text-base font-bold text-white tracking-[0.16em] uppercase">
+                  CRYSTOLYTE MEDIA
+                </span>
+                <span className="text-[9px] tracking-[0.24em] uppercase text-amber-400 font-bold font-cinzel">
+                  Creations · Hyderabad
+                </span>
+              </div>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm mb-6 font-light">
-              Founded by <strong>Prasad Nekuri</strong> and <strong>Praneeth Nekuri</strong>. Producers of the acclaimed Telugu feature film <em>IIT Krishnamurthy</em>. Committed to cinematic excellence and compelling storytelling.
+
+            <p className="text-xs text-slate-300 font-light leading-relaxed max-w-sm">
+              An independent entertainment company developing, producing, and owning premium film, television, music, and original intellectual property.
             </p>
-            <div className="text-xs text-slate-400 space-y-1.5 font-light">
-              <p className="flex items-center gap-2">
-                <i className="fa-solid fa-location-dot text-amber-400" />
-                <span>{STUDIO_INFO.location}</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <i className="fa-solid fa-envelope text-amber-400" />
-                <span>{STUDIO_INFO.email}</span>
-              </p>
+
+            <p className="text-[11px] text-amber-400/90 font-cinzel font-semibold tracking-wider italic">
+              "Stories born in India. Built for the world."
+            </p>
+
+            <div className="text-xs text-slate-400 space-y-1 pt-2">
+              <p>Legal Entity: <strong className="text-slate-300 font-normal">{STUDIO_INFO.legalName}</strong></p>
+              <p>Headquarters: <strong className="text-slate-300 font-normal">{STUDIO_INFO.location}</strong></p>
             </div>
           </div>
 
-          <div className="md:col-span-3">
-            <h4 className="text-xs uppercase tracking-wider text-amber-400 mb-4 font-bold">
-              Studio Navigation
-            </h4>
-            <div className="flex flex-col space-y-3 text-xs">
-              <a href="#about" className="text-slate-300 hover:text-amber-400 transition-colors">
-                Studio Ethos
-              </a>
-              <a href="#feature-film" className="text-slate-300 hover:text-amber-400 transition-colors">
-                IIT Krishnamurthy (Poster & Media)
-              </a>
-              <a href="#slate" className="text-slate-300 hover:text-amber-400 transition-colors">
-                Development Slate
-              </a>
-              <a href="#leadership" className="text-slate-300 hover:text-amber-400 transition-colors">
-                Leadership & Producers
-              </a>
-            </div>
+          {/* Core Navigation Mirror */}
+          <div className="lg:col-span-3 space-y-3">
+            <span className="text-xs font-cinzel font-bold text-white uppercase tracking-widest block mb-4">
+              Studio & Portfolio
+            </span>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <button onClick={() => handleNav('home')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Home Overview
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('studio')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Studio Ethos & Approach
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('productions')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Productions Portfolio
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('productions/iit-krishnamurthy')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  IIT Krishnamurthy (Feature Film)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('slate')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Development Slate (Untitled CMC Feature)
+                </button>
+              </li>
+            </ul>
           </div>
 
-          <div className="md:col-span-4">
-            <h4 className="text-xs uppercase tracking-wider text-amber-400 mb-4 font-bold">
-              Team & Leadership Channels
-            </h4>
-            <p className="text-xs text-slate-400 mb-2 font-light">
-              Producer Praneeth Nekuri:
-            </p>
-            <div className="flex flex-col space-y-2 text-xs mb-4">
-              <a
-                href={praneeth.socialLinks?.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2"
-              >
-                <i className="fa-brands fa-linkedin text-[#0077b5]" />
-                <span>linkedin.com/in/praneeth-nekuri</span>
-              </a>
-              <a
-                href={praneeth.socialLinks?.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2"
-              >
-                <i className="fa-brands fa-instagram text-[#E1306C]" />
-                <span>instagram.com/praneethnekuri</span>
-              </a>
-              <a
-                href={praneeth.socialLinks?.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2"
-              >
-                <i className="fa-brands fa-facebook text-[#1877F2]" />
-                <span>facebook.com/praneethnekuri</span>
-              </a>
-            </div>
+          {/* Business & Corporate Hubs */}
+          <div className="lg:col-span-2 space-y-3">
+            <span className="text-xs font-cinzel font-bold text-white uppercase tracking-widest block mb-4">
+              Corporate Hubs
+            </span>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <button onClick={() => handleNav('ip-rights')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  IP & Rights Ownership
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('music')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Music & Publishing Division
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('leadership')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Executive Leadership
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('newsroom')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Press Newsroom
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('partnerships')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Institutional Partnerships
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('contact')} className="hover:text-amber-400 transition-colors cursor-pointer">
+                  Corporate Inquiries
+                </button>
+              </li>
+            </ul>
+          </div>
 
-            <p className="text-xs text-slate-400 mb-2 font-light">
-              Director S. Sreevardhan (IIT Krishnamurthy):
-            </p>
-            <div className="flex flex-col space-y-2 text-xs">
-              <a
-                href="https://www.instagram.com/mr.sreevardhan/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-2"
-              >
-                <i className="fa-brands fa-instagram text-[#E1306C]" />
-                <span>instagram.com/mr.sreevardhan</span>
-              </a>
+          {/* Contact Direct */}
+          <div className="lg:col-span-3 space-y-4">
+            <span className="text-xs font-cinzel font-bold text-white uppercase tracking-widest block mb-4">
+              Direct Desks
+            </span>
+            <div className="space-y-3 text-xs">
+              <div>
+                <span className="text-[10px] uppercase text-slate-400 block font-mono">Business & Financing:</span>
+                <a href="mailto:business@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
+                  business@crystolytemedia.com
+                </a>
+              </div>
+              <div>
+                <span className="text-[10px] uppercase text-slate-400 block font-mono">Press & Media Relations:</span>
+                <a href="mailto:press@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
+                  press@crystolytemedia.com
+                </a>
+              </div>
+              <div>
+                <span className="text-[10px] uppercase text-slate-400 block font-mono">Territorial Distribution:</span>
+                <a href="mailto:distribution@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
+                  distribution@crystolytemedia.com
+                </a>
+              </div>
             </div>
           </div>
 
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <div>
-            &copy; {currentYear} {STUDIO_INFO.name} ({STUDIO_INFO.brandName}). All rights reserved.
-          </div>
-          <div>
-            <a href="#hero" className="hover:text-amber-400 transition-colors">
-              Back to top ↑
-            </a>
+        {/* Unsolicited Materials Disclaimer: Mandatory Blueprint Compliance */}
+        <div className="py-6 border-b border-white/5 text-[11px] text-slate-400 leading-relaxed font-light">
+          <p>
+            <strong className="text-slate-300">Unsolicited Materials Legal Notice:</strong> Crystolyte Media (Crystolyte Media Creations) does not accept unsolicited scripts, treatments, concepts, screenplays, or other creative materials unless submitted through an authorized literary representative, talent agent, or licensed attorney. Any unsolicited creative material received will be deleted or returned unread without review.
+          </p>
+        </div>
+
+        {/* Bottom Bar: Copyright & Ecosystem */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+          <p className="text-slate-400">
+            © {currentYear} {STUDIO_INFO.legalName}. All rights reserved.
+          </p>
+
+          <div className="flex items-center space-x-6 text-[11px] uppercase tracking-wider text-slate-400">
+            <span>FILM</span>
+            <span>·</span>
+            <span>SERIES</span>
+            <span>·</span>
+            <span>MUSIC</span>
+            <span>·</span>
+            <span>IP & RIGHTS</span>
+            <span>·</span>
+            <span>GLOBAL PARTNERSHIPS</span>
           </div>
         </div>
 

@@ -1,30 +1,32 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Film, Play } from 'lucide-react';
+import { Film, Play, Handshake, ArrowRight } from 'lucide-react';
 import { STUDIO_INFO, FEATURE_FILM } from '../data/studioData.ts';
 import { CMCLogo } from './CMCLogo.tsx';
+import { AppRoute } from '../types.ts';
 
 interface HeroProps {
   onOpenCinemaModal: (videoId?: string) => void;
+  onNavigate?: (route: AppRoute) => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal }) => {
-  const [scrambleText, setScrambleText] = useState("REDEFINING TELUGU CINEMA WITH EXCELLENCE");
-  const targetTagline = "REDEFINING TELUGU CINEMA WITH EXCELLENCE";
+export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate }) => {
+  const [scrambleText, setScrambleText] = useState("STORIES BORN IN INDIA. BUILT FOR THE WORLD.");
+  const targetTagline = "STORIES BORN IN INDIA. BUILT FOR THE WORLD.";
   const scrambleRef = useRef<boolean>(false);
 
-  // Hyperframes Clean Text Scrambler
+  // Refined Cinematic Text Scrambler
   useEffect(() => {
     if (scrambleRef.current) return;
     scrambleRef.current = true;
 
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#&%";
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789·.";
     let frame = 0;
-    const totalFrames = 30;
-    const queue = targetTagline.split('').map((char, i) => ({
+    const totalFrames = 28;
+    const queue = targetTagline.split('').map((char) => ({
       from: '',
       to: char,
-      start: Math.floor(Math.random() * 8),
-      end: 12 + Math.floor(Math.random() * 16)
+      start: Math.floor(Math.random() * 6),
+      end: 10 + Math.floor(Math.random() * 14)
     }));
 
     const timer = setInterval(() => {
@@ -51,16 +53,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal }) => {
         clearInterval(timer);
         setScrambleText(targetTagline);
       }
-    }, 45);
+    }, 40);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-8 md:px-10 overflow-hidden">
+    <section id="hero" className="relative min-h-[92vh] flex items-center justify-center pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-8 md:px-10 overflow-hidden">
       
       {/* Ambient Atmospheric Lighting */}
       <div className="absolute inset-0 pointer-events-none ambient-radial-glow opacity-80" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.08),transparent_60%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto text-center relative z-10 w-full flex flex-col items-center">
         
@@ -74,69 +77,69 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal }) => {
         </div>
 
         {/* Hyperframes Theatrical Title in Cinzel (Vertically Aligned Below Logo, Centered) */}
-        <div className="jitter-perspective mb-4 sm:mb-6 block max-w-4xl mx-auto text-center">
-          <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.16em] sm:tracking-[0.24em] leading-[1.25] uppercase transition-transform duration-500 hover:scale-[1.01]">
+        <div className="jitter-perspective mb-3 sm:mb-4 block max-w-4xl mx-auto text-center">
+          <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.16em] sm:tracking-[0.24em] leading-[1.2] uppercase transition-transform duration-500 hover:scale-[1.01]">
             CRYSTOLYTE <br />
             <span className="gold-luxury-text tracking-[0.18em] sm:tracking-[0.26em]">MEDIA CREATIONS</span>
           </h1>
         </div>
 
-        {/* Hyperframes Text Scramble Tagline */}
-        <div className="my-3 sm:my-5 min-h-[32px] sm:min-h-[36px] flex items-center justify-center px-2">
-          <p className="text-sm sm:text-lg md:text-2xl font-semibold tracking-wider text-amber-400 font-syne uppercase">
+        {/* Master Headline: STORIES BORN IN INDIA. BUILT FOR THE WORLD. */}
+        <div className="my-3 sm:my-5 min-h-[36px] sm:min-h-[44px] flex items-center justify-center px-2">
+          <h2 className="text-base sm:text-xl md:text-3xl font-extrabold tracking-wider text-amber-400 font-cinzel uppercase drop-shadow-md">
             {scrambleText}
-          </p>
+          </h2>
         </div>
 
-        {/* Studio Summary Narrative */}
-        <p className="max-w-2xl mx-auto text-slate-300 text-xs sm:text-base md:text-lg font-light leading-relaxed mb-8 sm:mb-10 px-2">
-          Founded by producers <strong className="text-white font-medium">Prasad Nekuri</strong> and{' '}
-          <strong className="text-white font-medium">Praneeth Nekuri</strong>. Dedicated to producing high-quality Telugu feature films with compelling stories, strong emotional depth, and cinematic excellence.
+        {/* Subcopy: Exact Brand Blueprint Specification */}
+        <p className="max-w-3xl mx-auto text-slate-300 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-8 sm:mb-10 px-2">
+          An independent entertainment company developing, producing, and owning premium film, television, music, and original intellectual property.
         </p>
 
-        {/* Core Actions */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xl mx-auto w-full px-2">
-          <a
-            href="#slate"
-            className="btn-gold-luxury w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl"
+        {/* Primary CTA & Secondary CTA */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xl mx-auto w-full px-2 mb-10">
+          <button
+            onClick={() => onNavigate ? onNavigate('productions') : window.location.assign('#productions')}
+            className="btn-gold-luxury w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
           >
             <Film className="w-4 h-4" />
-            <span>Explore Feature Slate</span>
-          </a>
+            <span>View Our Productions</span>
+          </button>
 
           <button
-            onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
+            onClick={() => onNavigate ? onNavigate('partnerships') : window.location.assign('#partnerships')}
             className="btn-launch-yt w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
           >
-            <Play className="w-4 h-4 fill-white" />
-            <span>Watch Official Trailer</span>
+            <Handshake className="w-4 h-4 text-amber-400" />
+            <span>Partner With CMC</span>
           </button>
         </div>
 
-        {/* Quick Feature Anchors */}
-        <div className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left w-full">
-          <div className="p-3.5 sm:p-4 rounded-xl glass-card cursor-pointer hover:border-amber-400/40 transition-colors" onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}>
-            <span className="text-[10px] sm:text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Debut Feature</span>
-            <span className="font-cinzel text-sm sm:text-base font-bold text-white block">IIT Krishnamurthy</span>
-            <span className="text-[11px] sm:text-xs text-slate-400">Official Trailer & 4K</span>
-          </div>
+        {/* Quick Trailer Trigger */}
+        <div className="mb-10">
+          <button
+            onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-white transition-colors cursor-pointer group"
+          >
+            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-amber-400 group-hover:text-black transition-colors">
+              <Play className="w-3 h-3 fill-current ml-0.5" />
+            </span>
+            <span>Watch IIT Krishnamurthy Trailer (Official 4K)</span>
+          </button>
+        </div>
 
-          <div className="p-3.5 sm:p-4 rounded-xl glass-card">
-            <span className="text-[10px] sm:text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Global Streaming</span>
-            <span className="font-cinzel text-sm sm:text-base font-bold text-white block">Dual Platform</span>
-            <span className="text-[11px] sm:text-xs text-slate-400">Prime Video & YouTube</span>
-          </div>
-
-          <div className="p-3.5 sm:p-4 rounded-xl glass-card">
-            <span className="text-[10px] sm:text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Leadership</span>
-            <span className="font-cinzel text-sm sm:text-base font-bold text-white block">Prasad & Praneeth</span>
-            <span className="text-[11px] sm:text-xs text-slate-400">Producers & Founders</span>
-          </div>
-
-          <div className="p-3.5 sm:p-4 rounded-xl glass-card">
-            <span className="text-[10px] sm:text-[11px] text-amber-400/90 uppercase tracking-wider block mb-0.5">Expansion</span>
-            <span className="font-cinzel text-sm sm:text-base font-bold text-white block">Production-2</span>
-            <span className="text-[11px] sm:text-xs text-slate-400">Feature Drama</span>
+        {/* Ecosystem Footer Strip: FILM • SERIES • MUSIC • IP • GLOBAL PARTNERSHIPS */}
+        <div className="w-full pt-8 sm:pt-10 border-t border-white/10 max-w-4xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+            <span className="text-slate-200">FILM</span>
+            <span className="text-amber-400/60">·</span>
+            <span className="text-slate-200">SERIES</span>
+            <span className="text-amber-400/60">·</span>
+            <span className="text-slate-200">MUSIC</span>
+            <span className="text-amber-400/60">·</span>
+            <span className="text-slate-200">IP & RIGHTS</span>
+            <span className="text-amber-400/60">·</span>
+            <span className="text-slate-200">GLOBAL PARTNERSHIPS</span>
           </div>
         </div>
 

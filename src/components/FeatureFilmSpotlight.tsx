@@ -3,11 +3,14 @@ import { Play, Sparkles, Film, Music, ShieldCheck, Clapperboard, ExternalLink, T
 import { FEATURE_FILM } from '../data/studioData.ts';
 import { OfficialMoviePoster } from './OfficialMoviePoster.tsx';
 
+import { AppRoute } from '../types.ts';
+
 interface FeatureFilmSpotlightProps {
   onOpenCinemaModal: (videoId?: string) => void;
+  onNavigate?: (route: AppRoute) => void;
 }
 
-export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOpenCinemaModal }) => {
+export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOpenCinemaModal, onNavigate }) => {
   const directorInsta = FEATURE_FILM.directorInstagram || "https://www.instagram.com/mr.sreevardhan/";
 
   return (
@@ -41,6 +44,14 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
               className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 flex items-center gap-1.5 hover:bg-[#00a8e1]/25 transition-colors"
             >
               <i className="fa-brands fa-amazon" /> Prime Video Worldwide
+            </a>
+            <a
+              href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#ff671f]/15 text-[#ff8c42] border border-[#ff671f]/30 flex items-center gap-1.5 hover:bg-[#ff671f]/25 transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#ff671f] inline-block shadow-sm" /> Aha Video
             </a>
             <button
               onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
@@ -88,7 +99,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   </div>
                   <div className="text-right">
                     <span className="text-slate-400 uppercase tracking-wider block text-[10px]">Global Distribution</span>
-                    <span className="font-bold text-[#38bdf8]">Prime Video & YouTube (4K)</span>
+                    <span className="font-bold text-[#38bdf8]">Prime Video, Aha & YouTube (4K)</span>
                   </div>
                 </div>
 
@@ -172,23 +183,14 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 <span className="text-[11px] uppercase tracking-widest text-slate-400 font-semibold block mb-3">
                   Watch Online:
                 </span>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
                   {/* Trailer Button */}
                   <button
                     onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
-                    className="btn-gold px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
+                    className="btn-gold-luxury px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
                   >
                     <Play className="w-3.5 h-3.5 fill-black" />
-                    <span>Watch Trailer</span>
-                  </button>
-
-                  {/* YouTube Full Movie Button */}
-                  <button
-                    onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
-                    className="btn-launch-yt px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
-                  >
-                    <i className="fa-brands fa-youtube text-base" />
-                    <span>Full Movie 4K</span>
+                    <span>Trailer</span>
                   </button>
 
                   {/* Prime Video Button */}
@@ -196,11 +198,31 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-launch-prime px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-lg min-h-[46px]"
+                    className="btn-launch-prime px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-lg min-h-[46px]"
                   >
                     <i className="fa-brands fa-amazon text-base" />
                     <span>Prime Video</span>
                   </a>
+
+                  {/* Aha Video Button */}
+                  <a
+                    href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-launch-aha px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-lg min-h-[46px]"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-white shadow-sm shrink-0" />
+                    <span>Aha Video</span>
+                  </a>
+
+                  {/* YouTube Full Movie Button */}
+                  <button
+                    onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
+                    className="btn-launch-yt px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
+                  >
+                    <i className="fa-brands fa-youtube text-base" />
+                    <span>YouTube 4K</span>
+                  </button>
                 </div>
               </div>
 

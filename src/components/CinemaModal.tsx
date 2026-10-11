@@ -76,6 +76,14 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
               <i className="fa-brands fa-amazon" /> Prime Video
             </a>
             <a
+              href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-[#ff8c42] hover:underline hidden sm:inline-flex items-center gap-1.5"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff671f]" /> Aha Video
+            </a>
+            <a
               href={currentVideo.watchUrl}
               target="_blank"
               rel="noopener noreferrer"
