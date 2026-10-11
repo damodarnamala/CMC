@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Menu, X, ArrowUpRight, ChevronDown } from 'lucide-react';
 import { CMCLogo } from './CMCLogo.tsx';
 import { AppRoute } from '../types.ts';
 
@@ -10,29 +10,50 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement>(null);
 
-  const navItems: { label: string; route: AppRoute }[] = [
+  // Exactly 4 primary core navigation items
+  const primaryNavItems: { label: string; route: AppRoute }[] = [
     { label: 'HOME', route: 'home' },
-    { label: 'STUDIO', route: 'studio' },
     { label: 'PRODUCTIONS', route: 'productions' },
-    { label: 'DEVELOPMENT SLATE', route: 'slate' },
-    { label: 'MUSIC', route: 'music' },
-    { label: 'IP & RIGHTS', route: 'ip-rights' },
     { label: 'LEADERSHIP', route: 'leadership' },
-    { label: 'NEWSROOM', route: 'newsroom' },
-    { label: 'PARTNERSHIPS', route: 'partnerships' },
     { label: 'CONTACT', route: 'contact' },
   ];
+
+  // Secondary studio sections accessible via subtle "More" dropdown
+  const secondaryNavItems: { label: string; route: AppRoute; desc: string }[] = [
+    { label: 'STUDIO ETHOS', route: 'studio', desc: 'Institutional vision & philosophy' },
+    { label: 'DEVELOPMENT SLATE', route: 'slate', desc: 'Upcoming theatrical & OTT pipeline' },
+    { label: 'MUSIC PUBLISHING', route: 'music', desc: 'Independent soundtrack catalog' },
+    { label: 'IP & FILM RIGHTS', route: 'ip-rights', desc: 'Enduring library asset ownership' },
+    { label: 'NEWSROOM & PRESS', route: 'newsroom', desc: 'Official media announcements' },
+    { label: 'INSTITUTIONAL PARTNERS', route: 'partnerships', desc: 'Global co-production alliances' },
+  ];
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (moreMenuRef.current && !moreMenuRef.current.contains(event.target as Node)) {
+        setMoreMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleNavClick = (route: AppRoute) => {
     onNavigate(route);
     setMobileMenuOpen(false);
+    setMoreMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const isSecondaryActive = secondaryNavItems.some((item) => item.route === currentRoute);
+
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[#08090d]/90 backdrop-blur-2xl border-b border-white/5 transition-all">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-6">
         
         {/* Zone 1: Official CMC Brand Wordmark */}
         <button
@@ -53,9 +74,9 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
           </div>
         </button>
 
-        {/* Zone 2: Primary Desktop Navigation (All 10 required items) */}
-        <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-5 text-[11px] font-semibold tracking-wider uppercase text-slate-300 shrink-0">
-          {navItems.map((item) => {
+        {/* Zone 2: Primary Clean Desktop Navigation (Max 4 Core Items + More Dropdown) */}
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">
+          {primaryNavItems.map((item) => {
             const isActive =
               currentRoute === item.route ||
               (item.route === 'productions' && currentRoute === 'productions/iit-krishnamurthy');
@@ -63,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
               <button
                 key={item.route}
                 onClick={() => handleNavClick(item.route)}
-                className={`py-1 relative transition-colors whitespace-nowrap cursor-pointer ${
+                className={`py-2 relative transition-colors whitespace-nowrap cursor-pointer ${
                   isActive
                     ? 'text-amber-400 font-bold'
                     : 'text-slate-300 hover:text-white'
@@ -71,39 +92,72 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute bottom-0 inset-x-0 h-0.5 bg-amber-400 rounded-full" />
+                  <span className="absolute bottom-0 inset-x-0 h-0.5 bg-amber-400 rounded-full shadow-[0_0_8px_rgba(251,191,36,0.6)]" />
                 )}
               </button>
             );
           })}
-        </nav>
 
-        {/* Compact Navigation for Medium Screens (lg to xl) */}
-        <nav className="hidden md:flex xl:hidden items-center space-x-3 text-[11px] font-semibold tracking-wider uppercase text-slate-300">
-          {navItems.slice(0, 5).map((item) => (
+          {/* Elegant "More" Dropdown Menu */}
+          <div className="relative" ref={moreMenuRef}>
             <button
-              key={item.route}
-              onClick={() => handleNavClick(item.route)}
-              className={`py-1 transition-colors whitespace-nowrap cursor-pointer ${
-                currentRoute === item.route ? 'text-amber-400 font-bold' : 'hover:text-white'
+              onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+              className={`py-2 flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
+                isSecondaryActive || moreMenuOpen
+                  ? 'text-amber-400 font-bold'
+                  : 'text-slate-400 hover:text-white'
               }`}
+              aria-expanded={moreMenuOpen}
+              aria-haspopup="true"
             >
-              {item.label}
+              <span>MORE</span>
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${moreMenuOpen ? 'rotate-180 text-amber-400' : ''}`} />
+              {isSecondaryActive && (
+                <span className="absolute bottom-0 inset-x-0 h-0.5 bg-amber-400 rounded-full" />
+              )}
             </button>
-          ))}
-          <button
-            onClick={() => setMobileMenuOpen(true)}
-            className="text-amber-400 font-medium text-[11px] hover:underline cursor-pointer"
-          >
-            More ▾
-          </button>
+
+            {/* Dropdown Card */}
+            {moreMenuOpen && (
+              <div className="absolute top-full right-0 mt-3 w-72 rounded-2xl bg-[#0c0f17]/95 border border-white/10 shadow-2xl backdrop-blur-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="px-3 py-2 border-b border-white/5 mb-1">
+                  <span className="text-[10px] uppercase tracking-widest font-mono text-amber-400/90 font-bold">
+                    Studio Ecosystem
+                  </span>
+                </div>
+                <div className="space-y-0.5">
+                  {secondaryNavItems.map((sec) => {
+                    const isSecActive = currentRoute === sec.route;
+                    return (
+                      <button
+                        key={sec.route}
+                        onClick={() => handleNavClick(sec.route)}
+                        className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex flex-col group cursor-pointer ${
+                          isSecActive
+                            ? 'bg-amber-500/15 text-amber-300'
+                            : 'hover:bg-white/5 text-slate-300 hover:text-white'
+                        }`}
+                      >
+                        <span className="text-xs font-semibold tracking-wider uppercase group-hover:text-amber-400 transition-colors">
+                          {sec.label}
+                        </span>
+                        <span className="text-[10px] text-slate-400 font-normal tracking-normal mt-0.5">
+                          {sec.desc}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
-        {/* Zone 3: 1 Primary Action (Top Bar Contract Compliant) */}
+        {/* Zone 3: Primary Action Button */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
           <button
             onClick={() => handleNavClick('partnerships')}
-            className="btn-gold-luxury px-4 py-2 rounded-lg text-xs uppercase tracking-wider font-bold whitespace-nowrap shadow-lg cursor-pointer flex items-center gap-1.5"
+            className="btn-gold-luxury px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap shadow-lg cursor-pointer flex items-center gap-1.5 hover:scale-[1.02] transition-transform"
           >
             <span>Partner With CMC</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -125,23 +179,52 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0c0f16]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-3 text-sm font-medium">
-          {navItems.map((item) => {
-            const isActive =
-              currentRoute === item.route ||
-              (item.route === 'productions' && currentRoute === 'productions/iit-krishnamurthy');
-            return (
-              <button
-                key={item.route}
-                onClick={() => handleNavClick(item.route)}
-                className={`block w-full text-left py-2 text-xs uppercase tracking-wider font-semibold transition-colors ${
-                  isActive ? 'text-amber-400 font-bold' : 'text-slate-200 hover:text-amber-300'
-                }`}
-              >
-                {item.label}
-              </button>
-            );
-          })}
+        <div className="md:hidden bg-[#0c0f16]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4 text-sm font-medium animate-in fade-in duration-200">
+          {/* Primary Mobile Items */}
+          <div className="space-y-1">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400/80 px-2 block mb-1">
+              Core Navigation
+            </span>
+            {primaryNavItems.map((item) => {
+              const isActive =
+                currentRoute === item.route ||
+                (item.route === 'productions' && currentRoute === 'productions/iit-krishnamurthy');
+              return (
+                <button
+                  key={item.route}
+                  onClick={() => handleNavClick(item.route)}
+                  className={`block w-full text-left px-3 py-2.5 rounded-xl text-xs uppercase tracking-wider font-semibold transition-colors ${
+                    isActive ? 'bg-amber-500/15 text-amber-400 font-bold' : 'text-slate-200 hover:bg-white/5 hover:text-amber-300'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Secondary Mobile Items */}
+          <div className="pt-3 border-t border-white/5 space-y-1">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 px-2 block mb-1">
+              More Studio Sections
+            </span>
+            <div className="grid grid-cols-2 gap-1.5">
+              {secondaryNavItems.map((sec) => (
+                <button
+                  key={sec.route}
+                  onClick={() => handleNavClick(sec.route)}
+                  className={`text-left px-3 py-2 rounded-lg text-[11px] font-medium tracking-wide uppercase transition-colors ${
+                    currentRoute === sec.route
+                      ? 'bg-amber-500/10 text-amber-400'
+                      : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {sec.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="pt-4 border-t border-white/10">
             <button
               onClick={() => handleNavClick('partnerships')}
