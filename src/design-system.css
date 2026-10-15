@@ -183,11 +183,13 @@
 
 .cmc-btn {
   display: inline-flex;
+  white-space: nowrap;
+  min-height: 3rem;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
-  border-radius: 0.75rem;
+  border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -281,4 +283,31 @@ section + section::before {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--cmc-text-body);
+}
+
+/* ---------- Button system: two types only ---------- */
+/* Primary: yellow gradient fill, dark text */
+.cmc-btn-primary,
+.cmc-btn-primary:hover {
+  background: linear-gradient(135deg, #fde68a 0%, #fbbf24 45%, #c98a1b 100%);
+  color: #08090d;
+  border: 1px solid rgba(251, 191, 36, 0.6);
+  box-shadow: 0 8px 22px -4px rgba(251, 191, 36, 0.45);
+}
+/* Secondary: transparent with a yellow border, yellow text */
+.cmc-btn-secondary,
+.cmc-btn-secondary:hover,
+.cmc-btn-ghost,
+.cmc-btn-ghost:hover {
+  background: transparent;
+  color: #fbbf24;
+  border: 1px solid #fbbf24;
+  box-shadow: none;
+}
+
+/* Compact capsule button for tight grids (e.g. watch-online row) */
+.cmc-btn-compact {
+  padding: 0.75rem 0.875rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
 }

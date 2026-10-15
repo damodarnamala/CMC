@@ -140,7 +140,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="btn-gold-luxury px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold cursor-pointer"
+                    className="cmc-btn cmc-btn-primary px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold cursor-pointer"
                   >
                     Send Another Inquiry
                   </button>
@@ -225,7 +225,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                   <button
                     type="submit"
-                    className="btn-gold-luxury w-full py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-xl cursor-pointer"
+                    className="cmc-btn cmc-btn-primary w-full py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-xl cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Message to Crystolyte Media</span>

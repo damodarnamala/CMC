@@ -149,7 +149,7 @@ export const NewsroomPage: React.FC<NewsroomPageProps> = ({ onNavigate }) => {
                     href={activeArticle.linkUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-gold-luxury px-4 py-2 rounded-lg font-bold uppercase tracking-wider flex items-center gap-1.5"
+                    className="cmc-btn cmc-btn-primary px-4 py-2 rounded-lg font-bold uppercase tracking-wider flex items-center gap-1.5"
                   >
                     <span>{activeArticle.linkText || "View Reference"}</span>
                     <ExternalLink className="w-3.5 h-3.5" />

@@ -108,7 +108,7 @@ export const DevelopmentSlate: React.FC<DevelopmentSlateProps> = ({ onNavigate, 
           {onNavigate && (
             <button
               onClick={() => onNavigate('partnerships')}
-              className="btn-gold-luxury px-6 py-3 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shrink-0 shadow-lg"
+              className="cmc-btn cmc-btn-primary px-6 py-3 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shrink-0 shadow-lg"
             >
               Request Slate Prospectus
             </button>

@@ -90,14 +90,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenCinemaModa
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
             <button
               onClick={() => onNavigate('partnerships')}
-              className="btn-gold-luxury w-full sm:w-auto px-8 py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-2xl cursor-pointer"
+              className="cmc-btn cmc-btn-primary w-full sm:w-auto px-8 py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-2xl cursor-pointer"
             >
               <Handshake className="w-4 h-4" />
               <span>Partner With CMC</span>
             </button>
             <button
               onClick={() => onNavigate('slate')}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl text-xs uppercase tracking-wider font-bold bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              className="cmc-btn cmc-btn-secondary whitespace-nowrap w-full sm:w-auto flex items-center justify-center gap-2 cursor-pointer"
             >
               <Film className="w-4 h-4 text-amber-400" />
               <span>Explore Development Slate</span>

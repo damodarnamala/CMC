@@ -204,7 +204,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
               </div>
               <button
                 onClick={() => onNavigate('ip-rights')}
-                className="btn-gold-luxury px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider whitespace-nowrap cursor-pointer shrink-0"
+                className="cmc-btn cmc-btn-primary px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider whitespace-nowrap cursor-pointer shrink-0"
               >
                 Inquire Rights
               </button>

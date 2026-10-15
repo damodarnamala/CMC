@@ -187,7 +187,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   {/* Trailer Button */}
                   <button
                     onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
-                    className="btn-gold-luxury px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
+                    className="cmc-btn cmc-btn-primary whitespace-nowrap w-full min-w-0 cmc-btn-compact shadow-lg"
                   >
                     <Play className="w-3.5 h-3.5 fill-black" />
                     <span>Trailer</span>
@@ -198,7 +198,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-launch-prime px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-lg min-h-[46px]"
+                    className="cmc-btn cmc-btn-secondary whitespace-nowrap w-full min-w-0 cmc-btn-compact shadow-lg"
                   >
                     <i className="fa-brands fa-amazon text-base" />
                     <span>Prime Video</span>
@@ -209,7 +209,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-launch-aha px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-lg min-h-[46px]"
+                    className="cmc-btn cmc-btn-secondary whitespace-nowrap w-full min-w-0 cmc-btn-compact shadow-lg"
                   >
                     <span className="w-2 h-2 rounded-full bg-white shadow-sm shrink-0" />
                     <span>Aha Video</span>
@@ -218,7 +218,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   {/* YouTube Full Movie Button */}
                   <button
                     onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
-                    className="btn-launch-yt px-3 sm:px-4 py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[46px]"
+                    className="cmc-btn cmc-btn-secondary whitespace-nowrap w-full min-w-0 cmc-btn-compact shadow-lg"
                   >
                     <i className="fa-brands fa-youtube text-base" />
                     <span>YouTube 4K</span>

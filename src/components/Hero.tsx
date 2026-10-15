@@ -188,7 +188,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
         <div className="cmc-rise flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xl mx-auto w-full px-2 mb-10" style={{ '--d': '1.5s' } as React.CSSProperties}>
           <button
             onClick={() => onNavigate ? onNavigate('productions') : window.location.assign('#productions')}
-            className="btn-gold-luxury w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
+            className="cmc-btn cmc-btn-primary w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
           >
             <Film className="w-4 h-4" />
             <span>View Our Productions</span>
@@ -196,7 +196,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
 
           <button
             onClick={() => onNavigate ? onNavigate('partnerships') : window.location.assign('#partnerships')}
-            className="btn-launch-yt w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
+            className="cmc-btn cmc-btn-secondary w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
           >
             <Handshake className="w-4 h-4 text-amber-400" />
             <span>Partner With CMC</span>

@@ -169,19 +169,19 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
           <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={() => onNavigate('productions')}
-              className="btn-gold-luxury px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold cursor-pointer"
+              className="cmc-btn cmc-btn-primary px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold cursor-pointer"
             >
               View Productions
             </button>
             <button
               onClick={() => onNavigate('leadership')}
-              className="px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-colors cursor-pointer"
+              className="cmc-btn cmc-btn-secondary whitespace-nowrap cursor-pointer"
             >
               Executive Leadership
             </button>
             <button
               onClick={() => onNavigate('partnerships')}
-              className="px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-colors cursor-pointer"
+              className="cmc-btn cmc-btn-secondary whitespace-nowrap cursor-pointer"
             >
               Partner With Us
             </button>

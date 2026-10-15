@@ -137,7 +137,7 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
 
           <button
             onClick={() => onNavigate('contact')}
-            className="btn-gold-luxury px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shadow-lg"
+            className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shadow-lg"
           >
             Inquire Music Sync
           </button>

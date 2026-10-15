@@ -210,7 +210,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
           <div className="pt-4 border-t border-white/10">
             <button
               onClick={() => handleNavClick('partnerships')}
-              className="btn-gold-luxury w-full py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer"
+              className="cmc-btn cmc-btn-primary w-full py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Partner With CMC</span>
               <ArrowUpRight className="w-4 h-4" />

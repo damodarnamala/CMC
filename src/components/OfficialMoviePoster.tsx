@@ -102,7 +102,7 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
             {onPlayTrailer && (
               <button
                 onClick={(e) => { e.stopPropagation(); onPlayTrailer(); }}
-                className="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-[1.02]"
+                className="cmc-btn cmc-btn-primary whitespace-nowrap w-full flex items-center justify-center gap-2 shadow-lg"
               >
                 <Play className="w-3.5 h-3.5 fill-black" />
                 <span>Watch Official Trailer</span>
@@ -112,7 +112,7 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
             {onPlayTeaser && (
               <button
                 onClick={(e) => { e.stopPropagation(); onPlayTeaser(); }}
-                className="w-full py-2.5 px-4 rounded-xl bg-[#141a24] hover:bg-[#1c2432] text-white border border-white/15 font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-transform hover:scale-[1.02]"
+                className="cmc-btn cmc-btn-secondary whitespace-nowrap w-full flex items-center justify-center gap-2"
               >
                 <Play className="w-3.5 h-3.5 text-amber-400" />
                 <span>Watch First Look Teaser</span>
@@ -122,7 +122,7 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
             {onPlaySong && (
               <button
                 onClick={(e) => { e.stopPropagation(); onPlaySong(); }}
-                className="w-full py-2.5 px-4 rounded-xl bg-[#141a24] hover:bg-[#1c2432] text-white border border-white/15 font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-transform hover:scale-[1.02]"
+                className="cmc-btn cmc-btn-secondary whitespace-nowrap w-full flex items-center justify-center gap-2"
               >
                 <Music className="w-3.5 h-3.5 text-pink-400" />
                 <span>Play "Megham Tho Megham"</span>
@@ -132,7 +132,7 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
             {onPlayFullMovie && (
               <button
                 onClick={(e) => { e.stopPropagation(); onPlayFullMovie(); }}
-                className="w-full py-2.5 px-4 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-[1.02]"
+                className="cmc-btn cmc-btn-secondary whitespace-nowrap w-full flex items-center justify-center gap-2 shadow-lg"
               >
                 <i className="fa-brands fa-youtube text-sm" />
                 <span>Full Feature Film (4K)</span>

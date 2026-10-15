@@ -44,13 +44,13 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <>
                   <button
                     onClick={() => onNavigate('ip-rights')}
-                    className="btn-gold-luxury px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold shadow-lg cursor-pointer"
+                    className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold shadow-lg cursor-pointer"
                   >
                     Explore IP & Rights Architecture
                   </button>
                   <button
                     onClick={() => onNavigate('studio')}
-                    className="px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-colors cursor-pointer"
+                    className="cmc-btn cmc-btn-secondary whitespace-nowrap cursor-pointer"
                   >
                     Our Studio Ethos
                   </button>
