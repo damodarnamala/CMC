@@ -30,19 +30,19 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
         
         {/* Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
             <span className="w-5 h-px bg-amber-400" />
             <span>INSTITUTIONAL ALLIANCES & CAPITAL</span>
           </div>
 
           <div className="jitter-perspective mb-6">
-            <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+            <h1 className="cmc-title tilted-text-item text-white leading-tight">
               BUILD WITH <br />
-              <span className="gold-luxury-text">CRYSTOLYTE MEDIA</span>
+              <span className="cmc-gold-text">CRYSTOLYTE MEDIA</span>
             </h1>
           </div>
 
-          <p className="text-slate-300 text-base sm:text-xl font-light leading-relaxed">
+          <p className="text-slate-300 text-base sm:text-xl font-normal leading-relaxed">
             Speaking directly to studio executives, institutional financiers, global streaming platforms, and brand collaborators seeking aligned, disciplined creative partnerships.
           </p>
         </div>
@@ -52,13 +52,13 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-8">
-              <span className="text-xs uppercase tracking-wider text-amber-400 font-mono font-semibold block mb-2">
+              <span className="cmc-eyebrow block mb-2">
                 Executive Partnership Principles
               </span>
-              <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-4">
+              <h2 className="cmc-title text-white mb-4">
                 Disciplined Capital Meets Narrative Rigor
               </h2>
-              <div className="space-y-4 text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              <div className="space-y-4 text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
                 <p>
                   Crystolyte Media operates with the governance standards expected by institutional private equity and international studios. We structure every production under clear milestone agreements, audited budgeting, and transparent waterfall recoupment models.
                 </p>
@@ -69,7 +69,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
             </div>
 
             <div className="lg:col-span-4 p-6 sm:p-8 rounded-2xl bg-black/50 border border-white/5 space-y-3 text-xs text-slate-300">
-              <div className="flex items-center gap-2 text-amber-400 font-semibold uppercase tracking-wider pb-2 border-b border-white/10">
+              <div className="cmc-eyebrow flex items-center gap-2 pb-2 border-b border-white/10">
                 <Building2 className="w-4 h-4" />
                 <span>Institutional Commitments</span>
               </div>
@@ -97,10 +97,10 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
         {/* Targeted Sectors */}
         <div className="mb-20">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-mono font-semibold block mb-2">
+            <span className="cmc-eyebrow block mb-2">
               Collaborative Ecosystem
             </span>
-            <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">
+            <h2 className="cmc-title text-white">
               Targeted Partnership Sectors
             </h2>
           </div>
@@ -112,21 +112,21 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
                 className="glass-card rounded-2xl p-7 sm:p-8 border border-white/10 flex flex-col justify-between hover:border-amber-400/40 transition-all duration-300 group"
               >
                 <div>
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-white/10">
-                    <span className="font-mono text-amber-400 font-semibold uppercase text-[11px]">{sec.scope}</span>
-                    <Handshake className="w-4 h-4 text-slate-400 group-hover:text-amber-400 transition-colors" />
+                  <div className="flex items-center justify-between text-xs text-slate-300 mb-4 pb-3 border-b border-white/10">
+                    <span className="cmc-eyebrow ">{sec.scope}</span>
+                    <Handshake className="w-4 h-4 text-slate-300 group-hover:text-amber-400 transition-colors" />
                   </div>
 
-                  <h3 className="font-cinzel text-xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">
+                  <h3 className="font-cinzel text-xl font-bold text-white mb-3 group-hover:text-amber-200 transition-colors">
                     {sec.title}
                   </h3>
 
-                  <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                  <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
                     {sec.description}
                   </p>
 
                   <div className="space-y-1.5 mb-6 text-xs">
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block font-mono">
+                    <span className="cmc-label block">
                       Target Partners:
                     </span>
                     {sec.targetPartners.map((tp, idx) => (
@@ -141,7 +141,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
                 <div className="pt-4 border-t border-white/5">
                   <a
                     href="#proposal-form"
-                    className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors"
+                    className="cmc-eyebrow inline-flex items-center gap-2 hover:text-amber-200 transition-colors"
                   >
                     <span>Initiate partnership dialog</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -155,13 +155,13 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
         {/* Partnership Proposal Form */}
         <div id="proposal-form" className="glass-card rounded-3xl p-8 sm:p-12 border border-amber-500/30 max-w-4xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-mono font-semibold block mb-2">
+            <span className="cmc-eyebrow block mb-2">
               Direct Corporate Gateway
             </span>
-            <h2 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-white mb-2">
+            <h2 className="cmc-title text-white mb-2">
               Submit a Strategic Partnership Proposal
             </h2>
-            <p className="text-slate-300 text-xs sm:text-sm font-light">
+            <p className="text-slate-300 text-sm sm:text-sm font-normal">
               Connect directly with executive leadership at Crystolyte Media. Proposals are reviewed by our corporate strategy committee.
             </p>
           </div>
@@ -186,7 +186,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                  <label className="cmc-label block mb-2">
                     Executive Full Name *
                   </label>
                   <input
@@ -200,7 +200,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                  <label className="cmc-label block mb-2">
                     Organization / Studio Name *
                   </label>
                   <input
@@ -216,7 +216,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                  <label className="cmc-label block mb-2">
                     Corporate Email Address *
                   </label>
                   <input
@@ -230,7 +230,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                  <label className="cmc-label block mb-2">
                     Partnership Sector *
                   </label>
                   <select
@@ -249,7 +249,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                <label className="cmc-label block mb-2">
                   Executive Summary / Proposal Scope *
                 </label>
                 <textarea
@@ -263,7 +263,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
               </div>
 
               {/* Strict Disclaimer Notice */}
-              <p className="text-[11px] text-slate-400 italic leading-relaxed">
+              <p className="text-sm text-slate-300 italic leading-relaxed">
                 * Note: Partnership inquiries must be submitted by authorized corporate representatives. Crystolyte Media does not accept unsolicited scripts or treatments via this form.
               </p>
 

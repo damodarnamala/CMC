@@ -18,19 +18,19 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
               <span className="w-5 h-px bg-amber-400" />
               <span>OFFICIAL DEBUT FEATURE & MEDIA ARCHIVE</span>
             </div>
 
             <div className="jitter-perspective">
-              <h2 className="tilted-text-item font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
+              <h2 className="tilted-text-item cmc-title">
                 {FEATURE_FILM.title}
               </h2>
             </div>
-            <p className="text-slate-400 text-xs sm:text-sm mt-1 font-mono tracking-wider">
+            <p className="text-slate-300 text-sm sm:text-sm mt-1 font-mono tracking-wider">
               {FEATURE_FILM.teluguTitle} • {FEATURE_FILM.tagline}
             </p>
           </div>
@@ -94,36 +94,36 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
               <div>
                 <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6 text-xs">
                   <div>
-                    <span className="text-slate-400 uppercase tracking-wider block text-[10px]">Production House</span>
+                    <span className="cmc-label block">Production House</span>
                     <span className="font-cinzel text-sm font-bold text-white">Crystolyte Media Creations</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-slate-400 uppercase tracking-wider block text-[10px]">Global Distribution</span>
+                    <span className="cmc-label block">Global Distribution</span>
                     <span className="font-bold text-[#38bdf8]">Prime Video, Aha & YouTube (4K)</span>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <span className="px-3 py-1 rounded-md bg-amber-400 text-black text-[10px] font-bold uppercase tracking-widest inline-block mb-2">
+                  <span className="cmc-label px-3 py-1 rounded-md bg-amber-400 text-black inline-block mb-2">
                     Official Feature Debut
                   </span>
                   <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
-                    IIT KRISHNAMURTHY <span className="text-slate-400 text-lg font-normal">({FEATURE_FILM.teluguTitle})</span>
+                    IIT KRISHNAMURTHY <span className="text-slate-300 text-lg font-normal">({FEATURE_FILM.teluguTitle})</span>
                   </h3>
-                  <p className="text-xs text-amber-400 font-mono">
+                  <p className="text-sm text-amber-200 font-sans font-semibold">
                     # A 3 D S U C A • A Corporate Crime • Non Recognised Sector
                   </p>
                 </div>
 
-                <h4 className="text-xs uppercase tracking-wider text-amber-400 font-bold mb-2">Film Synopsis</h4>
-                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-light mb-6">
+                <h4 className="cmc-eyebrow mb-2">Film Synopsis</h4>
+                <p className="text-slate-300 text-sm sm:text-sm leading-relaxed font-normal mb-6">
                   {FEATURE_FILM.synopsis}
                 </p>
 
                 {/* Cast & Crew Matrix from Official Billing Block */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5 text-xs border-y border-white/10 py-5 mb-6">
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Writer & Director</span>
+                    <span className="cmc-label block">Writer & Director</span>
                     <a
                       href={directorInsta}
                       target="_blank"
@@ -137,42 +137,42 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Producers</span>
+                    <span className="cmc-label block">Producers</span>
                     <span className="text-amber-400 font-semibold text-xs">{FEATURE_FILM.producers.join(' & ')}</span>
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Lead Cast</span>
+                    <span className="cmc-label block">Lead Cast</span>
                     <span className="text-white font-medium text-xs">{FEATURE_FILM.cast.hero}</span>
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Female Lead</span>
+                    <span className="cmc-label block">Female Lead</span>
                     <span className="text-white font-medium text-xs">{FEATURE_FILM.cast.heroine}</span>
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Music Director</span>
+                    <span className="cmc-label block">Music Director</span>
                     <span className="text-white font-medium text-xs">{FEATURE_FILM.musicDirector}</span>
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Cinematography (DOP)</span>
+                    <span className="cmc-label block">Cinematography (DOP)</span>
                     <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.dop}</span>
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Editor</span>
+                    <span className="cmc-label block">Editor</span>
                     <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.editor}</span>
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Publicity Design</span>
+                    <span className="cmc-label block">Publicity Design</span>
                     <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.publicityDesign}</span>
                   </div>
 
                   <div>
-                    <span className="text-slate-400 block text-[10px] uppercase tracking-wider">Colorist</span>
+                    <span className="cmc-label block">Colorist</span>
                     <span className="text-white font-medium text-xs">{FEATURE_FILM.crew.colorist}</span>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
 
               {/* Primary Direct Actions */}
               <div>
-                <span className="text-[11px] uppercase tracking-widest text-slate-400 font-semibold block mb-3">
+                <span className="cmc-label block mb-3">
                   Watch Online:
                 </span>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
@@ -237,14 +237,14 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
         <div>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 gap-3">
             <div>
-              <span className="text-amber-400 text-xs font-semibold uppercase tracking-widest block mb-1">
+              <span className="cmc-eyebrow block mb-1">
                 CINEMATIC RELEASES
               </span>
               <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
                 Trailers, Teasers & Music
               </h3>
             </div>
-            <p className="text-slate-400 text-xs max-w-md font-light">
+            <p className="text-slate-300 text-sm max-w-md font-normal">
               Click any release to stream directly inside the high-definition theater modal.
             </p>
           </div>
@@ -268,7 +268,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   
                   {/* Category Pill */}
                   <div className="absolute top-3 left-3 z-10">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md text-amber-300 border border-white/10">
+                    <span className="cmc-tag px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10">
                       {vid.badge}
                     </span>
                   </div>
@@ -282,7 +282,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
 
                   {/* Duration Badge */}
                   {vid.duration && (
-                    <div className="absolute bottom-2.5 right-2.5 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono text-slate-300 border border-white/10">
+                    <div className="absolute bottom-2.5 right-2.5 bg-black/80 px-2 py-0.5 rounded text-xs font-mono text-slate-300 border border-white/10">
                       {vid.duration}
                     </div>
                   )}
@@ -294,7 +294,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     <h4 className="font-cinzel text-sm sm:text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1.5 leading-snug">
                       {vid.title}
                     </h4>
-                    <p className="text-slate-400 text-xs font-light line-clamp-2 leading-relaxed mb-4">
+                    <p className="text-slate-300 text-sm font-normal line-clamp-2 leading-relaxed mb-4">
                       {vid.description}
                     </p>
                   </div>
@@ -309,7 +309,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="text-slate-400 hover:text-white p-1"
+                      className="text-slate-300 hover:text-white p-1"
                       title="Open in YouTube"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
@@ -328,14 +328,14 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
         <div className="mt-16 sm:mt-20 pt-12 border-t border-white/10">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-3">
             <div>
-              <span className="text-amber-400 text-xs font-semibold uppercase tracking-widest block mb-1">
+              <span className="cmc-eyebrow block mb-1">
                 OFFICIAL ARTWORK & PUBLICITY
               </span>
               <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
                 Theatrical Posters Gallery
               </h3>
             </div>
-            <p className="text-slate-400 text-xs max-w-md font-light">
+            <p className="text-slate-300 text-sm max-w-md font-normal">
               High-resolution promotional key art and first look posters for IIT Krishnamurthy.
             </p>
           </div>
@@ -365,7 +365,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   
                   {/* Badge */}
                   <div className="absolute top-3 left-3 z-10">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/15">
+                    <span className="cmc-tag px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15">
                       {poster.tag}
                     </span>
                   </div>
@@ -377,7 +377,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     <h4 className="font-cinzel text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1">
                       {poster.title}
                     </h4>
-                    <p className="text-slate-400 text-xs font-light">
+                    <p className="text-slate-300 text-sm font-normal">
                       {poster.subtitle}
                     </p>
                   </div>
@@ -388,7 +388,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                       href={poster.src}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-slate-400 hover:text-white inline-flex items-center gap-1 text-[11px] hover:underline"
+                      className="text-slate-300 hover:text-white inline-flex items-center gap-1 text-xs hover:underline"
                     >
                       <span>Full Resolution</span>
                       <ExternalLink className="w-3 h-3" />
@@ -406,7 +406,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
         <div className="mt-16 sm:mt-20 pt-12 border-t border-white/10">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-3">
             <div>
-              <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-1">
+              <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-1">
                 <Trophy className="w-4 h-4 text-amber-400" />
                 <span>ACCOLADES & INDUSTRY RECOGNITION</span>
               </div>
@@ -414,7 +414,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 Awards & SIIMA Nominations
               </h3>
             </div>
-            <p className="text-slate-400 text-xs max-w-md font-light">
+            <p className="text-slate-300 text-sm sm:text-base max-w-lg leading-relaxed font-normal">
               Celebrating premier honors, festival victories, and prestigious nominations for IIT Krishnamurthy.
             </p>
           </div>
@@ -424,21 +424,21 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
             {/* Card 1: Golden Cape Awards 2021 Winner */}
             <div className="lg:col-span-6 glass-card rounded-2xl p-6 sm:p-8 border border-amber-500/30 flex flex-col justify-between hover:border-amber-400/60 transition-all duration-300 relative group">
               <div className="absolute top-4 right-4">
-                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 inline-flex items-center gap-1.5 shadow-md">
+                <span className="cmc-tag px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/30 inline-flex items-center gap-1.5 shadow-md">
                   <Trophy className="w-3.5 h-3.5 text-amber-400" />
                   Winner
                 </span>
               </div>
 
               <div>
-                <span className="text-[11px] font-semibold tracking-wider uppercase text-amber-400/90 block mb-1">
+                <span className="cmc-eyebrow block mb-1">
                   Golden Cape Awards 2021
                 </span>
                 <h4 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
                   The Nail Biting Category Award
                 </h4>
-                <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
-                  <strong className="text-white font-medium">IIT Krishnamurthy</strong> won the prestigious <strong className="text-amber-300 font-semibold">Nail Byting Category Award</strong> at the <strong className="text-white font-medium">Golden Cape Awards 2021 | Telugu Cinema</strong>, honoring the film's gripping tension, intricate suspense, and cinematic storytelling.
+                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
+                  <strong className="text-white font-medium">IIT Krishnamurthy</strong> won the prestigious <strong className="text-amber-200 font-semibold">Nail Byting Category Award</strong> at the <strong className="text-white font-medium">Golden Cape Awards 2021 | Telugu Cinema</strong>, honoring the film's gripping tension, intricate suspense, and cinematic storytelling.
                 </p>
 
                 {/* Video Card for Award Presentation */}
@@ -463,7 +463,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                     
                     <div className="absolute top-3 left-3 z-10">
-                      <span className="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-300 border border-white/10 flex items-center gap-1.5 shadow">
+                      <span className="cmc-eyebrow px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/10 flex items-center gap-1.5 shadow">
                         <Play className="w-2.5 h-2.5 fill-amber-300" />
                         Award Feature
                       </span>
@@ -478,17 +478,17 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
 
                   <div className="p-3.5 bg-[#0a0e16] border-t border-white/5 flex items-center justify-between">
                     <div className="min-w-0 pr-3">
-                      <p className="text-xs font-semibold text-white truncate group-hover/vid:text-amber-400 transition-colors">
+                      <p className="text-sm font-semibold text-white truncate group-hover/vid:text-amber-400 transition-colors">
                         IIT Krishnamurthy Movie Wins The Nail Byting Category Award | Golden Cape Awards 2021
                       </p>
-                      <span className="text-[10px] text-slate-400 font-mono">Telugu Cinema • Watch Video</span>
+                      <span className="text-xs text-slate-300 font-mono">Telugu Cinema • Watch Video</span>
                     </div>
                     <a
                       href="https://www.youtube.com/watch?v=xxfSpP6yxT4"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="text-slate-400 hover:text-white p-1"
+                      className="text-slate-300 hover:text-white p-1"
                       title="Open on YouTube"
                     >
                       <ExternalLink className="w-4 h-4" />
@@ -505,27 +505,27 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   <Play className="w-3.5 h-3.5 fill-amber-400" />
                   <span>Stream Award Segment</span>
                 </button>
-                <span className="text-slate-400 text-[11px]">Golden Cape Awards 2021</span>
+                <span className="text-slate-300 text-xs">Golden Cape Awards 2021</span>
               </div>
             </div>
 
             {/* Card 2: 9th SIIMA Awards Nominee */}
             <div className="lg:col-span-6 glass-card rounded-2xl p-6 sm:p-8 border border-sky-500/30 flex flex-col justify-between hover:border-sky-400/60 transition-all duration-300 relative group">
               <div className="absolute top-4 right-4">
-                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sky-500/20 text-sky-400 border border-sky-500/30 inline-flex items-center gap-1.5 shadow-md">
+                <span className="cmc-tag px-3 py-1 rounded-full bg-sky-500/20 border border-sky-500/30 inline-flex items-center gap-1.5 shadow-md">
                   <Medal className="w-3.5 h-3.5 text-sky-400" />
                   SIIMA Nominee
                 </span>
               </div>
 
               <div>
-                <span className="text-[11px] font-semibold tracking-wider uppercase text-sky-400/90 block mb-1">
+                <span className="cmc-eyebrow block mb-1">
                   9th South Indian International Movie Awards
                 </span>
                 <h4 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
                   Best Debut Actor (Telugu)
                 </h4>
-                <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
                   <strong className="text-white font-medium">Dandamudi Pruthvi</strong> was nominated for the <strong className="text-sky-300 font-semibold">Best Debut Actor (Telugu)</strong> award at the <strong className="text-white font-medium">9th South Indian International Movie Awards (SIIMA)</strong> for his role in the 2020 Telugu mystery film <em className="text-slate-200">IIT Krishnamurthy</em>.
                 </p>
 
@@ -569,7 +569,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   <Award className="w-3.5 h-3.5 text-amber-400" />
                   <span>Pan-South Indian Cinema Recognition</span>
                 </span>
-                <span className="text-slate-400 text-[11px]">9th SIIMA Awards</span>
+                <span className="text-slate-300 text-xs">9th SIIMA Awards</span>
               </div>
             </div>
 

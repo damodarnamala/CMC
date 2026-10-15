@@ -11,19 +11,19 @@ export const GlobalOutlookMap: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
             <span className="w-5 h-px bg-amber-400" />
             <span>GLOBAL DISTRIBUTION & FOOTPRINT</span>
             <span className="w-5 h-px bg-amber-400" />
           </div>
 
           <div className="jitter-perspective mb-4">
-            <h2 className="tilted-text-item font-cinzel text-3xl sm:text-5xl font-extrabold text-white tracking-wide">
-              INDIAN STORIES. <span className="gold-luxury-text">GLOBAL AUDIENCES.</span>
+            <h2 className="tilted-text-item cmc-title tracking-wide">
+              INDIAN STORIES. <span className="cmc-gold-text">GLOBAL AUDIENCES.</span>
             </h2>
           </div>
 
-          <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
             Headquartered in Hyderabad, Crystolyte Media crafts narrative-driven properties calibrated for worldwide digital syndication. Through tier-one platforms—including Amazon Prime Video, regional giant Aha, and global YouTube 4K—our debut feature reaches viewers in over 200 countries and territories.
           </p>
         </div>
@@ -111,23 +111,23 @@ export const GlobalOutlookMap: React.FC = () => {
                 <span className="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-white shadow-[0_0_15px_#f59e0b]" />
               </span>
               <div className="mt-2 text-center bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-amber-500/40 shadow-xl">
-                <p className="font-cinzel text-xs font-bold text-white tracking-wider">HYDERABAD</p>
-                <p className="text-[10px] text-amber-400 font-mono tracking-tight uppercase">Global Studio HQ</p>
+                <p className="font-cinzel text-sm font-bold text-white tracking-wider">HYDERABAD</p>
+                <p className="cmc-eyebrow ">Global Studio HQ</p>
               </div>
             </div>
 
             {/* Regional Hub: Mumbai Distribution & Cinema */}
             <div className="absolute left-[63%] top-[48%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
               <span className="w-2.5 h-2.5 rounded-full bg-sky-400 shadow-[0_0_10px_#38bdf8]" />
-              <span className="text-[9px] text-slate-400 font-medium mt-1">Mumbai</span>
+              <span className="text-xs text-slate-300 font-medium mt-1">Mumbai</span>
             </div>
 
             {/* Global Distribution Node: North America */}
             <div className="absolute left-[24%] top-[28%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
               <span className="w-3 h-3 rounded-full bg-sky-400 border border-white/50 shadow-[0_0_10px_#38bdf8]" />
               <div className="mt-1 text-center bg-black/70 px-2 py-0.5 rounded border border-white/10">
-                <p className="text-[10px] text-slate-200 font-medium">North America</p>
-                <p className="text-[8px] text-sky-400">Prime Video / YouTube</p>
+                <p className="text-sm text-slate-200 font-medium">North America</p>
+                <p className="text-sm text-sky-400">Prime Video / YouTube</p>
               </div>
             </div>
 
@@ -135,8 +135,8 @@ export const GlobalOutlookMap: React.FC = () => {
             <div className="absolute left-[48%] top-[26%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
               <span className="w-3 h-3 rounded-full bg-sky-400 border border-white/50 shadow-[0_0_10px_#38bdf8]" />
               <div className="mt-1 text-center bg-black/70 px-2 py-0.5 rounded border border-white/10">
-                <p className="text-[10px] text-slate-200 font-medium">Europe & UK</p>
-                <p className="text-[8px] text-sky-400">Global OTT Streaming</p>
+                <p className="text-sm text-slate-200 font-medium">Europe & UK</p>
+                <p className="text-sm text-sky-400">Global OTT Streaming</p>
               </div>
             </div>
 
@@ -144,8 +144,8 @@ export const GlobalOutlookMap: React.FC = () => {
             <div className="absolute left-[81%] top-[32%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
               <span className="w-3 h-3 rounded-full bg-sky-400 border border-white/50 shadow-[0_0_10px_#38bdf8]" />
               <div className="mt-1 text-center bg-black/70 px-2 py-0.5 rounded border border-white/10">
-                <p className="text-[10px] text-slate-200 font-medium">Asia-Pacific</p>
-                <p className="text-[8px] text-sky-400">Digital Syndication</p>
+                <p className="text-sm text-slate-200 font-medium">Asia-Pacific</p>
+                <p className="text-sm text-sky-400">Digital Syndication</p>
               </div>
             </div>
 
@@ -155,19 +155,19 @@ export const GlobalOutlookMap: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 mt-4 border-t border-white/10 text-center">
             <div>
               <p className="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">200+</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-1">Countries & Territories</p>
+              <p className="cmc-label mt-1">Countries & Territories</p>
             </div>
             <div>
               <p className="font-cinzel text-2xl sm:text-3xl font-extrabold text-amber-400">3</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-1">Global Streaming Platforms</p>
+              <p className="cmc-label mt-1">Global Streaming Platforms</p>
             </div>
             <div>
               <p className="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">4K UHD</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-1">Master Delivery Standards</p>
+              <p className="cmc-label mt-1">Master Delivery Standards</p>
             </div>
             <div>
               <p className="font-cinzel text-2xl sm:text-3xl font-extrabold text-amber-400">100%</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-1">Core IP Retention</p>
+              <p className="cmc-label mt-1">Core IP Retention</p>
             </div>
           </div>
 

@@ -15,24 +15,24 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
         {/* Company Introduction Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
               <span className="w-5 h-px bg-amber-400" />
               <span>COMPANY INTRODUCTION</span>
             </div>
 
             <div className="jitter-perspective mb-5">
-              <h2 className="tilted-text-item font-cinzel text-3xl sm:text-5xl font-extrabold text-white leading-tight">
-                BUILDING AN ENTERTAINMENT COMPANY <br />
-                <span className="gold-luxury-text">FOR THE NEXT GENERATION</span>
+              <h2 className="tilted-text-item cmc-title leading-tight text-balance" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
+                <span className="block">BUILDING AN ENTERTAINMENT COMPANY</span>
+                <span className="block cmc-gold-text">FOR THE NEXT GENERATION</span>
               </h2>
             </div>
 
-            <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-6">
+            <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-6">
               Founded in Hyderabad by producers <strong className="text-white font-medium">Prasad Nekuri</strong> and{' '}
               <strong className="text-white font-medium">Praneeth Nekuri</strong>, Crystolyte Media is focused on the long-term vision to develop distinctive stories, build valuable intellectual property, and cross languages and borders.
             </p>
 
-            <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed mb-8">
+            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-8">
               Rather than transient packaging, we treat storytelling as an institutional discipline: developing screenplays with narrative precision, exercising strict production governance, and retaining master rights across streaming, theatrical, music, and territorial syndication.
             </p>
 
@@ -56,21 +56,21 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5">
             <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/10 relative">
               <h3 className="font-cinzel text-xl font-bold text-white mb-3">Our Core Mandate</h3>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-light mb-6">
+              <p className="text-slate-300 text-sm sm:text-sm leading-relaxed font-normal mb-6">
                 {STUDIO_INFO.vision}
               </p>
               
               <div className="space-y-3 pt-4 border-t border-white/10 text-xs text-slate-300">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Legal Entity</span>
+                  <span className="text-slate-300">Legal Entity</span>
                   <span className="font-medium text-white">{STUDIO_INFO.legalName}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Headquarters</span>
+                  <span className="text-slate-300">Headquarters</span>
                   <span className="font-medium text-white">{STUDIO_INFO.location}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Capital Structure</span>
+                  <span className="text-slate-300">Capital Structure</span>
                   <span className="font-medium text-amber-400">Independent Slate Equity</span>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
               <Lightbulb className="w-5 h-5" />
             </div>
             <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">Original Storytelling</h4>
-            <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
               Cultivating authorial voices and intricate screenplays that balance regional specificity with global narrative momentum.
             </p>
           </div>
@@ -107,7 +107,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
               <Film className="w-5 h-5" />
             </div>
             <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">Production Discipline</h4>
-            <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
               Enforcing transparent financial budgeting and tier-one technical execution across 4K UHD color science, sound design, and master delivery.
             </p>
           </div>
@@ -117,7 +117,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">IP & Rights Ownership</h4>
-            <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
               Structuring long-term enterprise value by owning core intellectual property, remake rights, episodic adaptations, and music publishing.
             </p>
           </div>

@@ -64,18 +64,10 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
           <div className="py-1">
             <CMCLogo size="sm" showSubtitle={false} className="w-14 sm:w-16 group-hover:scale-105 transition-transform" />
           </div>
-          <div className="flex flex-col border-l border-white/15 pl-3">
-            <span className="font-cinzel text-sm sm:text-base font-bold tracking-[0.16em] text-white group-hover:text-amber-400 transition-colors flex items-center gap-1 leading-tight uppercase whitespace-nowrap">
-              CRYSTOLYTE MEDIA
-            </span>
-            <span className="text-[8px] tracking-[0.24em] uppercase text-amber-400/90 font-bold font-cinzel whitespace-nowrap">
-              Creations · Corporate HQ
-            </span>
-          </div>
         </button>
 
         {/* Zone 2: Primary Clean Desktop Navigation (Max 4 Core Items + More Dropdown) */}
-        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">
+        <nav className="cmc-label hidden md:flex flex-1 justify-center items-center space-x-6 lg:space-x-8">
           {primaryNavItems.map((item) => {
             const isActive =
               currentRoute === item.route ||
@@ -105,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
               className={`py-2 flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
                 isSecondaryActive || moreMenuOpen
                   ? 'text-amber-400 font-bold'
-                  : 'text-slate-400 hover:text-white'
+                  : 'text-slate-300 hover:text-white'
               }`}
               aria-expanded={moreMenuOpen}
               aria-haspopup="true"
@@ -121,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
             {moreMenuOpen && (
               <div className="absolute top-full right-0 mt-3 w-72 rounded-2xl bg-[#0c0f17]/95 border border-white/10 shadow-2xl backdrop-blur-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                 <div className="px-3 py-2 border-b border-white/5 mb-1">
-                  <span className="text-[10px] uppercase tracking-widest font-mono text-amber-400/90 font-bold">
+                  <span className="cmc-eyebrow ">
                     Studio Ecosystem
                   </span>
                 </div>
@@ -134,14 +126,14 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
                         onClick={() => handleNavClick(sec.route)}
                         className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex flex-col group cursor-pointer ${
                           isSecActive
-                            ? 'bg-amber-500/15 text-amber-300'
+                            ? 'bg-amber-500/15 text-amber-200'
                             : 'hover:bg-white/5 text-slate-300 hover:text-white'
                         }`}
                       >
-                        <span className="text-xs font-semibold tracking-wider uppercase group-hover:text-amber-400 transition-colors">
+                        <span className="cmc-eyebrow group-hover:text-amber-400 transition-colors">
                           {sec.label}
                         </span>
-                        <span className="text-[10px] text-slate-400 font-normal tracking-normal mt-0.5">
+                        <span className="text-xs text-slate-300 font-normal tracking-normal mt-0.5">
                           {sec.desc}
                         </span>
                       </button>
@@ -153,16 +145,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
           </div>
         </nav>
 
-        {/* Zone 3: Primary Action Button */}
-        <div className="hidden md:flex items-center gap-3 shrink-0">
-          <button
-            onClick={() => handleNavClick('partnerships')}
-            className="btn-gold-luxury px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap shadow-lg cursor-pointer flex items-center gap-1.5 hover:scale-[1.02] transition-transform"
-          >
-            <span>Partner With CMC</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
 
         {/* Mobile Menu Toggle Button */}
         <div className="md:hidden flex items-center">
@@ -182,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
         <div className="md:hidden bg-[#0c0f16]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4 text-sm font-medium animate-in fade-in duration-200">
           {/* Primary Mobile Items */}
           <div className="space-y-1">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400/80 px-2 block mb-1">
+            <span className="cmc-eyebrow px-2 block mb-1">
               Core Navigation
             </span>
             {primaryNavItems.map((item) => {
@@ -194,7 +176,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
                   key={item.route}
                   onClick={() => handleNavClick(item.route)}
                   className={`block w-full text-left px-3 py-2.5 rounded-xl text-xs uppercase tracking-wider font-semibold transition-colors ${
-                    isActive ? 'bg-amber-500/15 text-amber-400 font-bold' : 'text-slate-200 hover:bg-white/5 hover:text-amber-300'
+                    isActive ? 'bg-amber-500/15 text-amber-400 font-bold' : 'text-slate-200 hover:bg-white/5 hover:text-amber-200'
                   }`}
                 >
                   {item.label}
@@ -205,7 +187,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
 
           {/* Secondary Mobile Items */}
           <div className="pt-3 border-t border-white/5 space-y-1">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 px-2 block mb-1">
+            <span className="cmc-label px-2 block mb-1">
               More Studio Sections
             </span>
             <div className="grid grid-cols-2 gap-1.5">
@@ -213,10 +195,10 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
                 <button
                   key={sec.route}
                   onClick={() => handleNavClick(sec.route)}
-                  className={`text-left px-3 py-2 rounded-lg text-[11px] font-medium tracking-wide uppercase transition-colors ${
+                  className={`text-left px-3 py-2 rounded-lg text-xs font-medium tracking-wide uppercase transition-colors ${
                     currentRoute === sec.route
                       ? 'bg-amber-500/10 text-amber-400'
-                      : 'text-slate-400 hover:text-white hover:bg-white/5'
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {sec.label}

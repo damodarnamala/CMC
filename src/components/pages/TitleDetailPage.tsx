@@ -17,16 +17,16 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
         {/* Back navigation */}
         <button
           onClick={() => onNavigate('productions')}
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-amber-400 transition-colors mb-8 cursor-pointer"
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-amber-400 transition-colors mb-8 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Productions</span>
         </button>
 
         {/* Title Studio Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 pb-8 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6 pb-8 border-b border-white/10">
           <div>
-            <div className="flex items-center gap-3 text-xs text-amber-400 font-mono uppercase tracking-widest mb-2">
+            <div className="cmc-eyebrow flex items-center gap-3 mb-2">
               <span>Studio Title Dossier</span>
               <span>·</span>
               <span>Feature Film</span>
@@ -34,10 +34,10 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
               <span>Released 2020</span>
             </div>
 
-            <h1 className="font-cinzel text-4xl sm:text-6xl font-extrabold text-white tracking-wide">
+            <h1 className="cmc-title text-white tracking-wide">
               {FEATURE_FILM.title}
             </h1>
-            <p className="text-sm sm:text-base text-slate-400 font-mono mt-1">
+            <p className="text-sm sm:text-base text-slate-300 font-mono mt-1">
               {FEATURE_FILM.teluguTitle} · {FEATURE_FILM.tagline}
             </p>
           </div>
@@ -65,7 +65,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
 
             {/* Streaming Links Direct */}
             <div className="w-full max-w-md mt-6 space-y-2.5">
-              <span className="text-[11px] uppercase tracking-wider text-slate-400 font-mono block">
+              <span className="cmc-label block">
                 Official Watch Platforms:
               </span>
               <a
@@ -112,7 +112,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
               <h2 className="font-cinzel text-xl font-bold text-white mb-3">
                 Synopsis
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
                 {FEATURE_FILM.synopsis}
               </p>
             </div>
@@ -128,9 +128,9 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5">
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-xs font-bold text-white">The Nail Biting Category Award — Winner</span>
-                    <span className="text-[10px] text-amber-400 font-mono">2021</span>
+                    <span className="text-sm text-amber-200 font-sans font-semibold">2021</span>
                   </div>
-                  <p className="text-xs text-slate-300 mb-2">
+                  <p className="text-sm text-slate-300 mb-2">
                     Golden Cape Awards 2021 (Telugu Cinema) — Awarded for exceptional suspense architecture and narrative pacing.
                   </p>
                   <button
@@ -145,9 +145,9 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5">
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-xs font-bold text-white">Best Debut Actor (Telugu) — Nominee</span>
-                    <span className="text-[10px] text-sky-400 font-mono">2021</span>
+                    <span className="text-xs text-sky-400 font-mono">2021</span>
                   </div>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-sm text-slate-300">
                     9th South Indian International Movie Awards (SIIMA) — Nominee: <strong>Dandamudi Pruthvi</strong> (playing Krishnamurthy).
                   </p>
                 </div>
@@ -157,19 +157,19 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
             {/* Production Specifications */}
             <div className="grid grid-cols-2 gap-4 text-xs">
               <div className="p-4 rounded-xl glass-card border border-white/5">
-                <span className="text-slate-400 uppercase block mb-1">Director</span>
+                <span className="cmc-label block mb-1">Director</span>
                 <span className="font-semibold text-white text-sm">{FEATURE_FILM.director}</span>
               </div>
               <div className="p-4 rounded-xl glass-card border border-white/5">
-                <span className="text-slate-400 uppercase block mb-1">Producers</span>
+                <span className="cmc-label block mb-1">Producers</span>
                 <span className="font-semibold text-white text-sm">{FEATURE_FILM.producers.join(' & ')}</span>
               </div>
               <div className="p-4 rounded-xl glass-card border border-white/5">
-                <span className="text-slate-400 uppercase block mb-1">Music Director</span>
+                <span className="cmc-label block mb-1">Music Director</span>
                 <span className="font-semibold text-white text-sm">{FEATURE_FILM.musicDirector}</span>
               </div>
               <div className="p-4 rounded-xl glass-card border border-white/5">
-                <span className="text-slate-400 uppercase block mb-1">Cinematography (DOP)</span>
+                <span className="cmc-label block mb-1">Cinematography (DOP)</span>
                 <span className="font-semibold text-white text-sm">{FEATURE_FILM.crew.dop}</span>
               </div>
             </div>
@@ -195,10 +195,10 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
             {/* Remake & Licensing Note */}
             <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h4 className="font-cinzel text-sm font-bold text-amber-300 mb-0.5">
+                <h4 className="font-cinzel text-sm font-bold text-amber-200 mb-0.5">
                   Rights & Remake Availability
                 </h4>
-                <p className="text-xs text-slate-300 font-light">
+                <p className="text-sm text-slate-300 font-normal">
                   Hindi, Tamil, and international format adaptation rights are managed directly by Crystolyte Media.
                 </p>
               </div>

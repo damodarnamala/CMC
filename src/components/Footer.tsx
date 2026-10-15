@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-[#050608] border-t border-white/10 text-slate-400 relative z-10 pt-16 pb-12">
+    <footer className="bg-[#050608] border-t border-white/10 text-slate-300 relative z-10 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Top Grid: Brand & Institutional Hubs */}
@@ -33,21 +33,21 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <span className="font-cinzel text-base font-bold text-white tracking-[0.16em] uppercase">
                   CRYSTOLYTE MEDIA
                 </span>
-                <span className="text-[9px] tracking-[0.24em] uppercase text-amber-400 font-bold font-cinzel">
+                <span className="text-xs tracking-[0.24em] uppercase text-amber-400 font-bold font-cinzel">
                   Creations · Hyderabad
                 </span>
               </div>
             </div>
 
-            <p className="text-xs text-slate-300 font-light leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-300 font-normal leading-relaxed max-w-sm">
               An independent entertainment company developing, producing, and owning premium film, television, music, and original intellectual property.
             </p>
 
-            <p className="text-[11px] text-amber-400/90 font-cinzel font-semibold tracking-wider italic">
+            <p className="text-sm text-amber-200 font-cinzel font-semibold tracking-wider italic">
               "Stories born in India. Built for the world."
             </p>
 
-            <div className="text-xs text-slate-400 space-y-1 pt-2">
+            <div className="text-xs text-slate-300 space-y-1 pt-2">
               <p>Legal Entity: <strong className="text-slate-300 font-normal">{STUDIO_INFO.legalName}</strong></p>
               <p>Headquarters: <strong className="text-slate-300 font-normal">{STUDIO_INFO.location}</strong></p>
             </div>
@@ -133,19 +133,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </span>
             <div className="space-y-3 text-xs">
               <div>
-                <span className="text-[10px] uppercase text-slate-400 block font-mono">Business & Financing:</span>
+                <span className="cmc-label block">Business & Financing:</span>
                 <a href="mailto:business@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
                   business@crystolytemedia.com
                 </a>
               </div>
               <div>
-                <span className="text-[10px] uppercase text-slate-400 block font-mono">Press & Media Relations:</span>
+                <span className="cmc-label block">Press & Media Relations:</span>
                 <a href="mailto:press@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
                   press@crystolytemedia.com
                 </a>
               </div>
               <div>
-                <span className="text-[10px] uppercase text-slate-400 block font-mono">Territorial Distribution:</span>
+                <span className="cmc-label block">Territorial Distribution:</span>
                 <a href="mailto:distribution@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
                   distribution@crystolytemedia.com
                 </a>
@@ -156,7 +156,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* Unsolicited Materials Disclaimer: Mandatory Blueprint Compliance */}
-        <div className="py-6 border-b border-white/5 text-[11px] text-slate-400 leading-relaxed font-light">
+        <div className="py-6 border-b border-white/5 text-xs text-slate-300 leading-relaxed font-normal">
           <p>
             <strong className="text-slate-300">Unsolicited Materials Legal Notice:</strong> Crystolyte Media (Crystolyte Media Creations) does not accept unsolicited scripts, treatments, concepts, screenplays, or other creative materials unless submitted through an authorized literary representative, talent agent, or licensed attorney. Any unsolicited creative material received will be deleted or returned unread without review.
           </p>
@@ -164,11 +164,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Bottom Bar: Copyright & Ecosystem */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-          <p className="text-slate-400">
+          <p className="text-slate-300">
             © {currentYear} {STUDIO_INFO.legalName}. All rights reserved.
           </p>
 
-          <div className="flex items-center space-x-6 text-[11px] uppercase tracking-wider text-slate-400">
+          <div className="cmc-label flex items-center space-x-6">
             <span>FILM</span>
             <span>·</span>
             <span>SERIES</span>

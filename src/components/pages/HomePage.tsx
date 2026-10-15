@@ -20,7 +20,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenCinemaModa
     <div>
       {/* 1. Hero Section: Refined Motion, Vertical Brand Stack, Exact Blueprint Tagline & CTAs */}
       <Hero
+        variant="wallpaper"
         onOpenCinemaModal={onOpenCinemaModal}
+        onNavigate={onNavigate}
+      />
+
+      <Hero
+        variant="intro"
+        onOpenCinemaModal={onOpenCinemaModal}
+        onNavigate={onNavigate}
+      />
+
+      {/* Leadership & collaborators follows the tagline block */}
+      <ProducersLeadership
         onNavigate={onNavigate}
       />
 
@@ -53,29 +65,25 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenCinemaModa
         onNavigate={onNavigate}
       />
 
-      {/* 8. Leadership & Creative Collaborators: Prasad, Praneeth, Sreevardhan & Executive Org */}
-      <ProducersLeadership
-        onNavigate={onNavigate}
-      />
 
       {/* 9. Partnership CTA Section: "Build With Us" */}
       <section className="py-20 sm:py-24 relative z-10 border-t border-white/5 bg-[#080a0e] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(212,175,55,0.08),transparent_60%)] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-4">
             <span className="w-5 h-px bg-amber-400" />
             <span>PARTNERSHIP INVITATION</span>
             <span className="w-5 h-px bg-amber-400" />
           </div>
 
           <div className="jitter-perspective mb-6">
-            <h2 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
-              BUILD WITH <span className="gold-luxury-text">CRYSTOLYTE MEDIA</span>
+            <h2 className="cmc-title tilted-text-item text-white leading-tight">
+              BUILD WITH <span className="cmc-gold-text">CRYSTOLYTE MEDIA</span>
             </h2>
           </div>
 
-          <p className="max-w-2xl mx-auto text-slate-300 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-10">
+          <p className="max-w-2xl mx-auto text-slate-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-10">
             We invite aligned financial institutions, co-producers, global streaming networks, and creative partners to collaborate on our active development slate and transmedia intellectual properties.
           </p>
 

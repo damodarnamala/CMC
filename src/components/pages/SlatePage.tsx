@@ -13,7 +13,7 @@ export const SlatePage: React.FC<SlatePageProps> = ({ onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         <button
           onClick={() => onNavigate('home')}
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-amber-400 transition-colors mb-6 cursor-pointer"
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-amber-400 transition-colors mb-6 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Studio Overview</span>

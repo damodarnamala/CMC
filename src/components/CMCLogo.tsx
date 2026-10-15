@@ -43,7 +43,7 @@ export const CMCLogo: React.FC<CMCLogoProps> = ({
         <div className="flex flex-col items-center justify-center">
           <span className="font-cinzel text-2xl font-black text-amber-400 tracking-wider">CMC</span>
           {showSubtitle && (
-            <span className="text-[10px] uppercase tracking-[0.3em] text-amber-300 font-semibold mt-1">
+            <span className="cmc-eyebrow mt-1">
               CREATIVE WORKS
             </span>
           )}

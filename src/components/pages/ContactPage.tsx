@@ -38,19 +38,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
         
         {/* Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
             <span className="w-5 h-px bg-amber-400" />
             <span>CONTACT & COMMUNICATIONS</span>
           </div>
 
-          <div className="jitter-perspective mb-6">
-            <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
-              CONNECT WITH <br />
-              <span className="gold-luxury-text">CRYSTOLYTE MEDIA</span>
-            </h1>
-          </div>
-
-          <p className="text-slate-300 text-base sm:text-xl font-light leading-relaxed">
+          <p className="text-slate-300 text-base sm:text-xl font-normal leading-relaxed">
             Direct routing to our executive offices, legal counsel, distribution desks, and press communications in Hyderabad.
           </p>
         </div>
@@ -65,8 +58,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               <h2 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2 uppercase tracking-wide">
                 Studio Policy Regarding Unsolicited Creative Materials
               </h2>
-              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-light">
-                <strong className="text-amber-300">Crystolyte Media does not accept unsolicited scripts, treatments, concepts, pitch decks, screenplays, or other creative materials</strong> unless submitted through an authorized entertainment representative, literary agent, or licensed attorney. Any unsolicited materials received via email or standard mail will be deleted or returned unread without review, to protect both creators and the studio from potential intellectual property conflicts.
+              <p className="text-sm sm:text-sm text-slate-200 leading-relaxed font-normal">
+                <strong className="text-amber-200">Crystolyte Media does not accept unsolicited scripts, treatments, concepts, pitch decks, screenplays, or other creative materials</strong> unless submitted through an authorized entertainment representative, literary agent, or licensed attorney. Any unsolicited materials received via email or standard mail will be deleted or returned unread without review, to protect both creators and the studio from potential intellectual property conflicts.
               </p>
             </div>
           </div>
@@ -88,14 +81,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block font-medium">Crystolyte Media Creations</strong>
-                    <span className="text-slate-400">Hyderabad, Telangana, India</span>
+                    <span className="text-slate-300">Hyderabad, Telangana, India</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 pt-3 border-t border-white/5">
                   <Mail className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-slate-400 block text-xs">Primary Corporate Desk</span>
+                    <span className="text-slate-300 block text-xs">Primary Corporate Desk</span>
                     <a href="mailto:business@crystolytemedia.com" className="text-white hover:text-amber-400 font-medium">
                       business@crystolytemedia.com
                     </a>
@@ -115,11 +108,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   <div key={i} className="pb-3 border-b border-white/5 last:border-b-0 last:pb-0">
                     <div className="flex items-center justify-between mb-0.5">
                       <span className="font-semibold text-white">{d.name}</span>
-                      <a href={`mailto:${d.email}`} className="text-amber-400 hover:underline font-mono text-[11px]">
+                      <a href={`mailto:${d.email}`} className="text-amber-200 hover:underline font-sans font-semibold text-sm">
                         {d.email}
                       </a>
                     </div>
-                    <span className="text-slate-400 text-[11px] block">{d.desc}</span>
+                    <span className="text-slate-300 text-xs block">{d.desc}</span>
                   </div>
                 ))}
               </div>
@@ -129,10 +122,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
           {/* Right: Direct Corporate Message Form */}
           <div className="lg:col-span-7">
             <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/10">
-              <h2 className="font-cinzel text-2xl font-bold text-white mb-2">
+              <h2 className="cmc-title text-white mb-2">
                 Send an Executive Inquiry
               </h2>
-              <p className="text-slate-400 text-xs sm:text-sm font-light mb-8">
+              <p className="text-slate-300 text-sm sm:text-sm font-normal mb-8">
                 Please complete the form below. Messages are routed to the appropriate department within one business day.
               </p>
 
@@ -156,7 +149,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                      <label className="cmc-label block mb-2">
                         Full Name *
                       </label>
                       <input
@@ -170,7 +163,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                      <label className="cmc-label block mb-2">
                         Email Address *
                       </label>
                       <input
@@ -186,7 +179,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                      <label className="cmc-label block mb-2">
                         Target Department *
                       </label>
                       <select
@@ -203,7 +196,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                      <label className="cmc-label block mb-2">
                         Organization (Optional)
                       </label>
                       <input
@@ -217,7 +210,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-2">
+                    <label className="cmc-label block mb-2">
                       Inquiry Message *
                     </label>
                     <textarea

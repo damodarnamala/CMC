@@ -1,0 +1,228 @@
+/* ==========================================================================
+   CMC Design System — tokens and reusable text, surface and button styles.
+   Import once (index.css does this). Use the classes instead of ad-hoc styles.
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --cmc-bg: #08090d;            /* page background */
+  --cmc-surface: #0e1117;       /* section background */
+  --cmc-surface-raised: #131824;/* cards */
+  --cmc-border: rgba(255, 255, 255, 0.08);
+
+  /* Text */
+  --cmc-text: #ffffff;          /* headings */
+  --cmc-text-body: #cbd5e1;     /* body copy (slate-300) */
+  --cmc-text-muted: #94a3b8;    /* captions, meta (slate-400) */
+
+  /* Gold — sampled from the CMC logo */
+  --cmc-gold-highlight: #fbf4d4;
+  --cmc-gold-light: #eed49e;
+  --cmc-gold-mid: #d5b27f;
+  --cmc-gold: #fbbf24;          /* accent used for eyebrows, badges, links */
+  --cmc-gold-deep: #bc9362;
+  --cmc-gold-shadow: #8a5a12;
+
+  /* Brand accents (buttons only) */
+  --cmc-accent-red: #ff0033;
+  --cmc-accent-blue: #00a8e1;
+
+  /* Type */
+  --cmc-font-display: 'Cinzel', serif;
+  --cmc-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- Gold & silver treatments ---------- */
+
+/* Logo-matched gold gradient text */
+.cmc-gold-text {
+  background: linear-gradient(180deg, var(--cmc-gold-highlight) 0%, var(--cmc-gold-light) 30%, var(--cmc-gold-mid) 55%, var(--cmc-gold-deep) 80%, #e2c382 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Gold with a subtle emboss (use for logotype-style lettering) */
+.cmc-gold-emboss {
+  background: linear-gradient(180deg, var(--cmc-gold-highlight) 0%, var(--cmc-gold-light) 30%, var(--cmc-gold-mid) 55%, var(--cmc-gold-deep) 80%, #e2c382 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 240, 190, 0.45))
+    drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.9))
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.75));
+}
+
+/* Brushed silver text */
+.cmc-silver-text {
+  background: linear-gradient(180deg, #ffffff 0%, #d6d9de 45%, #8b9099 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ---------- Typography ---------- */
+
+/* Display: page hero titles */
+.cmc-display {
+  font-family: var(--cmc-font-display);
+  font-size: clamp(1.875rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cmc-text);
+}
+
+/* H2: section titles */
+.cmc-title {
+  font-family: var(--cmc-font-display);
+  font-size: clamp(1.875rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cmc-text);
+}
+
+/* H3: card and item titles */
+.cmc-heading {
+  font-family: var(--cmc-font-display);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--cmc-text);
+}
+
+/* Subtitle / tagline under a title (gold) */
+.cmc-subtitle {
+  font-family: var(--cmc-font-display);
+  font-size: clamp(0.875rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cmc-gold);
+}
+
+/* Eyebrow: small label above a title */
+.cmc-eyebrow {
+  font-family: var(--cmc-font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cmc-gold);
+}
+
+/* Body copy */
+.cmc-body {
+  font-family: var(--cmc-font-body);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--cmc-text-body);
+}
+
+/* Small body copy (cards, lists) */
+.cmc-body-sm {
+  font-family: var(--cmc-font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--cmc-text-body);
+}
+
+/* Caption / meta */
+.cmc-caption {
+  font-family: var(--cmc-font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cmc-text-muted);
+}
+
+/* ---------- Surfaces ---------- */
+
+.cmc-section {
+  background: var(--cmc-surface);
+  border-top: 1px solid var(--cmc-border);
+}
+
+.cmc-card {
+  background: var(--cmc-surface-raised);
+  border: 1px solid var(--cmc-border);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.cmc-card:hover {
+  border-color: rgba(251, 191, 36, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px -10px rgba(230, 175, 46, 0.2);
+}
+
+/* Small gold pill (role or status badge) */
+.cmc-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cmc-gold);
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+/* ---------- Buttons ---------- */
+
+.cmc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease, box-shadow 0.3s ease;
+}
+.cmc-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+/* Primary: gold gradient (main calls to action) */
+.cmc-btn-primary,
+.cmc-btn-primary:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #e6af2e 50%, #b47814 100%);
+  color: #08090d;
+  border: none;
+  box-shadow: 0 6px 20px -3px rgba(230, 175, 46, 0.35);
+}
+
+/* Secondary: brand red (partner / contact actions) */
+.cmc-btn-secondary,
+.cmc-btn-secondary:hover {
+  background: linear-gradient(135deg, #ff0033 0%, #d4002b 50%, #99001f 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 80, 110, 0.35);
+  box-shadow: 0 6px 20px -3px rgba(255, 0, 51, 0.38);
+}
+
+/* Ghost: outline on dark backgrounds */
+.cmc-btn-ghost,
+.cmc-btn-ghost:hover {
+  background: transparent;
+  color: var(--cmc-gold);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  box-shadow: none;
+}

@@ -1,0 +1,220 @@
+import React from 'react';
+import { FEATURE_FILM } from '../../data/studioData.ts';
+import { ArrowLeft, Play, ExternalLink, Award, Medal, CheckCircle2, Film, Music, ShieldCheck } from 'lucide-react';
+import { OfficialMoviePoster } from '../OfficialMoviePoster.tsx';
+import { AppRoute } from '../../types.ts';
+
+interface TitleDetailPageProps {
+  onNavigate: (route: AppRoute) => void;
+  onOpenCinemaModal: (videoId?: string) => void;
+}
+
+export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, onOpenCinemaModal }) => {
+  return (
+    <div className="pt-28 pb-24 text-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
+        
+        {/* Back navigation */}
+        <button
+          onClick={() => onNavigate('productions')}
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-amber-400 transition-colors mb-8 cursor-pointer"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>Back to Productions</span>
+        </button>
+
+        {/* Title Studio Header */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6 pb-8 border-b border-white/10">
+          <div>
+            <div className="flex items-center gap-3 text-sm text-amber-200 font-sans font-semibold uppercase tracking-widest mb-2">
+              <span>Studio Title Dossier</span>
+              <span>·</span>
+              <span>Feature Film</span>
+              <span>·</span>
+              <span>Released 2020</span>
+            </div>
+
+            <h1 className="font-cinzel text-4xl sm:text-6xl font-extrabold text-white tracking-wide">
+              {FEATURE_FILM.title}
+            </h1>
+            <p className="text-sm sm:text-base text-slate-300 font-mono mt-1">
+              {FEATURE_FILM.teluguTitle} · {FEATURE_FILM.tagline}
+            </p>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="flex flex-wrap items-center gap-3 text-xs text-slate-300">
+            <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Runtime: 2h 08m</span>
+            <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Language: Telugu</span>
+            <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Format: 4K UHD Master</span>
+          </div>
+        </div>
+
+        {/* Main Title Layout: Poster Showcase + Data */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+          
+          {/* Left: Authentic Official Poster Display (without any CMC overlay as requested) */}
+          <div className="lg:col-span-5 flex flex-col items-center">
+            <OfficialMoviePoster
+              className="w-full max-w-md shadow-2xl"
+              onPlayTrailer={() => onOpenCinemaModal('ez6iLxDgdBU')}
+              onPlayTeaser={() => onOpenCinemaModal('XfDvmgAZmX4')}
+              onPlaySong={() => onOpenCinemaModal('5IAPAGizJ9Y')}
+              onPlayFullMovie={() => onOpenCinemaModal('_nKFH-wbwtE')}
+            />
+
+            {/* Streaming Links Direct */}
+            <div className="w-full max-w-md mt-6 space-y-2.5">
+              <span className="text-xs uppercase tracking-wider text-slate-300 font-mono block">
+                Official Watch Platforms:
+              </span>
+              <a
+                href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 px-4 rounded-xl bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 hover:bg-[#00a8e1]/25 transition-colors flex items-center justify-between text-xs font-semibold"
+              >
+                <span className="flex items-center gap-2">
+                  <i className="fa-brands fa-amazon" /> Watch on Prime Video (Worldwide)
+                </span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 px-4 rounded-xl bg-[#ff671f]/15 text-[#ff8c42] border border-[#ff671f]/30 hover:bg-[#ff671f]/25 transition-colors flex items-center justify-between text-xs font-semibold"
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#ff671f]" /> Watch on Aha Video
+                </span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+
+              <button
+                onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
+                className="w-full py-3 px-4 rounded-xl bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 hover:bg-[#ff0033]/25 transition-colors flex items-center justify-between text-xs font-semibold cursor-pointer"
+              >
+                <span className="flex items-center gap-2">
+                  <i className="fa-brands fa-youtube" /> Stream Full Movie 4K (YouTube)
+                </span>
+                <Play className="w-3.5 h-3.5 fill-red-400" />
+              </button>
+            </div>
+          </div>
+
+          {/* Right: Synopsis, Metadata, verified Cast & Crew */}
+          <div className="lg:col-span-7 space-y-8">
+            
+            {/* Synopsis */}
+            <div>
+              <h2 className="font-cinzel text-xl font-bold text-white mb-3">
+                Synopsis
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+                {FEATURE_FILM.synopsis}
+              </p>
+            </div>
+
+            {/* Industry Honors */}
+            <div className="glass-card rounded-2xl p-6 border border-amber-500/30">
+              <h3 className="font-cinzel text-base font-bold text-amber-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <Award className="w-5 h-5 text-amber-400" />
+                <span>Verified Awards & Nominations</span>
+              </h3>
+
+              <div className="space-y-4">
+                <div className="p-4 rounded-xl bg-black/40 border border-white/5">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs font-bold text-white">The Nail Biting Category Award — Winner</span>
+                    <span className="text-sm text-amber-200 font-sans font-semibold">2021</span>
+                  </div>
+                  <p className="text-sm text-slate-300 mb-2">
+                    Golden Cape Awards 2021 (Telugu Cinema) — Awarded for exceptional suspense architecture and narrative pacing.
+                  </p>
+                  <button
+                    onClick={() => onOpenCinemaModal('xxfSpP6yxT4')}
+                    className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:underline cursor-pointer"
+                  >
+                    <Play className="w-3.5 h-3.5 fill-amber-400" />
+                    <span>Watch Golden Cape Awards Winner Segment</span>
+                  </button>
+                </div>
+
+                <div className="p-4 rounded-xl bg-black/40 border border-white/5">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs font-bold text-white">Best Debut Actor (Telugu) — Nominee</span>
+                    <span className="text-xs text-sky-400 font-mono">2021</span>
+                  </div>
+                  <p className="text-sm text-slate-300">
+                    9th South Indian International Movie Awards (SIIMA) — Nominee: <strong>Dandamudi Pruthvi</strong> (playing Krishnamurthy).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Production Specifications */}
+            <div className="grid grid-cols-2 gap-4 text-xs">
+              <div className="p-4 rounded-xl glass-card border border-white/5">
+                <span className="text-slate-300 uppercase block mb-1">Director</span>
+                <span className="font-semibold text-white text-sm">{FEATURE_FILM.director}</span>
+              </div>
+              <div className="p-4 rounded-xl glass-card border border-white/5">
+                <span className="text-slate-300 uppercase block mb-1">Producers</span>
+                <span className="font-semibold text-white text-sm">{FEATURE_FILM.producers.join(' & ')}</span>
+              </div>
+              <div className="p-4 rounded-xl glass-card border border-white/5">
+                <span className="text-slate-300 uppercase block mb-1">Music Director</span>
+                <span className="font-semibold text-white text-sm">{FEATURE_FILM.musicDirector}</span>
+              </div>
+              <div className="p-4 rounded-xl glass-card border border-white/5">
+                <span className="text-slate-300 uppercase block mb-1">Cinematography (DOP)</span>
+                <span className="font-semibold text-white text-sm">{FEATURE_FILM.crew.dop}</span>
+              </div>
+            </div>
+
+            {/* Ensemble Cast & Full Crew */}
+            <div>
+              <h3 className="font-cinzel text-base font-bold text-white mb-3">
+                Cast & Key Crew
+              </h3>
+              <div className="space-y-2 text-xs text-slate-300">
+                <p>
+                  <strong className="text-white">Cast:</strong> {FEATURE_FILM.cast.hero}, {FEATURE_FILM.cast.heroine}, {FEATURE_FILM.cast.ensemble.join(', ')}
+                </p>
+                <p>
+                  <strong className="text-white">Editor:</strong> {FEATURE_FILM.crew.editor} · <strong className="text-white">Publicity Design:</strong> {FEATURE_FILM.crew.publicityDesign} · <strong className="text-white">Sound Design:</strong> {FEATURE_FILM.crew.soundDesign}
+                </p>
+                <p>
+                  <strong className="text-white">Colorist:</strong> {FEATURE_FILM.crew.colorist} · <strong className="text-white">Lyrics:</strong> {FEATURE_FILM.crew.lyrics} · <strong className="text-white">Executive Producer:</strong> {FEATURE_FILM.crew.executiveProducer}
+                </p>
+              </div>
+            </div>
+
+            {/* Remake & Licensing Note */}
+            <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h4 className="font-cinzel text-sm font-bold text-amber-200 mb-0.5">
+                  Rights & Remake Availability
+                </h4>
+                <p className="text-sm text-slate-300 font-normal">
+                  Hindi, Tamil, and international format adaptation rights are managed directly by Crystolyte Media.
+                </p>
+              </div>
+              <button
+                onClick={() => onNavigate('ip-rights')}
+                className="btn-gold-luxury px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider whitespace-nowrap cursor-pointer shrink-0"
+              >
+                Inquire Rights
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  );
+};

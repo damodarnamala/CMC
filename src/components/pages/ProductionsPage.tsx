@@ -16,20 +16,20 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 sm:mb-16 gap-6">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
               <span className="w-5 h-px bg-amber-400" />
               <span>STUDIO PORTFOLIO</span>
             </div>
 
             <div className="jitter-perspective mb-4">
-              <h1 className="tilted-text-item font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
+              <h1 className="tilted-text-item cmc-title">
                 PRODUCTIONS & RELEASES
               </h1>
             </div>
 
-            <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
               Our verified portfolio of released feature films, episodic pipelines, and active development properties.
             </p>
           </div>
@@ -66,7 +66,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
         {/* Marquee Featured Production: IIT Krishnamurthy */}
         {(filter === 'all' || filter === 'released') && (
           <div className="mb-16">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-mono font-semibold block mb-4">
+            <span className="cmc-eyebrow block mb-4">
               Featured Title · Proof of Execution
             </span>
 
@@ -95,8 +95,8 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                 {/* Film Data */}
                 <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between">
                   <div>
-                    <div className="flex flex-wrap items-center gap-3 text-xs text-slate-400 mb-4">
-                      <span className="text-amber-400 font-semibold font-mono uppercase">Feature Film</span>
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-slate-300 mb-4">
+                      <span className="cmc-eyebrow ">Feature Film</span>
                       <span>·</span>
                       <span>Telugu</span>
                       <span>·</span>
@@ -107,14 +107,14 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                       <span className="text-emerald-400">Released</span>
                     </div>
 
-                    <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-white mb-2">
+                    <h2 className="cmc-title text-white mb-2">
                       {FEATURE_FILM.title}
                     </h2>
-                    <p className="text-xs sm:text-sm text-slate-400 font-mono mb-4">
+                    <p className="text-sm sm:text-sm text-slate-300 font-mono mb-4">
                       {FEATURE_FILM.teluguTitle} · {FEATURE_FILM.tagline}
                     </p>
 
-                    <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-6">
+                    <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-6">
                       An intelligent student arrives in Hyderabad in search of his missing uncle, only to find himself entangled in a labyrinth of corporate deception and police intrigue where every clue unravels more questions than answers.
                     </p>
 
@@ -132,7 +132,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
 
                     {/* Global Streaming Availability */}
                     <div className="mb-6">
-                      <span className="text-[11px] uppercase tracking-wider text-slate-400 font-mono block mb-2">
+                      <span className="cmc-label block mb-2">
                         Worldwide Streaming Availability
                       </span>
                       <div className="flex flex-wrap items-center gap-2.5">
@@ -163,13 +163,13 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                   </div>
 
                   <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                    <div className="text-xs text-slate-400">
+                    <div className="text-xs text-slate-300">
                       Directed by <strong className="text-white font-medium">S. Sreevardhan</strong> · Produced by <strong className="text-white font-medium">Prasad Nekuri & Praneeth Nekuri</strong>
                     </div>
 
                     <button
                       onClick={() => onNavigate('productions/iit-krishnamurthy')}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-200 transition-colors cursor-pointer"
                     >
                       <span>View Title Dossier & Archive</span>
                       <ArrowRight className="w-4 h-4" />
@@ -185,7 +185,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
         {/* Development Pipeline Cards */}
         {(filter === 'all' || filter === 'upcoming') && (
           <div>
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-mono font-semibold block mb-4">
+            <span className="cmc-eyebrow block mb-4">
               Active Development Pipeline
             </span>
 
@@ -196,9 +196,9 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                   className="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300"
                 >
                   <div>
-                    <div className="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-white/10">
-                      <span className="font-mono text-amber-400">{proj.internalCode}</span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[10px] font-semibold uppercase">
+                    <div className="flex items-center justify-between text-xs text-slate-300 mb-4 pb-3 border-b border-white/10">
+                      <span className="font-sans font-semibold text-amber-200">{proj.internalCode}</span>
+                      <span className="cmc-tag px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">
                         {proj.status}
                       </span>
                     </div>
@@ -206,31 +206,31 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                     <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-1">
                       {proj.title}
                     </h3>
-                    <p className="text-xs uppercase tracking-wider text-slate-400 font-mono mb-4">
+                    <p className="cmc-label mb-4">
                       {proj.format} · {proj.genre}
                     </p>
 
-                    <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                    <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
                       {proj.synopsis}
                     </p>
 
                     <div className="p-3.5 rounded-xl bg-[#08090d]/80 border border-white/5 space-y-1.5 text-xs text-slate-300 mb-6">
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Stage</span>
+                        <span className="text-slate-300">Stage</span>
                         <span className="font-medium text-amber-400">{proj.stage}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Scope</span>
+                        <span className="text-slate-300">Scope</span>
                         <span className="font-medium text-slate-200">{proj.scope}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+                  <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-300">
                     <span>Confidential Package</span>
                     <button
                       onClick={() => onNavigate('slate')}
-                      className="text-amber-400 hover:text-amber-300 font-semibold cursor-pointer"
+                      className="text-amber-400 hover:text-amber-200 font-semibold cursor-pointer"
                     >
                       View Slate Details →
                     </button>

@@ -47,22 +47,22 @@ export const BusinessCapabilities: React.FC<BusinessCapabilitiesProps> = ({ onNa
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 sm:mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-14 sm:mb-16 gap-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
               <span className="w-5 h-px bg-amber-400" />
               <span>BUSINESS MODEL & CAPABILITIES</span>
             </div>
 
             <div className="jitter-perspective">
-              <h2 className="tilted-text-item font-cinzel text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+              <h2 className="tilted-text-item cmc-title leading-tight">
                 AN INTEGRATED <br />
-                <span className="gold-luxury-text">ENTERTAINMENT ENGINE</span>
+                <span className="cmc-gold-text">ENTERTAINMENT ENGINE</span>
               </h2>
             </div>
           </div>
 
-          <p className="text-slate-400 text-sm max-w-md font-light leading-relaxed">
+          <p className="text-slate-300 text-sm max-w-md font-normal leading-relaxed">
             Structuring the infrastructure to incubate original stories, allocate capital with precision, and retain enduring rights that compound in enterprise value.
           </p>
         </div>
@@ -76,22 +76,22 @@ export const BusinessCapabilities: React.FC<BusinessCapabilitiesProps> = ({ onNa
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-2xl font-bold text-amber-400/80 tracking-tight">
+                  <span className="font-sans font-semibold text-2xl font-bold text-amber-200 tracking-tight">
                     {cap.num}
                   </span>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <span className="cmc-tag px-3 py-1 rounded-full bg-white/5 border border-white/10">
                     {cap.tag}
                   </span>
                 </div>
 
-                <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-1.5 group-hover:text-amber-300 transition-colors">
+                <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-1.5 group-hover:text-amber-200 transition-colors">
                   {cap.title}
                 </h3>
-                <p className="text-xs font-medium uppercase tracking-wider text-amber-400/90 mb-4 font-mono">
+                <p className="cmc-eyebrow mb-4">
                   {cap.subtitle}
                 </p>
 
-                <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-6">
+                <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-6">
                   {cap.description}
                 </p>
               </div>

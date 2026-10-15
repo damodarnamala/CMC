@@ -18,19 +18,19 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
           
           {/* Left Column: Vision Statement */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center space-x-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
               <span className="w-5 h-px bg-amber-400" />
               <span>THE LONG-TERM HORIZON</span>
             </div>
 
             <div className="jitter-perspective mb-6">
-              <h2 className="tilted-text-item font-cinzel text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+              <h2 className="cmc-title tilted-text-item text-white leading-tight">
                 FROM STORIES TO <br />
-                <span className="gold-luxury-text">FRANCHISES.</span>
+                <span className="cmc-gold-text">FRANCHISES.</span>
               </h2>
             </div>
 
-            <div className="space-y-4 text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-8">
+            <div className="space-y-4 text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-8">
               <p>
                 The modern entertainment landscape rewards ownership over transience. While conventional producers chase isolated theatrical cycles, Crystolyte Media builds enduring properties that compound in audience loyalty and enterprise valuation.
               </p>
@@ -39,7 +39,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-400">
+            <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-300">
               {onNavigate && (
                 <>
                   <button
@@ -70,7 +70,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <h3 className="font-cinzel text-base font-bold text-white mb-1">
                   Compound Enterprise Value
                 </h3>
-                <p className="text-slate-400 text-xs sm:text-sm font-light leading-snug">
+                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-snug">
                   Retaining 100% core intellectual property transforms individual films into enduring library assets with generational cash flow.
                 </p>
               </div>
@@ -84,7 +84,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <h3 className="font-cinzel text-base font-bold text-white mb-1">
                   Transmedia Multipliers
                 </h3>
-                <p className="text-slate-400 text-xs sm:text-sm font-light leading-snug">
+                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-snug">
                   Developing properties engineered for multi-language regional adaptations, limited episodic spin-offs, and soundtrack publishing.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <h3 className="font-cinzel text-base font-bold text-white mb-1">
                   Disciplined Capital Governance
                 </h3>
-                <p className="text-slate-400 text-xs sm:text-sm font-light leading-snug">
+                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-snug">
                   Transparent production budgeting, milestone oversight, and risk-managed financing tailored to institutional equity partners.
                 </p>
               </div>
