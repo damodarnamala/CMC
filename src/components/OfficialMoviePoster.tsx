@@ -91,10 +91,10 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
           <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white tracking-wider">
             IIT KRISHNAMURTHY
           </h3>
-          <p className="text-sm text-amber-200 font-sans font-semibold">
+          <p className="text-base text-amber-200 font-sans font-semibold">
             {currentPoster.title}
           </p>
-          <p className="text-sm text-slate-300 max-w-xs font-normal">
+          <p className="text-base text-slate-200 max-w-xs font-normal">
             {currentPoster.subtitle}
           </p>
 
@@ -154,7 +154,7 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
               className={`p-2 rounded-xl border text-left transition-all duration-300 flex items-center gap-2.5 ${
                 isActive
                   ? 'bg-amber-500/15 border-amber-400 text-white shadow-md'
-                  : 'bg-[#0f141c] border-white/10 text-slate-300 hover:text-white hover:border-white/20'
+                  : 'bg-[#0f141c] border-white/10 text-slate-200 hover:text-white hover:border-white/20'
               }`}
             >
               <img
@@ -164,10 +164,10 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
                 referrerPolicy="no-referrer"
               />
               <div className="min-w-0">
-                <span className={`text-xs font-bold block uppercase tracking-wider truncate ${isActive ? 'text-amber-400' : 'text-slate-300'}`}>
+                <span className={`text-sm font-bold block uppercase tracking-wider truncate ${isActive ? 'text-amber-400' : 'text-slate-200'}`}>
                   {poster.tag}
                 </span>
-                <span className="text-xs text-slate-300 block truncate">
+                <span className="text-sm text-slate-200 block truncate">
                   View Image
                 </span>
               </div>

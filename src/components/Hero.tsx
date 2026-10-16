@@ -180,7 +180,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
         </div>
 
         {/* Subcopy: Exact Brand Blueprint Specification */}
-        <p className="cmc-rise max-w-3xl mx-auto text-slate-100 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-8 sm:mb-10 px-2">
+        <p className="cmc-rise max-w-3xl mx-auto text-slate-100 text-lg md:text-xl md:text-xl font-normal leading-relaxed mb-8 sm:mb-10 px-2">
           An independent entertainment company developing, producing, and owning premium film, television, music, and original intellectual property.
         </p>
 
@@ -188,7 +188,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
         <div className="cmc-rise flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xl mx-auto w-full px-2 mb-10" style={{ '--d': '1.5s' } as React.CSSProperties}>
           <button
             onClick={() => onNavigate ? onNavigate('productions') : window.location.assign('#productions')}
-            className="cmc-btn cmc-btn-primary w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
+            className="cmc-btn cmc-btn-primary w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
           >
             <Film className="w-4 h-4" />
             <span>View Our Productions</span>
@@ -196,7 +196,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
 
           <button
             onClick={() => onNavigate ? onNavigate('partnerships') : window.location.assign('#partnerships')}
-            className="cmc-btn cmc-btn-secondary w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
+            className="cmc-btn cmc-btn-secondary w-full sm:w-1/2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 shadow-xl cursor-pointer"
           >
             <Handshake className="w-4 h-4 text-amber-400" />
             <span>Partner With CMC</span>
@@ -207,7 +207,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
         <div className="cmc-rise mb-10" style={{ '--d': '1.7s' } as React.CSSProperties}>
           <button
             onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-white transition-colors cursor-pointer group"
+            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-slate-200 hover:text-white transition-colors cursor-pointer group"
           >
             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-amber-400 group-hover:text-black transition-colors">
               <Play className="w-3 h-3 fill-current ml-0.5" />
@@ -217,7 +217,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
         </div>
 
         {/* Ecosystem Footer Strip: FILM • SERIES • MUSIC • IP • GLOBAL PARTNERSHIPS */}
-        <div className="cmc-rise w-full pt-8 sm:pt-10 border-t border-white/10 max-w-4xl mx-auto" style={{ '--d': '1.9s' } as React.CSSProperties}>
+        <div className="cmc-rise w-full pt-8 sm:pt-10 cmc-rule-top max-w-4xl mx-auto" style={{ '--d': '1.9s' } as React.CSSProperties}>
           <div className="cmc-label flex flex-wrap items-center justify-center gap-3 sm:gap-6">
             <span className="text-slate-200">FILM</span>
             <span className="text-amber-300">·</span>

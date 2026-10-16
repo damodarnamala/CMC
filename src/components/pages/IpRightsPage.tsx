@@ -26,7 +26,7 @@ export const IpRightsPage: React.FC<IpRightsPageProps> = ({ onNavigate }) => {
             </h1>
           </div>
 
-          <p className="text-slate-300 text-base sm:text-xl font-normal leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-xl font-normal leading-relaxed">
             Positioned as a long-term rights-holding enterprise. We build lasting value by originating, structuring, and retaining comprehensive intellectual property across feature film, episodic television, master soundtracks, and international formats.
           </p>
         </div>
@@ -41,23 +41,23 @@ export const IpRightsPage: React.FC<IpRightsPageProps> = ({ onNavigate }) => {
               <h2 className="cmc-title text-white mb-4">
                 The Architecture of Intellectual Property Retention
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-4">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-4">
                 Traditional production cycles in Indian cinema often trade long-term balance sheet equity for immediate production commissions. At Crystolyte Media, our business model operates in reverse: we invest in script incubation, own our master negative rights, and license distribution windows with strict term limits.
               </p>
-              <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
                 This discipline guarantees that our characters, story worlds, musical compositions, and franchise opportunities remain under unified studio control for multi-decade exploitation.
               </p>
             </div>
 
-            <div className="lg:col-span-4 p-6 rounded-2xl bg-black/50 border border-white/5 space-y-3 text-xs">
-              <div className="cmc-eyebrow flex items-center gap-2 pb-2 border-b border-white/10">
+            <div className="lg:col-span-4 p-6 rounded-2xl bg-black/50 border border-white/5 space-y-3 text-sm">
+              <div className="cmc-eyebrow flex items-center gap-2 pb-2 cmc-rule-bottom">
                 <FileCheck2 className="w-4 h-4" />
                 <span>Rights Governance</span>
               </div>
-              <p className="text-slate-300">
+              <p className="text-slate-200">
                 <strong className="text-white">Clean Chain of Title:</strong> All screenplays registered with the Screenwriters Association and copyright authorities.
               </p>
-              <p className="text-slate-300">
+              <p className="text-slate-200">
                 <strong className="text-white">Direct Licensing:</strong> Bilateral contracts with platforms (Prime Video, Aha) avoiding third-party syndication leakage.
               </p>
             </div>
@@ -72,7 +72,7 @@ export const IpRightsPage: React.FC<IpRightsPageProps> = ({ onNavigate }) => {
               className="glass-card rounded-2xl p-7 sm:p-8 border border-white/10 flex flex-col justify-between hover:border-amber-400/40 transition-all duration-300 group"
             >
               <div>
-                <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 text-xs text-slate-300 mb-4 pb-3 border-b border-white/10">
+                <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 text-sm text-slate-200 mb-4 pb-3 cmc-rule-bottom">
                   <span className="cmc-eyebrow min-w-0">{pillar.subtitle}</span>
                   <span className="cmc-tag shrink-0 whitespace-nowrap px-3 py-1 rounded-full border border-white/10 bg-white/5">{pillar.status}</span>
                 </div>
@@ -81,7 +81,7 @@ export const IpRightsPage: React.FC<IpRightsPageProps> = ({ onNavigate }) => {
                   {pillar.title}
                 </h3>
 
-                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
+                <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
                   {pillar.description}
                 </p>
 
@@ -90,7 +90,7 @@ export const IpRightsPage: React.FC<IpRightsPageProps> = ({ onNavigate }) => {
                     Key Assets Under Governance:
                   </span>
                   {pillar.keyAssets.map((asset, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                    <div key={i} className="flex items-start gap-2 text-sm text-slate-200">
                       <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5" />
                       <span>{asset}</span>
                     </div>
@@ -98,10 +98,10 @@ export const IpRightsPage: React.FC<IpRightsPageProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/5">
+              <div className="pt-4 cmc-rule-top">
                 <button
                   onClick={() => onNavigate('partnerships')}
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400 hover:text-amber-200 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-amber-400 hover:text-amber-200 transition-colors cursor-pointer"
                 >
                   <span>Inquire licensing terms</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -117,14 +117,14 @@ export const IpRightsPage: React.FC<IpRightsPageProps> = ({ onNavigate }) => {
             <h3 className="font-cinzel text-xl font-bold text-white mb-2">
               Corporate Rights & Format Licensing Inquiries
             </h3>
-            <p className="text-slate-300 text-sm sm:text-sm font-normal">
+            <p className="text-slate-200 text-lg md:text-xl font-normal">
               Are you an international distributor, regional film producer, or streaming commissioner seeking adaptation rights or territorial distribution windows? Contact our Rights & Business Affairs division.
             </p>
           </div>
 
           <button
             onClick={() => onNavigate('contact')}
-            className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shadow-lg"
+            className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-sm uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shadow-lg"
           >
             Submit Rights Inquiry
           </button>

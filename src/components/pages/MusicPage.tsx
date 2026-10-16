@@ -27,7 +27,7 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
             </h1>
           </div>
 
-          <p className="text-slate-300 text-base sm:text-xl font-normal leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-xl font-normal leading-relaxed">
             Curating original motion picture soundtracks, managing master recording rights, and cultivating independent artist collaborations across South Asian and global soundscapes.
           </p>
         </div>
@@ -42,16 +42,16 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
               <h2 className="cmc-title text-white mb-4">
                 Master Rights, Publishing & Sync Architecture
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-4">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-4">
                 Crystolyte Media's music arm operates at the intersection of cinematic immersion and independent sound publishing. In addition to orchestrating atmospheric scores and chart-topping motion picture melodies, the division is selectively expanding into standalone singles and master rights curation.
               </p>
-              <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
                 Led by CEO Praneeth Nekuri, initiatives such as the <em>Bangaru Bomma</em> independent music project demonstrate the studio's commitment to pairing fresh melodic composers with contemporary visual storytelling.
               </p>
             </div>
 
-            <div className="lg:col-span-4 p-6 rounded-2xl bg-black/50 border border-white/5 space-y-3 text-xs text-slate-300">
-              <div className="cmc-eyebrow flex items-center gap-2 pb-2 border-b border-white/10">
+            <div className="lg:col-span-4 p-6 rounded-2xl bg-black/50 border border-white/5 space-y-3 text-sm text-slate-200">
+              <div className="cmc-eyebrow flex items-center gap-2 pb-2 cmc-rule-bottom">
                 <Disc3 className="w-4 h-4" />
                 <span>Publishing Disciplines</span>
               </div>
@@ -76,11 +76,11 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
                 className="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between hover:border-amber-400/40 transition-all duration-300 group"
               >
                 <div>
-                  <div className="flex items-center justify-between text-xs text-slate-300 mb-4 pb-3 border-b border-white/10">
+                  <div className="flex items-center justify-between text-sm text-slate-200 mb-4 pb-3 cmc-rule-bottom">
                     <span className="cmc-tag px-2.5 py-0.5 rounded-full bg-white/5">
                       {track.category}
                     </span>
-                    <span className="font-mono text-slate-300">{track.duration}</span>
+                    <span className="font-mono text-slate-200">{track.duration}</span>
                   </div>
 
                   <h3 className="font-cinzel text-xl font-bold text-white mb-1 group-hover:text-amber-200 transition-colors">
@@ -90,16 +90,16 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
                     {track.artist} · Composer: {track.composer}
                   </p>
 
-                  <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
+                  <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
                     {track.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                <div className="pt-4 cmc-rule-top flex items-center justify-between">
                   {track.youtubeId ? (
                     <button
                       onClick={() => onOpenCinemaModal(track.youtubeId)}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-200 transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-amber-400 hover:text-amber-200 transition-colors cursor-pointer"
                     >
                       <Play className="w-3.5 h-3.5 fill-current" />
                       <span>Play Track</span>
@@ -115,9 +115,9 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   ) : (
-                    <span className="text-xs text-slate-300 font-mono">Catalog Archive</span>
+                    <span className="text-sm text-slate-200 font-mono">Catalog Archive</span>
                   )}
-                  <span className="text-xs text-slate-300 font-mono">Crystolyte Music</span>
+                  <span className="text-sm text-slate-200 font-mono">Crystolyte Music</span>
                 </div>
               </div>
             ))}
@@ -130,14 +130,14 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
             <h3 className="font-cinzel text-xl font-bold text-white mb-2">
               Sync Licensing & Publishing Inquiries
             </h3>
-            <p className="text-slate-300 text-sm sm:text-sm font-normal">
+            <p className="text-slate-200 text-lg md:text-xl font-normal">
               For music supervisors, commercial brands, or gaming studios seeking synchronization licenses for master recordings and publishing catalogs.
             </p>
           </div>
 
           <button
             onClick={() => onNavigate('contact')}
-            className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shadow-lg"
+            className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-sm uppercase tracking-wider font-bold whitespace-nowrap cursor-pointer shadow-lg"
           >
             Inquire Music Sync
           </button>

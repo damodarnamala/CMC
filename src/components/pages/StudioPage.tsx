@@ -26,7 +26,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
             </h1>
           </div>
 
-          <p className="text-slate-300 text-base sm:text-xl font-normal leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-xl font-normal leading-relaxed">
             Crystolyte Media is an independent entertainment company developing, producing, and owning premium film, television, music, and original intellectual property.
           </p>
         </div>
@@ -42,7 +42,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <h2 className="cmc-title text-white mb-6">
                 Founded on Creative Independence & Financial Discipline
               </h2>
-              <div className="space-y-4 text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+              <div className="space-y-4 text-slate-200 text-base md:text-lg font-normal leading-relaxed">
                 <p>
                   Established in 2020 in Hyderabad, Crystolyte Media was created by producers <strong className="text-white font-medium">Prasad Nekuri</strong> and <strong className="text-white font-medium">Praneeth Nekuri</strong> to address a persistent structural limitation in Indian cinema: the reliance on single-cycle, work-for-hire production models that forfeit long-term rights.
                 </p>
@@ -56,33 +56,33 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
             </div>
 
             <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-black/60 border border-white/5 space-y-4">
-              <h3 className="font-cinzel text-lg font-bold text-white pb-3 border-b border-white/10">
+              <h3 className="font-cinzel text-lg font-bold text-white pb-3 cmc-rule-bottom">
                 Institutional Facts
               </h3>
 
-              <div className="space-y-3 text-xs sm:text-sm text-slate-300">
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-300">Customer Brand</span>
+              <div className="space-y-3 text-base md:text-lg text-slate-200">
+                <div className="flex justify-between py-1.5 cmc-rule-bottom">
+                  <span className="text-slate-200">Customer Brand</span>
                   <span className="font-medium text-white">{STUDIO_INFO.customerBrand}</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-300">Legal Entity</span>
+                <div className="flex justify-between py-1.5 cmc-rule-bottom">
+                  <span className="text-slate-200">Legal Entity</span>
                   <span className="font-medium text-white">{STUDIO_INFO.legalName}</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-300">Year Founded</span>
+                <div className="flex justify-between py-1.5 cmc-rule-bottom">
+                  <span className="text-slate-200">Year Founded</span>
                   <span className="font-medium text-white">2020</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-300">Operating Base</span>
+                <div className="flex justify-between py-1.5 cmc-rule-bottom">
+                  <span className="text-slate-200">Operating Base</span>
                   <span className="font-medium text-white">Hyderabad, Telangana</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-300">Core Positioning</span>
+                <div className="flex justify-between py-1.5 cmc-rule-bottom">
+                  <span className="text-slate-200">Core Positioning</span>
                   <span className="font-medium text-amber-400">Original IP & Rights Ownership</span>
                 </div>
                 <div className="flex justify-between py-1.5">
-                  <span className="text-slate-300">Global Reach</span>
+                  <span className="text-slate-200">Global Reach</span>
                   <span className="font-medium text-white">200+ Countries & Territories</span>
                 </div>
               </div>
@@ -111,7 +111,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <h3 className="font-cinzel text-lg font-bold text-white mb-2">
                 01. Creative Excellence
               </h3>
-              <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
                 Prioritizing screenplay integrity, narrative momentum, and authentic character arcs over generic commercial tropes.
               </p>
             </div>
@@ -123,7 +123,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <h3 className="font-cinzel text-lg font-bold text-white mb-2">
                 02. Financial Discipline
               </h3>
-              <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
                 Employing transparent budget governance, milestone-based capital drawdown, and audited production controls for institutional peace of mind.
               </p>
             </div>
@@ -135,7 +135,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <h3 className="font-cinzel text-lg font-bold text-white mb-2">
                 03. Rights Ownership
               </h3>
-              <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
                 Retaining master intellectual property and soundtrack publishing rights, ensuring enduring library equity that compounds across decades.
               </p>
             </div>
@@ -147,7 +147,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <h3 className="font-cinzel text-lg font-bold text-white mb-2">
                 04. Global Ambition
               </h3>
-              <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
                 Bridging Indian storytelling with universal cinematic pacing to capture international streaming audiences and multi-territory remake markets.
               </p>
             </div>
@@ -161,7 +161,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
             <h3 className="font-cinzel text-xl font-bold text-white mb-1">
               Explore Our Expanding Operations
             </h3>
-            <p className="text-slate-300 text-sm sm:text-sm font-normal">
+            <p className="text-slate-200 text-lg md:text-xl font-normal">
               Review our development pipeline, verified production archives, or executive organization.
             </p>
           </div>
@@ -169,7 +169,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
           <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={() => onNavigate('productions')}
-              className="cmc-btn cmc-btn-primary px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold cursor-pointer"
+              className="cmc-btn cmc-btn-primary px-5 py-3 rounded-xl text-sm uppercase tracking-wider font-bold cursor-pointer"
             >
               View Productions
             </button>

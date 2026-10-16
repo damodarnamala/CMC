@@ -17,14 +17,14 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
         {/* Back navigation */}
         <button
           onClick={() => onNavigate('productions')}
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-amber-400 transition-colors mb-8 cursor-pointer"
+          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-slate-200 hover:text-amber-400 transition-colors mb-8 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Productions</span>
         </button>
 
         {/* Title Studio Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6 pb-8 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6 pb-8 cmc-rule-bottom">
           <div>
             <div className="cmc-eyebrow flex items-center gap-3 mb-2">
               <span>Studio Title Dossier</span>
@@ -37,13 +37,13 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
             <h1 className="cmc-title text-white tracking-wide">
               {FEATURE_FILM.title}
             </h1>
-            <p className="text-sm sm:text-base text-slate-300 font-mono mt-1">
+            <p className="text-lg md:text-xl text-slate-200 font-mono mt-1">
               {FEATURE_FILM.teluguTitle} · {FEATURE_FILM.tagline}
             </p>
           </div>
 
           {/* Quick Stats */}
-          <div className="flex flex-wrap items-center gap-3 text-xs text-slate-300">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-slate-200">
             <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Runtime: 2h 08m</span>
             <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Language: Telugu</span>
             <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Format: 4K UHD Master</span>
@@ -72,7 +72,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
                 href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 rounded-xl bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 hover:bg-[#00a8e1]/25 transition-colors flex items-center justify-between text-xs font-semibold"
+                className="w-full py-3 px-4 rounded-xl bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 hover:bg-[#00a8e1]/25 transition-colors flex items-center justify-between text-sm font-semibold"
               >
                 <span className="flex items-center gap-2">
                   <i className="fa-brands fa-amazon" /> Watch on Prime Video (Worldwide)
@@ -84,7 +84,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
                 href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 rounded-xl bg-[#ff671f]/15 text-[#ff8c42] border border-[#ff671f]/30 hover:bg-[#ff671f]/25 transition-colors flex items-center justify-between text-xs font-semibold"
+                className="w-full py-3 px-4 rounded-xl bg-[#ff671f]/15 text-[#ff8c42] border border-[#ff671f]/30 hover:bg-[#ff671f]/25 transition-colors flex items-center justify-between text-sm font-semibold"
               >
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#ff671f]" /> Watch on Aha Video
@@ -94,7 +94,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
 
               <button
                 onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
-                className="w-full py-3 px-4 rounded-xl bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 hover:bg-[#ff0033]/25 transition-colors flex items-center justify-between text-xs font-semibold cursor-pointer"
+                className="w-full py-3 px-4 rounded-xl bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 hover:bg-[#ff0033]/25 transition-colors flex items-center justify-between text-sm font-semibold cursor-pointer"
               >
                 <span className="flex items-center gap-2">
                   <i className="fa-brands fa-youtube" /> Stream Full Movie 4K (YouTube)
@@ -112,7 +112,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
               <h2 className="font-cinzel text-xl font-bold text-white mb-3">
                 Synopsis
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+              <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
                 {FEATURE_FILM.synopsis}
               </p>
             </div>
@@ -127,15 +127,15 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
               <div className="space-y-4">
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs font-bold text-white">The Nail Biting Category Award — Winner</span>
+                    <span className="text-sm font-bold text-white">The Nail Biting Category Award — Winner</span>
                     <span className="text-sm text-amber-200 font-sans font-semibold">2021</span>
                   </div>
-                  <p className="text-sm text-slate-300 mb-2">
+                  <p className="text-base text-slate-200 mb-2">
                     Golden Cape Awards 2021 (Telugu Cinema) — Awarded for exceptional suspense architecture and narrative pacing.
                   </p>
                   <button
                     onClick={() => onOpenCinemaModal('xxfSpP6yxT4')}
-                    className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:underline cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-sm text-amber-400 hover:underline cursor-pointer"
                   >
                     <Play className="w-3.5 h-3.5 fill-amber-400" />
                     <span>Watch Golden Cape Awards Winner Segment</span>
@@ -144,10 +144,10 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
 
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs font-bold text-white">Best Debut Actor (Telugu) — Nominee</span>
-                    <span className="text-xs text-sky-400 font-mono">2021</span>
+                    <span className="text-sm font-bold text-white">Best Debut Actor (Telugu) — Nominee</span>
+                    <span className="text-sm text-sky-400 font-mono">2021</span>
                   </div>
-                  <p className="text-sm text-slate-300">
+                  <p className="text-base text-slate-200">
                     9th South Indian International Movie Awards (SIIMA) — Nominee: <strong>Dandamudi Pruthvi</strong> (playing Krishnamurthy).
                   </p>
                 </div>
@@ -155,7 +155,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
             </div>
 
             {/* Production Specifications */}
-            <div className="grid grid-cols-2 gap-4 text-xs">
+            <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="p-4 rounded-xl glass-card border border-white/5">
                 <span className="cmc-label block mb-1">Director</span>
                 <span className="font-semibold text-white text-sm">{FEATURE_FILM.director}</span>
@@ -179,7 +179,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
               <h3 className="font-cinzel text-base font-bold text-white mb-3">
                 Cast & Key Crew
               </h3>
-              <div className="space-y-2 text-xs text-slate-300">
+              <div className="space-y-2 text-sm text-slate-200">
                 <p>
                   <strong className="text-white">Cast:</strong> {FEATURE_FILM.cast.hero}, {FEATURE_FILM.cast.heroine}, {FEATURE_FILM.cast.ensemble.join(', ')}
                 </p>
@@ -198,13 +198,13 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
                 <h4 className="font-cinzel text-sm font-bold text-amber-200 mb-0.5">
                   Rights & Remake Availability
                 </h4>
-                <p className="text-sm text-slate-300 font-normal">
+                <p className="text-base text-slate-200 font-normal">
                   Hindi, Tamil, and international format adaptation rights are managed directly by Crystolyte Media.
                 </p>
               </div>
               <button
                 onClick={() => onNavigate('ip-rights')}
-                className="cmc-btn cmc-btn-primary px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider whitespace-nowrap cursor-pointer shrink-0"
+                className="cmc-btn cmc-btn-primary px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wider whitespace-nowrap cursor-pointer shrink-0"
               >
                 Inquire Rights
               </button>

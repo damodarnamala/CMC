@@ -53,7 +53,7 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
       <div className="relative w-full max-w-5xl bg-[#0e1117] rounded-3xl overflow-hidden border border-white/10 shadow-2xl my-auto">
         
         {/* Top Modal Header */}
-        <div className="flex items-center justify-between px-5 sm:px-7 py-4 bg-[#08090d] border-b border-white/10">
+        <div className="flex items-center justify-between px-5 sm:px-7 py-4 bg-[#08090d] cmc-rule-bottom">
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse" />
             <div>
@@ -71,7 +71,7 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
               href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-[#38bdf8] hover:underline hidden sm:inline-flex items-center gap-1.5"
+              className="text-sm text-[#38bdf8] hover:underline hidden sm:inline-flex items-center gap-1.5"
             >
               <i className="fa-brands fa-amazon" /> Prime Video
             </a>
@@ -79,7 +79,7 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
               href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-[#ff8c42] hover:underline hidden sm:inline-flex items-center gap-1.5"
+              className="text-sm text-[#ff8c42] hover:underline hidden sm:inline-flex items-center gap-1.5"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#ff671f]" /> Aha Video
             </a>
@@ -87,13 +87,13 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
               href={currentVideo.watchUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-amber-400 hover:underline hidden sm:inline-flex items-center gap-1.5"
+              className="text-sm text-amber-400 hover:underline hidden sm:inline-flex items-center gap-1.5"
             >
               YouTube <ExternalLink className="w-3 h-3" />
             </a>
             <button
               onClick={onClose}
-              className="text-slate-300 hover:text-white p-1.5 rounded-xl hover:bg-white/10 transition-colors"
+              className="text-slate-200 hover:text-white p-1.5 rounded-xl hover:bg-white/10 transition-colors"
               aria-label="Close Cinema Stream"
             >
               <X className="w-6 h-6" />
@@ -114,7 +114,7 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
         </div>
 
         {/* Video Selector Tabs Bar (Trailer, Teaser, Song, Full Movie) */}
-        <div className="bg-[#08090d] border-t border-white/10 p-3 sm:p-4">
+        <div className="bg-[#08090d] cmc-rule-top p-3 sm:p-4">
           <div className="cmc-label mb-2.5 px-1">
             Official Media Releases:
           </div>
@@ -128,25 +128,25 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
                   className={`text-left p-2.5 rounded-xl border transition-all flex flex-col justify-between ${
                     isActive
                       ? 'bg-amber-500/15 border-amber-500/60 text-white shadow-md'
-                      : 'bg-[#121620] border-white/5 text-slate-300 hover:bg-[#181e2b] hover:border-white/15'
+                      : 'bg-[#121620] border-white/5 text-slate-200 hover:bg-[#181e2b] hover:border-white/15'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-1.5">
                     <span
-                      className={`text-xs uppercase tracking-wider font-bold px-1.5 py-0.5 rounded ${
+                      className={`text-sm uppercase tracking-wider font-bold px-1.5 py-0.5 rounded ${
                         isActive
                           ? 'bg-amber-400 text-black'
-                          : 'bg-white/10 text-slate-300'
+                          : 'bg-white/10 text-slate-200'
                       }`}
                     >
                       {vid.category}
                     </span>
-                    <Play className={`w-3 h-3 ${isActive ? 'text-amber-400 fill-amber-400' : 'text-slate-300'}`} />
+                    <Play className={`w-3 h-3 ${isActive ? 'text-amber-400 fill-amber-400' : 'text-slate-200'}`} />
                   </div>
-                  <span className="text-xs font-semibold truncate block leading-tight">
+                  <span className="text-sm font-semibold truncate block leading-tight">
                     {vid.title}
                   </span>
-                  <span className="text-xs text-slate-300 font-mono mt-1">
+                  <span className="text-sm text-slate-200 font-mono mt-1">
                     {vid.duration || 'Watch'}
                   </span>
                 </button>
@@ -156,12 +156,12 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
         </div>
 
         {/* Bottom Film Details Ribbon */}
-        <div className="px-5 sm:px-7 py-3 bg-[#06080b] border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-300 gap-2">
+        <div className="px-5 sm:px-7 py-3 bg-[#06080b] cmc-rule-top flex flex-col sm:flex-row items-center justify-between text-sm text-slate-200 gap-2">
           <div>
             Directed by <strong className="text-white">{FEATURE_FILM.director}</strong> • Produced by{' '}
             <strong className="text-amber-400">{FEATURE_FILM.producers.join(' & ')}</strong>
           </div>
-          <div className="flex items-center gap-3 text-xs">
+          <div className="flex items-center gap-3 text-sm">
             <span>Crystolyte Media Creations</span>
             <span>•</span>
             <span className="text-amber-400">CMC Creative Works</span>

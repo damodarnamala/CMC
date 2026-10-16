@@ -43,7 +43,7 @@ export const BusinessCapabilities: React.FC<BusinessCapabilitiesProps> = ({ onNa
   ];
 
   return (
-    <section className="py-20 sm:py-24 relative z-10 border-t border-white/5 bg-[#0b0e14]">
+    <section className="py-20 sm:py-24 relative z-10 cmc-rule-top bg-[#0b0e14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Section Header */}
@@ -62,7 +62,7 @@ export const BusinessCapabilities: React.FC<BusinessCapabilitiesProps> = ({ onNa
             </div>
           </div>
 
-          <p className="text-slate-300 text-sm max-w-md font-normal leading-relaxed">
+          <p className="text-slate-200 text-base max-w-md font-normal leading-relaxed">
             Structuring the infrastructure to incubate original stories, allocate capital with precision, and retain enduring rights that compound in enterprise value.
           </p>
         </div>
@@ -91,7 +91,7 @@ export const BusinessCapabilities: React.FC<BusinessCapabilitiesProps> = ({ onNa
                   {cap.subtitle}
                 </p>
 
-                <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-6">
+                <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
                   {cap.description}
                 </p>
               </div>
@@ -99,7 +99,7 @@ export const BusinessCapabilities: React.FC<BusinessCapabilitiesProps> = ({ onNa
               {onNavigate && (
                 <button
                   onClick={() => onNavigate(cap.route)}
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-amber-400 transition-colors pt-4 border-t border-white/5 cursor-pointer text-left"
+                  className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-slate-200 hover:text-amber-400 transition-colors pt-4 cmc-rule-top cursor-pointer text-left"
                 >
                   <span>Learn more</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

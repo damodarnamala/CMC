@@ -13,7 +13,7 @@ export const LeadershipPage: React.FC<LeadershipPageProps> = ({ onNavigate }) =>
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         <button
           onClick={() => onNavigate('home')}
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-amber-400 transition-colors mb-6 cursor-pointer"
+          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-slate-200 hover:text-amber-400 transition-colors mb-6 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Studio Overview</span>

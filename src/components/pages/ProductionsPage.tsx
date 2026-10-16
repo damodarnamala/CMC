@@ -29,7 +29,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
               </h1>
             </div>
 
-            <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+            <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               Our verified portfolio of released feature films, episodic pipelines, and active development properties.
             </p>
           </div>
@@ -38,24 +38,24 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
           <div className="flex items-center gap-1 p-1 bg-white/5 border border-white/10 rounded-xl shrink-0">
             <button
               onClick={() => setFilter('all')}
-              className={`px-4 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer ${
-                filter === 'all' ? 'bg-amber-400 text-black font-bold shadow-md' : 'text-slate-300 hover:text-white'
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors cursor-pointer ${
+                filter === 'all' ? 'bg-amber-400 text-black font-bold shadow-md' : 'text-slate-200 hover:text-white'
               }`}
             >
               All Projects
             </button>
             <button
               onClick={() => setFilter('released')}
-              className={`px-4 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer ${
-                filter === 'released' ? 'bg-amber-400 text-black font-bold shadow-md' : 'text-slate-300 hover:text-white'
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors cursor-pointer ${
+                filter === 'released' ? 'bg-amber-400 text-black font-bold shadow-md' : 'text-slate-200 hover:text-white'
               }`}
             >
               Released
             </button>
             <button
               onClick={() => setFilter('upcoming')}
-              className={`px-4 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer ${
-                filter === 'upcoming' ? 'bg-amber-400 text-black font-bold shadow-md' : 'text-slate-300 hover:text-white'
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors cursor-pointer ${
+                filter === 'upcoming' ? 'bg-amber-400 text-black font-bold shadow-md' : 'text-slate-200 hover:text-white'
               }`}
             >
               Development Pipeline
@@ -84,7 +84,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                     <button
                       onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
-                      className="absolute bottom-4 left-4 right-4 py-3 rounded-xl bg-amber-400 text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl hover:bg-amber-300 transition-colors cursor-pointer"
+                      className="absolute bottom-4 left-4 right-4 py-3 rounded-xl bg-amber-400 text-black font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl hover:bg-amber-300 transition-colors cursor-pointer"
                     >
                       <Play className="w-4 h-4 fill-black" />
                       <span>Play Trailer</span>
@@ -95,7 +95,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                 {/* Film Data */}
                 <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between">
                   <div>
-                    <div className="flex flex-wrap items-center gap-3 text-xs text-slate-300 mb-4">
+                    <div className="flex flex-wrap items-center gap-3 text-sm text-slate-200 mb-4">
                       <span className="cmc-eyebrow ">Feature Film</span>
                       <span>·</span>
                       <span>Telugu</span>
@@ -110,16 +110,16 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                     <h2 className="cmc-title text-white mb-2">
                       {FEATURE_FILM.title}
                     </h2>
-                    <p className="text-sm sm:text-sm text-slate-300 font-mono mb-4">
+                    <p className="text-lg md:text-xl text-slate-200 font-mono mb-4">
                       {FEATURE_FILM.teluguTitle} · {FEATURE_FILM.tagline}
                     </p>
 
-                    <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-6">
+                    <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
                       An intelligent student arrives in Hyderabad in search of his missing uncle, only to find himself entangled in a labyrinth of corporate deception and police intrigue where every clue unravels more questions than answers.
                     </p>
 
                     {/* Honors Box */}
-                    <div className="p-4 rounded-xl bg-[#08090d]/80 border border-white/5 space-y-2 mb-6 text-xs text-slate-300">
+                    <div className="p-4 rounded-xl bg-[#08090d]/80 border border-white/5 space-y-2 mb-6 text-sm text-slate-200">
                       <div className="flex items-center gap-2 text-amber-400 font-semibold">
                         <Award className="w-4 h-4" />
                         <span>Golden Cape Awards 2021: Nail Biting Category Award (Winner)</span>
@@ -140,7 +140,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                           href={FEATURE_FILM.releasePlatforms.primeVideoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 hover:bg-[#00a8e1]/25 transition-colors flex items-center gap-1.5"
+                          className="px-3.5 py-1.5 rounded-lg text-sm font-semibold bg-[#00a8e1]/15 text-[#38bdf8] border border-[#00a8e1]/30 hover:bg-[#00a8e1]/25 transition-colors flex items-center gap-1.5"
                         >
                           <i className="fa-brands fa-amazon" /> Prime Video Worldwide
                         </a>
@@ -148,13 +148,13 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                           href={FEATURE_FILM.releasePlatforms.ahaVideoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#ff671f]/15 text-[#ff8c42] border border-[#ff671f]/30 hover:bg-[#ff671f]/25 transition-colors flex items-center gap-1.5"
+                          className="px-3.5 py-1.5 rounded-lg text-sm font-semibold bg-[#ff671f]/15 text-[#ff8c42] border border-[#ff671f]/30 hover:bg-[#ff671f]/25 transition-colors flex items-center gap-1.5"
                         >
                           <span className="w-2 h-2 rounded-full bg-[#ff671f]" /> Aha Video
                         </a>
                         <button
                           onClick={() => onOpenCinemaModal('_nKFH-wbwtE')}
-                          className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 hover:bg-[#ff0033]/25 transition-colors flex items-center gap-1.5 cursor-pointer"
+                          className="px-3.5 py-1.5 rounded-lg text-sm font-semibold bg-[#ff0033]/15 text-red-400 border border-[#ff0033]/30 hover:bg-[#ff0033]/25 transition-colors flex items-center gap-1.5 cursor-pointer"
                         >
                           <i className="fa-brands fa-youtube" /> YouTube 4K Full Movie
                         </button>
@@ -162,14 +162,14 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                    <div className="text-xs text-slate-300">
+                  <div className="pt-6 cmc-rule-top flex flex-wrap items-center justify-between gap-4">
+                    <div className="text-sm text-slate-200">
                       Directed by <strong className="text-white font-medium">S. Sreevardhan</strong> · Produced by <strong className="text-white font-medium">Prasad Nekuri & Praneeth Nekuri</strong>
                     </div>
 
                     <button
                       onClick={() => onNavigate('productions/iit-krishnamurthy')}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-200 transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-amber-400 hover:text-amber-200 transition-colors cursor-pointer"
                     >
                       <span>View Title Dossier & Archive</span>
                       <ArrowRight className="w-4 h-4" />
@@ -196,7 +196,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                   className="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300"
                 >
                   <div>
-                    <div className="flex items-center justify-between text-xs text-slate-300 mb-4 pb-3 border-b border-white/10">
+                    <div className="flex items-center justify-between text-sm text-slate-200 mb-4 pb-3 cmc-rule-bottom">
                       <span className="font-sans font-semibold text-amber-200">{proj.internalCode}</span>
                       <span className="cmc-tag px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">
                         {proj.status}
@@ -210,23 +210,23 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                       {proj.format} · {proj.genre}
                     </p>
 
-                    <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
+                    <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
                       {proj.synopsis}
                     </p>
 
-                    <div className="p-3.5 rounded-xl bg-[#08090d]/80 border border-white/5 space-y-1.5 text-xs text-slate-300 mb-6">
+                    <div className="p-3.5 rounded-xl bg-[#08090d]/80 border border-white/5 space-y-1.5 text-sm text-slate-200 mb-6">
                       <div className="flex justify-between">
-                        <span className="text-slate-300">Stage</span>
+                        <span className="text-slate-200">Stage</span>
                         <span className="font-medium text-amber-400">{proj.stage}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-300">Scope</span>
+                        <span className="text-slate-200">Scope</span>
                         <span className="font-medium text-slate-200">{proj.scope}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-300">
+                  <div className="pt-4 cmc-rule-top flex items-center justify-between text-sm text-slate-200">
                     <span>Confidential Package</span>
                     <button
                       onClick={() => onNavigate('slate')}

@@ -35,13 +35,13 @@ export const NewsroomPage: React.FC<NewsroomPageProps> = ({ onNavigate }) => {
               </h1>
             </div>
 
-            <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+            <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               The official source for Crystolyte Media press releases, production milestones, distribution partnerships, and festival recognition.
             </p>
           </div>
 
           {/* Press Contact Pill */}
-          <div className="p-4 rounded-2xl glass-card border border-white/10 shrink-0 text-xs text-slate-300">
+          <div className="p-4 rounded-2xl glass-card border border-white/10 shrink-0 text-sm text-slate-200">
             <span className="cmc-eyebrow block mb-1">
               Press & Media Inquiries
             </span>
@@ -53,15 +53,15 @@ export const NewsroomPage: React.FC<NewsroomPageProps> = ({ onNavigate }) => {
         </div>
 
         {/* Category Filters (Segmented Control buttons) */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-white/10">
+        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 cmc-rule-bottom">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs font-medium transition-colors cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors cursor-pointer ${
                 selectedCategory === cat
                   ? 'bg-amber-400 text-black font-bold shadow-md'
-                  : 'bg-white/5 text-slate-300 hover:text-white hover:bg-white/10'
+                  : 'bg-white/5 text-slate-200 hover:text-white hover:bg-white/10'
               }`}
             >
               {cat}
@@ -78,24 +78,24 @@ export const NewsroomPage: React.FC<NewsroomPageProps> = ({ onNavigate }) => {
               onClick={() => setActiveArticle(article)}
             >
               <div>
-                <div className="flex items-center justify-between text-xs text-slate-300 mb-4 pb-3 border-b border-white/10">
+                <div className="flex items-center justify-between text-sm text-slate-200 mb-4 pb-3 cmc-rule-bottom">
                   <span className="cmc-tag px-2.5 py-0.5 rounded-full bg-white/5">
                     {article.category}
                   </span>
-                  <span className="font-mono text-xs text-slate-300">{article.date}</span>
+                  <span className="font-mono text-sm text-slate-200">{article.date}</span>
                 </div>
 
                 <h2 className="font-cinzel text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-amber-200 transition-colors leading-snug">
                   {article.title}
                 </h2>
 
-                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
+                <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
                   {article.summary}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-300">
-                <span className="flex items-center gap-1.5 font-mono text-xs">
+              <div className="pt-4 cmc-rule-top flex items-center justify-between text-sm text-slate-200">
+                <span className="flex items-center gap-1.5 font-mono text-sm">
                   <Clock className="w-3.5 h-3.5" />
                   <span>{article.readTime}</span>
                 </span>
@@ -115,13 +115,13 @@ export const NewsroomPage: React.FC<NewsroomPageProps> = ({ onNavigate }) => {
               
               <button
                 onClick={() => setActiveArticle(null)}
-                className="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-300 hover:text-white hover:bg-white/20 transition-colors cursor-pointer"
+                className="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-200 hover:text-white hover:bg-white/20 transition-colors cursor-pointer"
                 aria-label="Close Announcement"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="flex items-center gap-3 text-xs text-slate-300 mb-3 pb-3 border-b border-white/10">
+              <div className="flex items-center gap-3 text-sm text-slate-200 mb-3 pb-3 cmc-rule-bottom">
                 <span className="cmc-eyebrow ">{activeArticle.category}</span>
                 <span>·</span>
                 <span className="font-mono">{activeArticle.date}</span>
@@ -133,14 +133,14 @@ export const NewsroomPage: React.FC<NewsroomPageProps> = ({ onNavigate }) => {
                 {activeArticle.title}
               </h2>
 
-              <div className="space-y-4 text-slate-200 text-sm sm:text-base font-normal leading-relaxed mb-8">
+              <div className="space-y-4 text-slate-200 text-base md:text-lg font-normal leading-relaxed mb-8">
                 {activeArticle.content.map((p, idx) => (
                   <p key={idx}>{p}</p>
                 ))}
               </div>
 
-              <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs">
-                <span className="text-slate-300 font-mono">
+              <div className="pt-6 cmc-rule-top flex flex-wrap items-center justify-between gap-4 text-sm">
+                <span className="text-slate-200 font-mono">
                   Source: {activeArticle.verifiedSource || "Crystolyte Media Corporate Press Wire"}
                 </span>
 

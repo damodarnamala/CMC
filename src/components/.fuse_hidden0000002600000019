@@ -1,0 +1,318 @@
+import React, { useState } from 'react';
+import { PRODUCERS, DIRECTOR } from '../data/studioData.ts';
+import { LEADERSHIP_PROFILES, LeadershipProfile } from '../data/leadershipProfiles.ts';
+import { ChevronDown, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { AppRoute } from '../types.ts';
+
+interface ProducersLeadershipProps {
+  onNavigate?: (route: AppRoute) => void;
+  isStandalone?: boolean;
+}
+
+type Socials = { linkedin?: string; instagram?: string; facebook?: string };
+
+const SOCIALS: Record<LeadershipProfile['id'], Socials | undefined> = {
+  prasad: PRODUCERS[0]?.socialLinks as Socials | undefined,
+  praneeth: PRODUCERS[1]?.socialLinks as Socials | undefined,
+  sreevardhan: { instagram: DIRECTOR.instagram },
+};
+
+// Portrait: tries the fallback file once, then shows initials
+const Portrait: React.FC<{ src: string; fallbackSrc: string; initials: string; alt: string }> = ({
+  src, fallbackSrc, initials, alt,
+}) => {
+  const [current, setCurrent] = useState(src);
+  const [failed, setFailed] = useState(false);
+  if (failed) {
+    return (
+      <div className="w-full h-full bg-gradient-to-br from-amber-500/20 via-slate-900 to-black flex items-center justify-center font-cinzel font-bold text-2xl text-amber-400">
+        {initials}
+      </div>
+    );
+  }
+  return (
+    <img
+      src={current}
+      alt={alt}
+      referrerPolicy="no-referrer"
+      className="w-full h-full object-cover object-top"
+      onError={() => (current !== fallbackSrc ? setCurrent(fallbackSrc) : setFailed(true))}
+    />
+  );
+};
+
+const SocialIcons: React.FC<{ socials?: Socials }> = ({ socials }) => {
+  if (!socials) return null;
+  const items = [
+    { href: socials.linkedin, label: 'LinkedIn', hover: 'hover:text-sky-400', Icon: Linkedin },
+    { href: socials.instagram, label: 'Instagram', hover: 'hover:text-pink-400', Icon: Instagram },
+    { href: socials.facebook, label: 'Facebook', hover: 'hover:text-blue-400', Icon: Facebook },
+  ].filter((i) => i.href);
+  return (
+    <div className="flex items-center gap-3">
+      {items.map(({ href, label, hover, Icon }) => (
+        <a key={label} href={href} target="_blank" rel="noopener noreferrer" title={label} aria-label={label}
+          className={`text-slate-300 ${hover} transition-colors`}>
+          <Icon className="w-4 h-4" />
+        </a>
+      ))}
+    </div>
+  );
+};
+
+// Expanding details shared by every card: full bio, highlights and quote
+const ExpandedDetails: React.FC<{ profile: LeadershipProfile }> = ({ profile }) => (
+  <div className="space-y-6">
+    <div className="space-y-4 text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
+      {profile.bio.map((para, i) => (
+        <p key={i}>{para}</p>
+      ))}
+    </div>
+
+    <div className="p-4 sm:p-5 rounded-2xl bg-[#08090d]/80 border border-white/5">
+      <h4 className="cmc-eyebrow mb-3">Key Highlights</h4>
+      <ul className="space-y-2.5 text-xs text-slate-200">
+        {profile.highlights.map((item, i) => (
+          <li key={i} className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+            <span className="leading-snug font-medium">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {profile.quote && (
+      <blockquote className="border-l-2 border-amber-400/70 pl-5">
+        <p className="text-sm italic text-slate-200 leading-relaxed">“{profile.quote.text}”</p>
+        <footer className="cmc-eyebrow mt-3">— {profile.quote.author}</footer>
+      </blockquote>
+    )}
+  </div>
+);
+
+const ShowMoreButton: React.FC<{ expanded: boolean; onToggle: () => void; name: string }> = ({ expanded, onToggle, name }) => (
+  <button
+    type="button"
+    onClick={onToggle}
+    aria-expanded={expanded}
+    aria-label={`${expanded ? 'Show less' : 'Show more'} about ${name}`}
+    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-200 border border-amber-500/30 hover:bg-amber-500/25 hover:border-amber-400 transition-colors cursor-pointer"
+  >
+    <span>{expanded ? 'Show less' : 'Show more'}</span>
+    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} />
+  </button>
+);
+
+// Smooth height + fade animation for expanding content
+const Collapse: React.FC<{ open: boolean; children: React.ReactNode }> = ({ open, children }) => (
+  <div
+    className={`grid transition-[grid-template-rows,opacity] duration-500 ease-in-out ${open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+    aria-hidden={!open}
+  >
+    <div className="overflow-hidden min-h-0">{children}</div>
+  </div>
+);
+
+// Two short paragraphs shown on every card
+const SummaryBlock: React.FC<{ paragraphs: string[]; className?: string }> = ({ paragraphs, className = '' }) => (
+  <div className={`space-y-3 text-xs sm:text-sm text-slate-300 font-normal leading-relaxed ${className}`}>
+    {paragraphs.map((para, i) => (
+      <p key={i}>{para}</p>
+    ))}
+  </div>
+);
+
+export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStandalone = false }) => {
+  // Only one card can be expanded at a time
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const toggle = (id: string) => setExpandedId((prev) => (prev === id ? null : id));
+
+  const byId = (id: LeadershipProfile['id']) => LEADERSHIP_PROFILES.find((p) => p.id === id)!;
+  const prasad = byId('prasad');
+  const praneeth = byId('praneeth');
+  const director = byId('sreevardhan');
+
+  const identity = (p: LeadershipProfile, photo: React.ReactNode, photoClass: string) => (
+    <div className="flex items-center gap-4 sm:gap-5 mb-6">
+      <div className={`${photoClass} rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-xl bg-slate-900 shrink-0 relative`}>
+        {photo}
+      </div>
+      <div className="min-w-0 flex-1">
+        <div className="mb-1">
+          <span className="cmc-tag px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 inline-block">
+            {p.badge}
+          </span>
+        </div>
+        <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white tracking-wide leading-tight">{p.name}</h3>
+        <span className="cmc-eyebrow block mt-1">
+          {p.title}
+        </span>
+      </div>
+    </div>
+  );
+
+  const renderExecutive = (p: LeadershipProfile) => {
+    const isOpen = expandedId === p.id;
+    return (
+      <div key={p.id} className="glass-card rounded-3xl p-7 sm:p-9 border border-amber-500/25 flex flex-col justify-between hover:border-amber-400/50 transition-all duration-300 group">
+        <div>
+          {identity(p, <Portrait src={p.photo} fallbackSrc={p.photoFallback} initials={p.initials} alt={`${p.name} - ${p.badge}`} />, 'w-20 h-20 sm:w-24 sm:h-24')}
+
+          <SummaryBlock paragraphs={p.summary} className="mb-6" />
+
+          <Collapse open={isOpen}>
+            <div className="pt-2 pb-6">
+              <ExpandedDetails profile={p} />
+            </div>
+          </Collapse>
+
+          <div className="mb-2">
+            <ShowMoreButton expanded={isOpen} onToggle={() => toggle(p.id)} name={p.name} />
+          </div>
+        </div>
+
+        <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-300">
+          <span className="text-slate-300 font-medium">Crystolyte Media Creations</span>
+          <SocialIcons socials={SOCIALS[p.id]} />
+        </div>
+      </div>
+    );
+  };
+
+  const isDirectorOpen = expandedId === director.id;
+  const directorPhoto = director.photo;
+
+  return (
+    <section id="leadership" className={`py-20 sm:py-24 relative z-10 ${!isStandalone ? 'border-t border-white/5 bg-[#0a0d13]/60' : ''}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
+
+        {/* Section Header */}
+        <div id="leadership-header" className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+          <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-3">
+            <span className="w-5 h-px bg-amber-400" />
+            <span>EXECUTIVE GOVERNANCE & CREATIVE PARTNERS</span>
+            <span className="w-5 h-px bg-amber-400" />
+          </div>
+          <div className="jitter-perspective mb-4">
+            <h2 className="tilted-text-item cmc-title">
+              LEADERSHIP & COLLABORATORS
+            </h2>
+          </div>
+          <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+            The foundation of an expanding entertainment enterprise. Crystolyte Media combines institutional business governance with an authorial creative community to build sustainable, globally scalable properties.
+          </p>
+        </div>
+
+        {/* Executive cards: Prasad & Praneeth */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12 items-start">
+          {renderExecutive(prasad)}
+          {renderExecutive(praneeth)}
+        </div>
+
+        {/* Creative collaborator: Sree Vardhan */}
+        <div className="max-w-6xl mx-auto glass-card rounded-3xl p-7 sm:p-9 border border-white/10 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <div className="lg:col-span-8">
+              <div className="inline-flex items-center space-x-2 cmc-eyebrow mb-2">
+                <span className="w-5 h-px bg-amber-400" />
+                <span>CREATIVE COLLABORATOR</span>
+              </div>
+              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">{director.name}</h3>
+              <p className="cmc-eyebrow mb-4">{director.title}</p>
+              <SummaryBlock paragraphs={director.summary} className="mb-6" />
+
+              <Collapse open={isDirectorOpen}>
+                <div className="pt-2 pb-6">
+                  <ExpandedDetails profile={director} />
+                </div>
+              </Collapse>
+
+              <ShowMoreButton expanded={isDirectorOpen} onToggle={() => toggle(director.id)} name={director.name} />
+            </div>
+
+            <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 sm:p-7 rounded-2xl bg-black/50 border border-amber-500/20 text-center relative group/director">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-900 shrink-0 relative mb-4"><Portrait src={directorPhoto} fallbackSrc={director.photoFallback} initials={director.initials} alt={`${director.name} - Writer & Director`} /><div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none rounded-2xl" /></div>
+
+                            <div className="mb-1">
+                <span className="cmc-tag px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 inline-block">
+                  {director.badge}
+                </span>
+              </div>
+              <h4 className="font-cinzel text-lg sm:text-xl font-bold text-white tracking-wide">{director.name}</h4>
+
+              <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+
+                {DIRECTOR.instagram && (
+                  <a
+                    href={DIRECTOR.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E1306C]/15 text-pink-300 border border-[#E1306C]/30 flex items-center gap-1.5 hover:bg-[#E1306C]/25 transition-colors shadow-sm"
+                  >
+                    <Instagram className="w-3.5 h-3.5" />
+                    <span>@mr.sreevardhan</span>
+                  </a>
+                )}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Expanding Executive Architecture (C-Suite Additions) */}
+        <div className="max-w-6xl mx-auto">
+          <div className="border-t border-white/10 pt-10">
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+              <div>
+                <h4 className="font-cinzel text-lg sm:text-xl font-bold text-white">Expanding Corporate Organization</h4>
+                <p className="text-slate-300 text-sm sm:text-sm font-normal">
+                  Architected to support future executive additions as Crystolyte Media scales slate financing, distribution, and franchise licensing.
+                </p>
+              </div>
+              <span className="cmc-eyebrow ">
+                Institutional Growth Framework
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="glass-card rounded-2xl p-6 border border-white/5 bg-[#090b10]/80">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="cmc-label ">Executive Chair</span>
+                  <span className="text-xs px-2 py-0.5 rounded bg-white/5 text-amber-400 border border-white/10">Active Search</span>
+                </div>
+                <h5 className="font-cinzel text-sm sm:text-base font-bold text-white mb-1">VP, Global Distribution & Licensing</h5>
+                <p className="text-slate-300 text-sm font-normal leading-snug">
+                  Overseeing worldwide SVOD/AVOD licensing, international theatrical sales, and airline syndication windows.
+                </p>
+              </div>
+
+              <div className="glass-card rounded-2xl p-6 border border-white/5 bg-[#090b10]/80">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="cmc-label ">Executive Chair</span>
+                  <span className="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 border border-white/10">Retained Advisory</span>
+                </div>
+                <h5 className="font-cinzel text-sm sm:text-base font-bold text-white mb-1">Head of Slate Finance & Legal Affairs</h5>
+                <p className="text-slate-300 text-sm font-normal leading-snug">
+                  Structuring institutional capital waterfalls, co-production treaty compliance, and clean chain-of-title governance.
+                </p>
+              </div>
+
+              <div className="glass-card rounded-2xl p-6 border border-white/5 bg-[#090b10]/80">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="cmc-label ">Executive Chair</span>
+                  <span className="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 border border-white/10">Operational Division</span>
+                </div>
+                <h5 className="font-cinzel text-sm sm:text-base font-bold text-white mb-1">Director of Franchise & Brand Partnerships</h5>
+                <p className="text-slate-300 text-sm font-normal leading-snug">
+                  Managing transmedia property expansions, music sync publishing, and high-value strategic brand alliances.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};

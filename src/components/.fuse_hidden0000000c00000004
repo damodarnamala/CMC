@@ -1,0 +1,116 @@
+import React from 'react';
+import { CMCLogo } from './CMCLogo.tsx';
+import { STUDIO_INFO } from '../data/studioData.ts';
+import { AppRoute } from '../types.ts';
+import { Mail, MapPin, ShieldAlert, ArrowUpRight } from 'lucide-react';
+
+interface FooterProps {
+  onNavigate?: (route: AppRoute) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const currentYear = new Date().getFullYear();
+
+  const handleNav = (route: AppRoute) => {
+    if (onNavigate) {
+      onNavigate(route);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer className="bg-[#050608] border-t border-white/10 text-slate-200 relative z-10 pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
+        
+        {/* Top Grid: Brand & Institutional Hubs */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 pb-14 border-b border-white/10">
+          
+          {/* Brand Info */}
+          <div className="lg:col-span-6 space-y-4">
+            <div className="flex items-center space-x-3">
+              <CMCLogo size="sm" showSubtitle={false} className="w-16" />
+              <div className="flex flex-col border-l border-white/15 pl-3">
+                <span className="font-cinzel text-base font-bold text-white tracking-[0.08em] uppercase">
+                  CRYSTOLYTE MEDIA
+                </span>
+                <span className="text-base tracking-[0.1em] uppercase text-amber-400 font-bold font-cinzel">
+                  Creations
+                </span>
+              </div>
+            </div>
+
+            <p className="text-base text-slate-200 font-normal leading-relaxed max-w-sm">
+              An independent entertainment company developing, producing, and owning premium film, television, music, and original intellectual property.
+            </p>
+
+            <p className="text-base text-amber-200 font-cinzel font-semibold tracking-wider italic">
+              "Stories born in India. Built for the world."
+            </p>
+
+            <div className="text-base text-slate-200 space-y-1 pt-2">
+              <p>Legal Entity: <strong className="text-slate-200 font-normal">{STUDIO_INFO.legalName}</strong></p>
+              <p>Headquarters: <strong className="text-slate-200 font-normal">{STUDIO_INFO.location}</strong></p>
+            </div>
+          </div>
+
+          {/* Core Navigation Mirror */}
+
+          {/* Contact Direct */}
+          <div className="lg:col-span-6 space-y-4">
+            <span className="text-base font-cinzel font-bold text-white uppercase tracking-[0.06em] block mb-4">
+              Direct Desks
+            </span>
+            <div className="space-y-3 text-base">
+              <div>
+                <span className="cmc-label block">Business & Financing:</span>
+                <a href="mailto:business@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
+                  business@crystolytemedia.com
+                </a>
+              </div>
+              <div>
+                <span className="cmc-label block">Press & Media Relations:</span>
+                <a href="mailto:press@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
+                  press@crystolytemedia.com
+                </a>
+              </div>
+              <div>
+                <span className="cmc-label block">Territorial Distribution:</span>
+                <a href="mailto:distribution@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
+                  distribution@crystolytemedia.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Unsolicited Materials Disclaimer: Mandatory Blueprint Compliance */}
+        <div className="py-6 border-b border-white/5 text-base text-slate-200 leading-relaxed font-normal">
+          <p>
+            <strong className="text-slate-200">Unsolicited Materials Legal Notice:</strong> Crystolyte Media (Crystolyte Media Creations) does not accept unsolicited scripts, treatments, concepts, screenplays, or other creative materials unless submitted through an authorized literary representative, talent agent, or licensed attorney. Any unsolicited creative material received will be deleted or returned unread without review.
+          </p>
+        </div>
+
+        {/* Bottom Bar: Copyright & Ecosystem */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-base">
+          <p className="text-slate-200">
+            © {currentYear} {STUDIO_INFO.legalName}. All rights reserved.
+          </p>
+
+          <div className="cmc-label flex items-center space-x-6">
+            <span>FILM</span>
+            <span>·</span>
+            <span>SERIES</span>
+            <span>·</span>
+            <span>MUSIC</span>
+            <span>·</span>
+            <span>IP & RIGHTS</span>
+            <span>·</span>
+            <span>GLOBAL PARTNERSHIPS</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+};

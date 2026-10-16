@@ -67,7 +67,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenCinemaModa
 
 
       {/* 9. Partnership CTA Section: "Build With Us" */}
-      <section className="py-20 sm:py-24 relative z-10 border-t border-white/5 bg-[#080a0e] overflow-hidden">
+      <section className="py-20 sm:py-24 relative z-10 cmc-rule-top bg-[#080a0e] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(212,175,55,0.08),transparent_60%)] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-8 text-center relative z-10">
@@ -83,14 +83,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenCinemaModa
             </h2>
           </div>
 
-          <p className="max-w-2xl mx-auto text-slate-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-10">
+          <p className="max-w-2xl mx-auto text-slate-200 text-lg md:text-xl md:text-lg font-normal leading-relaxed mb-10">
             We invite aligned financial institutions, co-producers, global streaming networks, and creative partners to collaborate on our active development slate and transmedia intellectual properties.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
             <button
               onClick={() => onNavigate('partnerships')}
-              className="cmc-btn cmc-btn-primary w-full sm:w-auto px-8 py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-2xl cursor-pointer"
+              className="cmc-btn cmc-btn-primary w-full sm:w-auto px-8 py-4 rounded-xl text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-2xl cursor-pointer"
             >
               <Handshake className="w-4 h-4" />
               <span>Partner With CMC</span>

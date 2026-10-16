@@ -52,7 +52,7 @@ const SocialIcons: React.FC<{ socials?: Socials }> = ({ socials }) => {
     <div className="flex items-center gap-3">
       {items.map(({ href, label, hover, Icon }) => (
         <a key={label} href={href} target="_blank" rel="noopener noreferrer" title={label} aria-label={label}
-          className={`text-slate-300 ${hover} transition-colors`}>
+          className={`text-slate-200 ${hover} transition-colors`}>
           <Icon className="w-4 h-4" />
         </a>
       ))}
@@ -63,7 +63,7 @@ const SocialIcons: React.FC<{ socials?: Socials }> = ({ socials }) => {
 // Expanding details shared by every card: full bio, highlights and quote
 const ExpandedDetails: React.FC<{ profile: LeadershipProfile }> = ({ profile }) => (
   <div className="space-y-6">
-    <div className="space-y-4 text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
+    <div className="space-y-4 text-lg md:text-xl text-slate-200 font-normal leading-relaxed">
       {profile.bio.map((para, i) => (
         <p key={i}>{para}</p>
       ))}
@@ -71,7 +71,7 @@ const ExpandedDetails: React.FC<{ profile: LeadershipProfile }> = ({ profile }) 
 
     <div className="p-4 sm:p-5 rounded-2xl bg-[#08090d]/80 border border-white/5">
       <h4 className="cmc-eyebrow mb-3">Key Highlights</h4>
-      <ul className="space-y-2.5 text-xs text-slate-200">
+      <ul className="space-y-2.5 text-base text-slate-200">
         {profile.highlights.map((item, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
@@ -83,7 +83,7 @@ const ExpandedDetails: React.FC<{ profile: LeadershipProfile }> = ({ profile }) 
 
     {profile.quote && (
       <blockquote className="border-l-2 border-amber-400/70 pl-5">
-        <p className="text-sm italic text-slate-200 leading-relaxed">“{profile.quote.text}”</p>
+        <p className="text-base italic text-slate-200 leading-relaxed">“{profile.quote.text}”</p>
         <footer className="cmc-eyebrow mt-3">— {profile.quote.author}</footer>
       </blockquote>
     )}
@@ -96,7 +96,7 @@ const ShowMoreButton: React.FC<{ expanded: boolean; onToggle: () => void; name: 
     onClick={onToggle}
     aria-expanded={expanded}
     aria-label={`${expanded ? 'Show less' : 'Show more'} about ${name}`}
-    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-200 border border-amber-500/30 hover:bg-amber-500/25 hover:border-amber-400 transition-colors cursor-pointer"
+    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-base font-semibold bg-amber-500/15 text-amber-200 border border-amber-500/30 hover:bg-amber-500/25 hover:border-amber-400 transition-colors cursor-pointer"
   >
     <span>{expanded ? 'Show less' : 'Show more'}</span>
     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} />
@@ -115,7 +115,7 @@ const Collapse: React.FC<{ open: boolean; children: React.ReactNode }> = ({ open
 
 // Two short paragraphs shown on every card
 const SummaryBlock: React.FC<{ paragraphs: string[]; className?: string }> = ({ paragraphs, className = '' }) => (
-  <div className={`space-y-3 text-xs sm:text-sm text-slate-300 font-normal leading-relaxed ${className}`}>
+  <div className={`space-y-3 text-lg md:text-xl text-slate-200 font-normal leading-relaxed ${className}`}>
     {paragraphs.map((para, i) => (
       <p key={i}>{para}</p>
     ))}
@@ -171,8 +171,8 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
           </div>
         </div>
 
-        <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-300">
-          <span className="text-slate-300 font-medium">Crystolyte Media Creations</span>
+        <div className="pt-4 mt-4 cmc-rule-top flex items-center justify-between text-base text-slate-200">
+          <span className="text-slate-200 font-medium">Crystolyte Media Creations</span>
           <SocialIcons socials={SOCIALS[p.id]} />
         </div>
       </div>
@@ -183,7 +183,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
   const directorPhoto = director.photo;
 
   return (
-    <section id="leadership" className={`py-20 sm:py-24 relative z-10 ${!isStandalone ? 'border-t border-white/5 bg-[#0a0d13]/60' : ''}`}>
+    <section id="leadership" className={`py-20 sm:py-24 relative z-10 ${!isStandalone ? 'cmc-rule-top bg-[#0a0d13]/60' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
 
         {/* Section Header */}
@@ -198,7 +198,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
               LEADERSHIP & COLLABORATORS
             </h2>
           </div>
-          <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+          <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
             The foundation of an expanding entertainment enterprise. Crystolyte Media combines institutional business governance with an authorial creative community to build sustainable, globally scalable properties.
           </p>
         </div>
@@ -248,7 +248,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
                     href={DIRECTOR.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E1306C]/15 text-pink-300 border border-[#E1306C]/30 flex items-center gap-1.5 hover:bg-[#E1306C]/25 transition-colors shadow-sm"
+                    className="px-3.5 py-1.5 rounded-full text-base font-semibold bg-[#E1306C]/15 text-pink-300 border border-[#E1306C]/30 flex items-center gap-1.5 hover:bg-[#E1306C]/25 transition-colors shadow-sm"
                   >
                     <Instagram className="w-3.5 h-3.5" />
                     <span>@mr.sreevardhan</span>
@@ -262,11 +262,11 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
 
         {/* Expanding Executive Architecture (C-Suite Additions) */}
         <div className="max-w-6xl mx-auto">
-          <div className="border-t border-white/10 pt-10">
+          <div className="cmc-rule-top pt-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
               <div>
                 <h4 className="font-cinzel text-lg sm:text-xl font-bold text-white">Expanding Corporate Organization</h4>
-                <p className="text-slate-300 text-sm sm:text-sm font-normal">
+                <p className="text-slate-200 text-lg md:text-xl font-normal">
                   Architected to support future executive additions as Crystolyte Media scales slate financing, distribution, and franchise licensing.
                 </p>
               </div>
@@ -279,10 +279,10 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
               <div className="glass-card rounded-2xl p-6 border border-white/5 bg-[#090b10]/80">
                 <div className="flex items-center justify-between mb-3">
                   <span className="cmc-label ">Executive Chair</span>
-                  <span className="text-xs px-2 py-0.5 rounded bg-white/5 text-amber-400 border border-white/10">Active Search</span>
+                  <span className="text-base px-2 py-0.5 rounded bg-white/5 text-amber-400 border border-white/10">Active Search</span>
                 </div>
-                <h5 className="font-cinzel text-sm sm:text-base font-bold text-white mb-1">VP, Global Distribution & Licensing</h5>
-                <p className="text-slate-300 text-sm font-normal leading-snug">
+                <h5 className="font-cinzel text-base md:text-lg font-bold text-white mb-1">VP, Global Distribution & Licensing</h5>
+                <p className="text-slate-200 text-base font-normal leading-snug">
                   Overseeing worldwide SVOD/AVOD licensing, international theatrical sales, and airline syndication windows.
                 </p>
               </div>
@@ -290,10 +290,10 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
               <div className="glass-card rounded-2xl p-6 border border-white/5 bg-[#090b10]/80">
                 <div className="flex items-center justify-between mb-3">
                   <span className="cmc-label ">Executive Chair</span>
-                  <span className="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 border border-white/10">Retained Advisory</span>
+                  <span className="text-base px-2 py-0.5 rounded bg-white/5 text-slate-200 border border-white/10">Retained Advisory</span>
                 </div>
-                <h5 className="font-cinzel text-sm sm:text-base font-bold text-white mb-1">Head of Slate Finance & Legal Affairs</h5>
-                <p className="text-slate-300 text-sm font-normal leading-snug">
+                <h5 className="font-cinzel text-base md:text-lg font-bold text-white mb-1">Head of Slate Finance & Legal Affairs</h5>
+                <p className="text-slate-200 text-base font-normal leading-snug">
                   Structuring institutional capital waterfalls, co-production treaty compliance, and clean chain-of-title governance.
                 </p>
               </div>
@@ -301,10 +301,10 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
               <div className="glass-card rounded-2xl p-6 border border-white/5 bg-[#090b10]/80">
                 <div className="flex items-center justify-between mb-3">
                   <span className="cmc-label ">Executive Chair</span>
-                  <span className="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 border border-white/10">Operational Division</span>
+                  <span className="text-base px-2 py-0.5 rounded bg-white/5 text-slate-200 border border-white/10">Operational Division</span>
                 </div>
-                <h5 className="font-cinzel text-sm sm:text-base font-bold text-white mb-1">Director of Franchise & Brand Partnerships</h5>
-                <p className="text-slate-300 text-sm font-normal leading-snug">
+                <h5 className="font-cinzel text-base md:text-lg font-bold text-white mb-1">Director of Franchise & Brand Partnerships</h5>
+                <p className="text-slate-200 text-base font-normal leading-snug">
                   Managing transmedia property expansions, music sync publishing, and high-value strategic brand alliances.
                 </p>
               </div>

@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
   const isSecondaryActive = secondaryNavItems.some((item) => item.route === currentRoute);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-[#08090d]/90 backdrop-blur-2xl border-b border-white/5 transition-all">
+    <header className="fixed top-0 inset-x-0 z-50 bg-[#08090d]/90 backdrop-blur-2xl cmc-rule-bottom transition-all">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-6">
         
         {/* Zone 1: Official CMC Brand Wordmark */}
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
                 className={`py-2 relative transition-colors whitespace-nowrap cursor-pointer ${
                   isActive
                     ? 'text-amber-400 font-bold'
-                    : 'text-slate-300 hover:text-white'
+                    : 'text-slate-200 hover:text-white'
                 }`}
               >
                 {item.label}
@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
               className={`py-2 flex items-center gap-1.5 transition-colors whitespace-nowrap cursor-pointer ${
                 isSecondaryActive || moreMenuOpen
                   ? 'text-amber-400 font-bold'
-                  : 'text-slate-300 hover:text-white'
+                  : 'text-slate-200 hover:text-white'
               }`}
               aria-expanded={moreMenuOpen}
               aria-haspopup="true"
@@ -112,7 +112,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
             {/* Dropdown Card */}
             {moreMenuOpen && (
               <div className="absolute top-full right-0 mt-3 w-72 rounded-2xl bg-[#0c0f17]/95 border border-white/10 shadow-2xl backdrop-blur-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                <div className="px-3 py-2 border-b border-white/5 mb-1">
+                <div className="px-3 py-2 cmc-rule-bottom mb-1">
                   <span className="cmc-eyebrow ">
                     Studio Ecosystem
                   </span>
@@ -127,13 +127,13 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
                         className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex flex-col group cursor-pointer ${
                           isSecActive
                             ? 'bg-amber-500/15 text-amber-200'
-                            : 'hover:bg-white/5 text-slate-300 hover:text-white'
+                            : 'hover:bg-white/5 text-slate-200 hover:text-white'
                         }`}
                       >
                         <span className="cmc-eyebrow group-hover:text-amber-400 transition-colors">
                           {sec.label}
                         </span>
-                        <span className="text-xs text-slate-300 font-normal tracking-normal mt-0.5">
+                        <span className="text-sm text-slate-200 font-normal tracking-normal mt-0.5">
                           {sec.desc}
                         </span>
                       </button>
@@ -150,7 +150,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-slate-300 hover:text-amber-400 transition-colors cursor-pointer"
+            className="p-2 text-slate-200 hover:text-amber-400 transition-colors cursor-pointer"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -161,7 +161,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0c0f16]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4 text-sm font-medium animate-in fade-in duration-200">
+        <div className="md:hidden bg-[#0c0f16]/98 backdrop-blur-2xl cmc-rule-bottom px-6 py-6 space-y-4 text-sm font-medium animate-in fade-in duration-200">
           {/* Primary Mobile Items */}
           <div className="space-y-1">
             <span className="cmc-eyebrow px-2 block mb-1">
@@ -175,7 +175,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
                 <button
                   key={item.route}
                   onClick={() => handleNavClick(item.route)}
-                  className={`block w-full text-left px-3 py-2.5 rounded-xl text-xs uppercase tracking-wider font-semibold transition-colors ${
+                  className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm uppercase tracking-wider font-semibold transition-colors ${
                     isActive ? 'bg-amber-500/15 text-amber-400 font-bold' : 'text-slate-200 hover:bg-white/5 hover:text-amber-200'
                   }`}
                 >
@@ -186,7 +186,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
           </div>
 
           {/* Secondary Mobile Items */}
-          <div className="pt-3 border-t border-white/5 space-y-1">
+          <div className="pt-3 cmc-rule-top space-y-1">
             <span className="cmc-label px-2 block mb-1">
               More Studio Sections
             </span>
@@ -195,10 +195,10 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
                 <button
                   key={sec.route}
                   onClick={() => handleNavClick(sec.route)}
-                  className={`text-left px-3 py-2 rounded-lg text-xs font-medium tracking-wide uppercase transition-colors ${
+                  className={`text-left px-3 py-2 rounded-lg text-sm font-medium tracking-wide uppercase transition-colors ${
                     currentRoute === sec.route
                       ? 'bg-amber-500/10 text-amber-400'
-                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+                      : 'text-slate-200 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {sec.label}
@@ -207,10 +207,10 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-white/10">
+          <div className="pt-4 cmc-rule-top">
             <button
               onClick={() => handleNavClick('partnerships')}
-              className="cmc-btn cmc-btn-primary w-full py-3 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer"
+              className="cmc-btn cmc-btn-primary w-full py-3 rounded-xl text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Partner With CMC</span>
               <ArrowUpRight className="w-4 h-4" />

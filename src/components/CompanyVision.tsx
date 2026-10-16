@@ -8,7 +8,7 @@ interface CompanyVisionProps {
 
 export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
   return (
-    <section className="py-20 sm:py-24 relative z-10 border-t border-white/5 bg-[#090b0f] overflow-hidden">
+    <section className="py-20 sm:py-24 relative z-10 cmc-rule-top bg-[#090b0f] overflow-hidden">
       {/* Ambient background aura */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-amber-500/5 blur-[120px] pointer-events-none rounded-full" />
 
@@ -30,7 +30,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
               </h2>
             </div>
 
-            <div className="space-y-4 text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-8">
+            <div className="space-y-4 text-slate-200 text-base md:text-lg font-normal leading-relaxed mb-8">
               <p>
                 The modern entertainment landscape rewards ownership over transience. While conventional producers chase isolated theatrical cycles, Crystolyte Media builds enduring properties that compound in audience loyalty and enterprise valuation.
               </p>
@@ -39,12 +39,12 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-300">
+            <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-200">
               {onNavigate && (
                 <>
                   <button
                     onClick={() => onNavigate('ip-rights')}
-                    className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold shadow-lg cursor-pointer"
+                    className="cmc-btn cmc-btn-primary px-6 py-3.5 rounded-xl text-sm uppercase tracking-wider font-bold shadow-lg cursor-pointer"
                   >
                     Explore IP & Rights Architecture
                   </button>
@@ -70,7 +70,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <h3 className="font-cinzel text-base font-bold text-white mb-1">
                   Compound Enterprise Value
                 </h3>
-                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-snug">
+                <p className="text-slate-200 text-lg md:text-xl font-normal leading-snug">
                   Retaining 100% core intellectual property transforms individual films into enduring library assets with generational cash flow.
                 </p>
               </div>
@@ -84,7 +84,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <h3 className="font-cinzel text-base font-bold text-white mb-1">
                   Transmedia Multipliers
                 </h3>
-                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-snug">
+                <p className="text-slate-200 text-lg md:text-xl font-normal leading-snug">
                   Developing properties engineered for multi-language regional adaptations, limited episodic spin-offs, and soundtrack publishing.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <h3 className="font-cinzel text-base font-bold text-white mb-1">
                   Disciplined Capital Governance
                 </h3>
-                <p className="text-slate-300 text-sm sm:text-sm font-normal leading-snug">
+                <p className="text-slate-200 text-lg md:text-xl font-normal leading-snug">
                   Transparent production budgeting, milestone oversight, and risk-managed financing tailored to institutional equity partners.
                 </p>
               </div>

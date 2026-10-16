@@ -19,119 +19,45 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-[#050608] border-t border-white/10 text-slate-300 relative z-10 pt-16 pb-12">
+    <footer className="bg-[#050608] cmc-rule-top text-slate-200 relative z-10 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Top Grid: Brand & Institutional Hubs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 pb-14 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 pb-14 cmc-rule-bottom">
           
           {/* Brand Info */}
-          <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center space-x-3">
+          <div className="lg:col-span-6 space-y-4 text-center">
+            <div className="flex items-center justify-center space-x-3">
               <CMCLogo size="sm" showSubtitle={false} className="w-16" />
               <div className="flex flex-col border-l border-white/15 pl-3">
-                <span className="font-cinzel text-base font-bold text-white tracking-[0.16em] uppercase">
-                  CRYSTOLYTE MEDIA
-                </span>
-                <span className="text-xs tracking-[0.24em] uppercase text-amber-400 font-bold font-cinzel">
-                  Creations · Hyderabad
+                <span className="font-cinzel text-base font-bold text-white tracking-[0.08em] uppercase whitespace-nowrap">
+                  CRYSTOLYTE MEDIA CREATIONS
                 </span>
               </div>
             </div>
 
-            <p className="text-sm text-slate-300 font-normal leading-relaxed max-w-sm">
+            <p className="text-base text-slate-200 font-normal leading-relaxed max-w-sm mx-auto">
               An independent entertainment company developing, producing, and owning premium film, television, music, and original intellectual property.
             </p>
 
-            <p className="text-sm text-amber-200 font-cinzel font-semibold tracking-wider italic">
+            <p className="text-base text-amber-200 font-cinzel font-semibold tracking-wider italic">
               "Stories born in India. Built for the world."
             </p>
 
-            <div className="text-xs text-slate-300 space-y-1 pt-2">
-              <p>Legal Entity: <strong className="text-slate-300 font-normal">{STUDIO_INFO.legalName}</strong></p>
-              <p>Headquarters: <strong className="text-slate-300 font-normal">{STUDIO_INFO.location}</strong></p>
+            <div className="text-base text-slate-200 space-y-1 pt-2">
+              <p>Legal Entity: <strong className="text-slate-200 font-normal">{STUDIO_INFO.legalName}</strong></p>
+              <p>Headquarters: <strong className="text-slate-200 font-normal">{STUDIO_INFO.location}</strong></p>
             </div>
           </div>
 
           {/* Core Navigation Mirror */}
-          <div className="lg:col-span-3 space-y-3">
-            <span className="text-xs font-cinzel font-bold text-white uppercase tracking-widest block mb-4">
-              Studio & Portfolio
-            </span>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <button onClick={() => handleNav('home')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Home Overview
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('studio')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Studio Ethos & Approach
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('productions')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Productions Portfolio
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('productions/iit-krishnamurthy')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  IIT Krishnamurthy (Feature Film)
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('slate')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Development Slate (Untitled CMC Feature)
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Business & Corporate Hubs */}
-          <div className="lg:col-span-2 space-y-3">
-            <span className="text-xs font-cinzel font-bold text-white uppercase tracking-widest block mb-4">
-              Corporate Hubs
-            </span>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <button onClick={() => handleNav('ip-rights')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  IP & Rights Ownership
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('music')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Music & Publishing Division
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('leadership')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Executive Leadership
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('newsroom')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Press Newsroom
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('partnerships')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Institutional Partnerships
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('contact')} className="hover:text-amber-400 transition-colors cursor-pointer">
-                  Corporate Inquiries
-                </button>
-              </li>
-            </ul>
-          </div>
 
           {/* Contact Direct */}
-          <div className="lg:col-span-3 space-y-4">
-            <span className="text-xs font-cinzel font-bold text-white uppercase tracking-widest block mb-4">
+          <div className="lg:col-span-6 space-y-4 text-center">
+            <span className="text-base font-cinzel font-bold text-white uppercase tracking-[0.06em] block mb-4">
               Direct Desks
             </span>
-            <div className="space-y-3 text-xs">
+            <div className="space-y-3 text-base">
               <div>
                 <span className="cmc-label block">Business & Financing:</span>
                 <a href="mailto:business@crystolytemedia.com" className="text-white hover:text-amber-400 transition-colors">
@@ -156,15 +82,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* Unsolicited Materials Disclaimer: Mandatory Blueprint Compliance */}
-        <div className="py-6 border-b border-white/5 text-xs text-slate-300 leading-relaxed font-normal">
+        <div className="py-6 cmc-rule-bottom text-base text-slate-200 leading-relaxed font-normal">
           <p>
-            <strong className="text-slate-300">Unsolicited Materials Legal Notice:</strong> Crystolyte Media (Crystolyte Media Creations) does not accept unsolicited scripts, treatments, concepts, screenplays, or other creative materials unless submitted through an authorized literary representative, talent agent, or licensed attorney. Any unsolicited creative material received will be deleted or returned unread without review.
+            <strong className="text-slate-200">Unsolicited Materials Legal Notice:</strong> Crystolyte Media (Crystolyte Media Creations) does not accept unsolicited scripts, treatments, concepts, screenplays, or other creative materials unless submitted through an authorized literary representative, talent agent, or licensed attorney. Any unsolicited creative material received will be deleted or returned unread without review.
           </p>
         </div>
 
         {/* Bottom Bar: Copyright & Ecosystem */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-          <p className="text-slate-300">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-base">
+          <p className="text-slate-200">
             © {currentYear} {STUDIO_INFO.legalName}. All rights reserved.
           </p>
 

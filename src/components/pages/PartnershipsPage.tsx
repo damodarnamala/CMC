@@ -42,7 +42,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
             </h1>
           </div>
 
-          <p className="text-slate-300 text-base sm:text-xl font-normal leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-xl font-normal leading-relaxed">
             Speaking directly to studio executives, institutional financiers, global streaming platforms, and brand collaborators seeking aligned, disciplined creative partnerships.
           </p>
         </div>
@@ -58,7 +58,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
               <h2 className="cmc-title text-white mb-4">
                 Disciplined Capital Meets Narrative Rigor
               </h2>
-              <div className="space-y-4 text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+              <div className="space-y-4 text-slate-200 text-base md:text-lg font-normal leading-relaxed">
                 <p>
                   Crystolyte Media operates with the governance standards expected by institutional private equity and international studios. We structure every production under clear milestone agreements, audited budgeting, and transparent waterfall recoupment models.
                 </p>
@@ -68,8 +68,8 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
               </div>
             </div>
 
-            <div className="lg:col-span-4 p-6 sm:p-8 rounded-2xl bg-black/50 border border-white/5 space-y-3 text-xs text-slate-300">
-              <div className="cmc-eyebrow flex items-center gap-2 pb-2 border-b border-white/10">
+            <div className="lg:col-span-4 p-6 sm:p-8 rounded-2xl bg-black/50 border border-white/5 space-y-3 text-sm text-slate-200">
+              <div className="cmc-eyebrow flex items-center gap-2 pb-2 cmc-rule-bottom">
                 <Building2 className="w-4 h-4" />
                 <span>Institutional Commitments</span>
               </div>
@@ -112,25 +112,25 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
                 className="glass-card rounded-2xl p-7 sm:p-8 border border-white/10 flex flex-col justify-between hover:border-amber-400/40 transition-all duration-300 group"
               >
                 <div>
-                  <div className="flex items-center justify-between text-xs text-slate-300 mb-4 pb-3 border-b border-white/10">
+                  <div className="flex items-center justify-between text-sm text-slate-200 mb-4 pb-3 cmc-rule-bottom">
                     <span className="cmc-eyebrow ">{sec.scope}</span>
-                    <Handshake className="w-4 h-4 text-slate-300 group-hover:text-amber-400 transition-colors" />
+                    <Handshake className="w-4 h-4 text-slate-200 group-hover:text-amber-400 transition-colors" />
                   </div>
 
                   <h3 className="font-cinzel text-xl font-bold text-white mb-3 group-hover:text-amber-200 transition-colors">
                     {sec.title}
                   </h3>
 
-                  <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-6">
+                  <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
                     {sec.description}
                   </p>
 
-                  <div className="space-y-1.5 mb-6 text-xs">
+                  <div className="space-y-1.5 mb-6 text-sm">
                     <span className="cmc-label block">
                       Target Partners:
                     </span>
                     {sec.targetPartners.map((tp, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-slate-300">
+                      <div key={idx} className="flex items-center gap-2 text-slate-200">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
                         <span>{tp}</span>
                       </div>
@@ -138,7 +138,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/5">
+                <div className="pt-4 cmc-rule-top">
                   <a
                     href="#proposal-form"
                     className="cmc-eyebrow inline-flex items-center gap-2 hover:text-amber-200 transition-colors"
@@ -161,7 +161,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
             <h2 className="cmc-title text-white mb-2">
               Submit a Strategic Partnership Proposal
             </h2>
-            <p className="text-slate-300 text-sm sm:text-sm font-normal">
+            <p className="text-slate-200 text-lg md:text-xl font-normal">
               Connect directly with executive leadership at Crystolyte Media. Proposals are reviewed by our corporate strategy committee.
             </p>
           </div>
@@ -172,12 +172,12 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
               <h3 className="font-cinzel text-2xl font-bold text-white">
                 Proposal Received
               </h3>
-              <p className="text-slate-300 text-sm max-w-lg mx-auto">
+              <p className="text-slate-200 text-base max-w-lg mx-auto">
                 Thank you, <strong className="text-white">{formData.name}</strong>. Your inquiry on behalf of <strong className="text-white">{formData.organization}</strong> regarding {formData.sector} has been delivered to our Corporate Development office. A representative will respond within two business days.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="cmc-btn cmc-btn-primary px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold cursor-pointer"
+                className="cmc-btn cmc-btn-primary px-6 py-2.5 rounded-xl text-sm uppercase tracking-wider font-bold cursor-pointer"
               >
                 Send Another Proposal
               </button>
@@ -263,13 +263,13 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
               </div>
 
               {/* Strict Disclaimer Notice */}
-              <p className="text-sm text-slate-300 italic leading-relaxed">
+              <p className="text-base text-slate-200 italic leading-relaxed">
                 * Note: Partnership inquiries must be submitted by authorized corporate representatives. Crystolyte Media does not accept unsolicited scripts or treatments via this form.
               </p>
 
               <button
                 type="submit"
-                className="cmc-btn cmc-btn-primary w-full py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-xl cursor-pointer"
+                className="cmc-btn cmc-btn-primary w-full py-4 rounded-xl text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-xl cursor-pointer"
               >
                 <Send className="w-4 h-4" />
                 <span>Submit Strategic Partnership Proposal</span>

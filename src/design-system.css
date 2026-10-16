@@ -251,9 +251,9 @@ section + section::before {
 /* Section label with gold colour, e.g. "BUSINESS MODEL & CAPABILITIES" */
 .cmc-eyebrow {
   font-family: var(--cmc-font-body);
-  font-size: 0.875rem;
+  font-size:  1rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cmc-gold-light);
 }
@@ -264,7 +264,7 @@ section + section::before {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8c94ab;
+  color: #b4bdd0;
 }
 /* Gold pill tag, e.g. "FOUNDER & CHAIRMAN", "WINNER" */
 .cmc-tag {
@@ -273,7 +273,7 @@ section + section::before {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8c94ab;
+  color: #b4bdd0;
 }
 /* Small caption label */
 .cmc-caption {
@@ -311,3 +311,23 @@ section + section::before {
   font-size: 0.6875rem;
   letter-spacing: 0.05em;
 }
+
+/* Gold hairline rules (replace plain grey borders inside sections) */
+.cmc-rule-top,
+.cmc-rule-bottom {
+  position: relative;
+}
+.cmc-rule-top::before,
+.cmc-rule-bottom::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, 86%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cmc-gold-deep) 20%, var(--cmc-gold-highlight) 50%, var(--cmc-gold-deep) 80%, transparent);
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.25);
+  pointer-events: none;
+}
+.cmc-rule-top::before { top: 0; }
+.cmc-rule-bottom::after { bottom: 0; }

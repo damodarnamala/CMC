@@ -43,7 +43,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             <span>CONTACT & COMMUNICATIONS</span>
           </div>
 
-          <p className="text-slate-300 text-base sm:text-xl font-normal leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-xl font-normal leading-relaxed">
             Direct routing to our executive offices, legal counsel, distribution desks, and press communications in Hyderabad.
           </p>
         </div>
@@ -58,7 +58,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               <h2 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2 uppercase tracking-wide">
                 Studio Policy Regarding Unsolicited Creative Materials
               </h2>
-              <p className="text-sm sm:text-sm text-slate-200 leading-relaxed font-normal">
+              <p className="text-lg md:text-xl text-slate-200 leading-relaxed font-normal">
                 <strong className="text-amber-200">Crystolyte Media does not accept unsolicited scripts, treatments, concepts, pitch decks, screenplays, or other creative materials</strong> unless submitted through an authorized entertainment representative, literary agent, or licensed attorney. Any unsolicited materials received via email or standard mail will be deleted or returned unread without review, to protect both creators and the studio from potential intellectual property conflicts.
               </p>
             </div>
@@ -76,19 +76,19 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <span>Headquarters & Offices</span>
               </h2>
 
-              <div className="space-y-4 text-xs sm:text-sm text-slate-300">
+              <div className="space-y-4 text-base md:text-lg text-slate-200">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block font-medium">Crystolyte Media Creations</strong>
-                    <span className="text-slate-300">Hyderabad, Telangana, India</span>
+                    <span className="text-slate-200">Hyderabad, Telangana, India</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 pt-3 border-t border-white/5">
+                <div className="flex items-start gap-3 pt-3 cmc-rule-top">
                   <Mail className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-slate-300 block text-xs">Primary Corporate Desk</span>
+                    <span className="text-slate-200 block text-sm">Primary Corporate Desk</span>
                     <a href="mailto:business@crystolytemedia.com" className="text-white hover:text-amber-400 font-medium">
                       business@crystolytemedia.com
                     </a>
@@ -103,16 +103,16 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 Departmental Inquiries
               </h3>
 
-              <div className="space-y-3.5 text-xs">
+              <div className="space-y-3.5 text-sm">
                 {departments.map((d, i) => (
-                  <div key={i} className="pb-3 border-b border-white/5 last:border-b-0 last:pb-0">
+                  <div key={i} className="pb-3 cmc-rule-bottom last:border-b-0 last:pb-0">
                     <div className="flex items-center justify-between mb-0.5">
                       <span className="font-semibold text-white">{d.name}</span>
                       <a href={`mailto:${d.email}`} className="text-amber-200 hover:underline font-sans font-semibold text-sm">
                         {d.email}
                       </a>
                     </div>
-                    <span className="text-slate-300 text-xs block">{d.desc}</span>
+                    <span className="text-slate-200 text-sm block">{d.desc}</span>
                   </div>
                 ))}
               </div>
@@ -125,7 +125,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               <h2 className="cmc-title text-white mb-2">
                 Send an Executive Inquiry
               </h2>
-              <p className="text-slate-300 text-sm sm:text-sm font-normal mb-8">
+              <p className="text-slate-200 text-lg md:text-xl font-normal mb-8">
                 Please complete the form below. Messages are routed to the appropriate department within one business day.
               </p>
 
@@ -135,12 +135,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   <h3 className="font-cinzel text-2xl font-bold text-white">
                     Message Dispatched
                   </h3>
-                  <p className="text-slate-300 text-sm max-w-md mx-auto">
+                  <p className="text-slate-200 text-base max-w-md mx-auto">
                     Thank you, <strong className="text-white">{formData.name}</strong>. Your communication has been routed to the <strong className="text-white">{formData.department}</strong> desk.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="cmc-btn cmc-btn-primary px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold cursor-pointer"
+                    className="cmc-btn cmc-btn-primary px-6 py-2.5 rounded-xl text-sm uppercase tracking-wider font-bold cursor-pointer"
                   >
                     Send Another Inquiry
                   </button>
@@ -225,7 +225,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                   <button
                     type="submit"
-                    className="cmc-btn cmc-btn-primary w-full py-4 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-xl cursor-pointer"
+                    className="cmc-btn cmc-btn-primary w-full py-4 rounded-xl text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-xl cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Message to Crystolyte Media</span>

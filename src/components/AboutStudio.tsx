@@ -9,7 +9,7 @@ interface AboutStudioProps {
 
 export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
   return (
-    <section id="about" className="py-20 sm:py-24 relative z-10 border-t border-white/5 bg-[#0e1117]/60">
+    <section id="about" className="py-20 sm:py-24 relative z-10 cmc-rule-top bg-[#0e1117]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* Company Introduction Header */}
@@ -27,16 +27,16 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
               </h2>
             </div>
 
-            <p className="text-slate-300 text-sm sm:text-base font-normal leading-relaxed mb-6">
+            <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
               Founded in Hyderabad by producers <strong className="text-white font-medium">Prasad Nekuri</strong> and{' '}
               <strong className="text-white font-medium">Praneeth Nekuri</strong>, Crystolyte Media is focused on the long-term vision to develop distinctive stories, build valuable intellectual property, and cross languages and borders.
             </p>
 
-            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed mb-8">
+            <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-8">
               Rather than transient packaging, we treat storytelling as an institutional discipline: developing screenplays with narrative precision, exercising strict production governance, and retaining master rights across streaming, theatrical, music, and territorial syndication.
             </p>
 
-            <div className="flex flex-wrap items-center gap-6 text-xs font-medium text-slate-300">
+            <div className="flex flex-wrap items-center gap-6 text-sm font-medium text-slate-200">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                 Founded 2020 · Hyderabad
@@ -56,30 +56,30 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5">
             <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/10 relative">
               <h3 className="font-cinzel text-xl font-bold text-white mb-3">Our Core Mandate</h3>
-              <p className="text-slate-300 text-sm sm:text-sm leading-relaxed font-normal mb-6">
+              <p className="text-slate-200 text-lg md:text-xl leading-relaxed font-normal mb-6">
                 {STUDIO_INFO.vision}
               </p>
               
-              <div className="space-y-3 pt-4 border-t border-white/10 text-xs text-slate-300">
+              <div className="space-y-3 pt-4 cmc-rule-top text-sm text-slate-200">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-300">Legal Entity</span>
+                  <span className="text-slate-200">Legal Entity</span>
                   <span className="font-medium text-white">{STUDIO_INFO.legalName}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-300">Headquarters</span>
+                  <span className="text-slate-200">Headquarters</span>
                   <span className="font-medium text-white">{STUDIO_INFO.location}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-300">Capital Structure</span>
+                  <span className="text-slate-200">Capital Structure</span>
                   <span className="font-medium text-amber-400">Independent Slate Equity</span>
                 </div>
               </div>
 
               {onNavigate && (
-                <div className="mt-6 pt-4 border-t border-white/10">
+                <div className="mt-6 pt-4 cmc-rule-top">
                   <button
                     onClick={() => onNavigate('studio')}
-                    className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors cursor-pointer"
                   >
                     <span>Read Full Studio Architecture</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -97,7 +97,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
               <Lightbulb className="w-5 h-5" />
             </div>
             <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">Original Storytelling</h4>
-            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+            <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               Cultivating authorial voices and intricate screenplays that balance regional specificity with global narrative momentum.
             </p>
           </div>
@@ -107,7 +107,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
               <Film className="w-5 h-5" />
             </div>
             <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">Production Discipline</h4>
-            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+            <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               Enforcing transparent financial budgeting and tier-one technical execution across 4K UHD color science, sound design, and master delivery.
             </p>
           </div>
@@ -117,7 +117,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">IP & Rights Ownership</h4>
-            <p className="text-slate-300 text-sm sm:text-sm font-normal leading-relaxed">
+            <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               Structuring long-term enterprise value by owning core intellectual property, remake rights, episodic adaptations, and music publishing.
             </p>
           </div>
