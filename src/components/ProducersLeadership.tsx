@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { PRODUCERS, DIRECTOR } from '../data/studioData.ts';
 import { LEADERSHIP_PROFILES, LeadershipProfile } from '../data/leadershipProfiles.ts';
-import { Camera, Check, ChevronDown, Facebook, Instagram, Linkedin, Upload } from 'lucide-react';
+import { ChevronDown, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { AppRoute } from '../types.ts';
 
 interface ProducersLeadershipProps {
@@ -127,28 +127,6 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const toggle = (id: string) => setExpandedId((prev) => (prev === id ? null : id));
 
-  const [customPhoto, setCustomPhoto] = useState<string>(() => {
-    try { return localStorage.getItem('sreevardhan_custom_photo') || ''; } catch { return ''; }
-  });
-  const [uploadSuccess, setUploadSuccess] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      if (result) {
-        setCustomPhoto(result);
-        try { localStorage.setItem('sreevardhan_custom_photo', result); } catch {}
-        setUploadSuccess(true);
-        setTimeout(() => setUploadSuccess(false), 3000);
-      }
-    };
-    reader.readAsDataURL(file);
-  };
-
   const byId = (id: LeadershipProfile['id']) => LEADERSHIP_PROFILES.find((p) => p.id === id)!;
   const prasad = byId('prasad');
   const praneeth = byId('praneeth');
@@ -202,7 +180,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
   };
 
   const isDirectorOpen = expandedId === director.id;
-  const directorPhoto = customPhoto || director.photo;
+  const directorPhoto = director.photo;
 
   return (
     <section id="leadership" className={`py-20 sm:py-24 relative z-10 ${!isStandalone ? 'border-t border-white/5 bg-[#0a0d13]/60' : ''}`}>
@@ -254,33 +232,9 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
             </div>
 
             <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 sm:p-7 rounded-2xl bg-black/50 border border-amber-500/20 text-center relative group/director">
-              <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={handlePhotoUpload} />
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-900 shrink-0 relative mb-4"><Portrait src={directorPhoto} fallbackSrc={director.photoFallback} initials={director.initials} alt={`${director.name} - Writer & Director`} /><div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none rounded-2xl" /></div>
 
-              <button
-                type="button"
-                onClick={() => fileInputRef.current?.click()}
-                title="Click to upload or replace portrait photo"
-                aria-label="Upload portrait photo"
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-900 shrink-0 relative mb-4 group-hover/director:border-amber-400 transition-all duration-300 cursor-pointer group/avatar"
-              >
-                <Portrait src={directorPhoto} fallbackSrc={director.photoFallback} initials={director.initials} alt={`${director.name} - Writer & Director`} />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-amber-200 p-2">
-                  <Camera className="w-6 h-6 mb-1 text-amber-400" />
-                  <span className="cmc-label ">
-                    {customPhoto ? 'Change Photo' : 'Upload Photo'}
-                  </span>
-                </div>
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none rounded-2xl" />
-              </button>
-
-              {uploadSuccess && (
-                <div className="mb-2.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-medium flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Profile picture replaced!</span>
-                </div>
-              )}
-
-              <div className="mb-1">
+                            <div className="mb-1">
                 <span className="cmc-tag px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 inline-block">
                   {director.badge}
                 </span>
@@ -288,14 +242,6 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
               <h4 className="font-cinzel text-lg sm:text-xl font-bold text-white tracking-wide">{director.name}</h4>
 
               <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
-                <button
-                  type="button"
-                  onClick={() => fileInputRef.current?.click()}
-                  className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-amber-500/15 text-amber-200 border border-amber-500/30 flex items-center gap-1.5 hover:bg-amber-500/25 hover:border-amber-400 transition-colors cursor-pointer shadow-sm"
-                >
-                  <Upload className="w-3.5 h-3.5 text-amber-400" />
-                  <span>{customPhoto ? 'Replace Photo' : 'Upload Picture'}</span>
-                </button>
 
                 {DIRECTOR.instagram && (
                   <a

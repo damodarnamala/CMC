@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
           {/* Stage matches the wallpaper's cover-scaled box, so the arc and logo stay aligned at any screen size */}
           <div
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            style={{ width: 'max(100%, calc(100svh * 2000 / 1001))', aspectRatio: '2000 / 1001' }}
+            style={{ width: 'max(100%, calc(100svh * 2000 / 1001))', aspectRatio: '2000 / 1001', containerType: 'inline-size' }}
           >
             <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 2000 1001" preserveAspectRatio="none">
               <defs>
@@ -127,7 +127,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
             </svg>
 
             {/* CMC mark, placed where it sits in the wallpaper */}
-            <div className="cmc-zoom-in cmc-hero-mark absolute" style={{ left: "calc(50% - min(19.5%, 32vw))", top: "26%", width: "min(39%, 64vw)" }}>
+            <div className="cmc-zoom-in cmc-hero-mark absolute" style={{ left: "calc(50cqw - min(19.5cqw, 32vw))", top: "13cqw", width: "min(39cqw, 64vw)" }}>
               <img src="./logo-mark.png" alt="CMC Creative Works" draggable={false} className="block w-full h-auto select-none" />
               <span
                 aria-hidden="true"
@@ -139,7 +139,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
             {/* Subtitle under the mark */}
             <div
               className="cmc-gold-emboss cmc-zoom-in cmc-hero-sub absolute left-0 right-0 text-center font-cinzel font-semibold uppercase whitespace-nowrap"
-              style={{ top: "49.5%", fontSize: "min(calc(100svh * 0.068), 6.2vw)", letterSpacing: '0.24em', lineHeight: 1 }}
+              style={{ top: "calc(13cqw + min(10.33cqw, 16.96vw) + 1.6cqw)", fontSize: "min(calc(100svh * 0.068), 6.2vw)", letterSpacing: '0.24em', lineHeight: 1 }}
             >
               CREATIVE WORKS
             </div>

@@ -252,28 +252,28 @@ section + section::before {
 .cmc-eyebrow {
   font-family: var(--cmc-font-body);
   font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--cmc-gold-light);
 }
 /* Field / meta label in light slate, e.g. form labels and card meta */
 .cmc-label {
   font-family: var(--cmc-font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-size:  0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cmc-text-body);
+  color: #8c94ab;
 }
 /* Gold pill tag, e.g. "FOUNDER & CHAIRMAN", "WINNER" */
 .cmc-tag {
   font-family: var(--cmc-font-body);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size:  0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cmc-gold-light);
+  color: #8c94ab;
 }
 /* Small caption label */
 .cmc-caption {
