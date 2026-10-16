@@ -119,7 +119,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
 
             {/* Industry Honors */}
             <div className="glass-card rounded-2xl p-6 border border-amber-500/30">
-              <h3 className="font-cinzel text-base font-bold text-amber-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-base font-bold text-amber-400 uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Award className="w-5 h-5 text-amber-400" />
                 <span>Verified Awards & Nominations</span>
               </h3>
@@ -176,7 +176,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
 
             {/* Ensemble Cast & Full Crew */}
             <div>
-              <h3 className="font-cinzel text-base font-bold text-white mb-3">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-base font-bold text-white mb-3">
                 Cast & Key Crew
               </h3>
               <div className="space-y-2 text-sm text-slate-200">
@@ -195,7 +195,7 @@ export const TitleDetailPage: React.FC<TitleDetailPageProps> = ({ onNavigate, on
             {/* Remake & Licensing Note */}
             <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h4 className="font-cinzel text-sm font-bold text-amber-200 mb-0.5">
+                <h4 className="font-[family-name:var(--cmc-font-body)] text-sm font-bold text-amber-200 mb-0.5">
                   Rights & Remake Availability
                 </h4>
                 <p className="text-base text-slate-200 font-normal">

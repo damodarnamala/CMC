@@ -203,7 +203,7 @@ export const ProductionsPage: React.FC<ProductionsPageProps> = ({ onNavigate, on
                       </span>
                     </div>
 
-                    <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-1">
+                    <h3 className="font-[family-name:var(--cmc-font-body)] text-xl sm:text-2xl font-bold text-white mb-1">
                       {proj.title}
                     </h3>
                     <p className="cmc-label mb-4">

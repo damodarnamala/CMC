@@ -67,7 +67,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <Layers className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-cinzel text-base font-bold text-white mb-1">
+                <h3 className="font-[family-name:var(--cmc-font-body)] text-base font-bold text-white mb-1">
                   Compound Enterprise Value
                 </h3>
                 <p className="text-slate-200 text-lg md:text-xl font-normal leading-snug">
@@ -81,7 +81,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <Sparkles className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-cinzel text-base font-bold text-white mb-1">
+                <h3 className="font-[family-name:var(--cmc-font-body)] text-base font-bold text-white mb-1">
                   Transmedia Multipliers
                 </h3>
                 <p className="text-slate-200 text-lg md:text-xl font-normal leading-snug">
@@ -95,7 +95,7 @@ export const CompanyVision: React.FC<CompanyVisionProps> = ({ onNavigate }) => {
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-cinzel text-base font-bold text-white mb-1">
+                <h3 className="font-[family-name:var(--cmc-font-body)] text-base font-bold text-white mb-1">
                   Disciplined Capital Governance
                 </h3>
                 <p className="text-slate-200 text-lg md:text-xl font-normal leading-snug">

@@ -143,7 +143,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
             {p.badge}
           </span>
         </div>
-        <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white tracking-wide leading-tight">{p.name}</h3>
+        <h3 className="font-[family-name:var(--cmc-font-body)] text-xl sm:text-2xl font-bold text-white tracking-wide leading-tight">{p.name}</h3>
         <span className="cmc-eyebrow block mt-1">
           {p.title}
         </span>
@@ -218,7 +218,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
                 <span className="w-5 h-px bg-amber-400" />
                 <span>CREATIVE COLLABORATOR</span>
               </div>
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">{director.name}</h3>
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-2xl sm:text-3xl font-bold text-white mb-1">{director.name}</h3>
               <p className="cmc-eyebrow mb-4">{director.title}</p>
               <SummaryBlock paragraphs={director.summary} className="mb-6" />
 
@@ -239,7 +239,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
                   {director.badge}
                 </span>
               </div>
-              <h4 className="font-cinzel text-lg sm:text-xl font-bold text-white tracking-wide">{director.name}</h4>
+              <h4 className="font-[family-name:var(--cmc-font-body)] text-lg sm:text-xl font-bold text-white tracking-wide">{director.name}</h4>
 
               <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
 
@@ -265,7 +265,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
           <div className="cmc-rule-top pt-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
               <div>
-                <h4 className="font-cinzel text-lg sm:text-xl font-bold text-white">Expanding Corporate Organization</h4>
+                <h4 className="font-[family-name:var(--cmc-font-body)] text-lg sm:text-xl font-bold text-white">Expanding Corporate Organization</h4>
                 <p className="text-slate-200 text-lg md:text-xl font-normal">
                   Architected to support future executive additions as Crystolyte Media scales slate financing, distribution, and franchise licensing.
                 </p>
@@ -281,7 +281,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
                   <span className="cmc-label ">Executive Chair</span>
                   <span className="text-base px-2 py-0.5 rounded bg-white/5 text-amber-400 border border-white/10">Active Search</span>
                 </div>
-                <h5 className="font-cinzel text-base md:text-lg font-bold text-white mb-1">VP, Global Distribution & Licensing</h5>
+                <h5 className="font-[family-name:var(--cmc-font-body)] text-base md:text-lg font-bold text-white mb-1">VP, Global Distribution & Licensing</h5>
                 <p className="text-slate-200 text-base font-normal leading-snug">
                   Overseeing worldwide SVOD/AVOD licensing, international theatrical sales, and airline syndication windows.
                 </p>
@@ -292,7 +292,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
                   <span className="cmc-label ">Executive Chair</span>
                   <span className="text-base px-2 py-0.5 rounded bg-white/5 text-slate-200 border border-white/10">Retained Advisory</span>
                 </div>
-                <h5 className="font-cinzel text-base md:text-lg font-bold text-white mb-1">Head of Slate Finance & Legal Affairs</h5>
+                <h5 className="font-[family-name:var(--cmc-font-body)] text-base md:text-lg font-bold text-white mb-1">Head of Slate Finance & Legal Affairs</h5>
                 <p className="text-slate-200 text-base font-normal leading-snug">
                   Structuring institutional capital waterfalls, co-production treaty compliance, and clean chain-of-title governance.
                 </p>
@@ -303,7 +303,7 @@ export const ProducersLeadership: React.FC<ProducersLeadershipProps> = ({ isStan
                   <span className="cmc-label ">Executive Chair</span>
                   <span className="text-base px-2 py-0.5 rounded bg-white/5 text-slate-200 border border-white/10">Operational Division</span>
                 </div>
-                <h5 className="font-cinzel text-base md:text-lg font-bold text-white mb-1">Director of Franchise & Brand Partnerships</h5>
+                <h5 className="font-[family-name:var(--cmc-font-body)] text-base md:text-lg font-bold text-white mb-1">Director of Franchise & Brand Partnerships</h5>
                 <p className="text-slate-200 text-base font-normal leading-snug">
                   Managing transmedia property expansions, music sync publishing, and high-value strategic brand alliances.
                 </p>

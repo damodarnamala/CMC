@@ -117,7 +117,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
                     <Handshake className="w-4 h-4 text-slate-200 group-hover:text-amber-400 transition-colors" />
                   </div>
 
-                  <h3 className="font-cinzel text-xl font-bold text-white mb-3 group-hover:text-amber-200 transition-colors">
+                  <h3 className="font-[family-name:var(--cmc-font-body)] text-xl font-bold text-white mb-3 group-hover:text-amber-200 transition-colors">
                     {sec.title}
                   </h3>
 
@@ -169,7 +169,7 @@ export const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }
           {submitted ? (
             <div className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-4">
               <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
-              <h3 className="font-cinzel text-2xl font-bold text-white">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-2xl font-bold text-white">
                 Proposal Received
               </h3>
               <p className="text-slate-200 text-base max-w-lg mx-auto">

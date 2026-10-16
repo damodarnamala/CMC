@@ -52,7 +52,7 @@ export const DevelopmentSlate: React.FC<DevelopmentSlateProps> = ({ onNavigate, 
                 </div>
 
                 {/* Title & Format */}
-                <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-1.5 group-hover:text-amber-200 transition-colors">
+                <h3 className="font-[family-name:var(--cmc-font-body)] text-xl sm:text-2xl font-bold text-white mb-1.5 group-hover:text-amber-200 transition-colors">
                   {proj.title}
                 </h3>
                 <p className="cmc-label mb-4">
@@ -96,7 +96,7 @@ export const DevelopmentSlate: React.FC<DevelopmentSlateProps> = ({ onNavigate, 
         {/* Institutional Slate Disclaimer / Co-Production Gateway */}
         <div className="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-1 flex items-center gap-2">
+            <h4 className="font-[family-name:var(--cmc-font-body)] text-base sm:text-lg font-bold text-white mb-1 flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-amber-400" />
               <span>Institutional Slate Governance</span>
             </h4>

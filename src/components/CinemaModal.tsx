@@ -57,7 +57,7 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse" />
             <div>
-              <h4 className="font-cinzel text-sm sm:text-base font-bold text-slate-100 tracking-wider">
+              <h4 className="font-[family-name:var(--cmc-font-body)] text-sm sm:text-base font-bold text-slate-100 tracking-wider">
                 IIT KRISHNAMURTHY MEDIA VAULT
               </h4>
               <span className="text-sm text-amber-200 font-sans font-semibold tracking-wide block">

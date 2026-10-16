@@ -83,7 +83,7 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
                     <span className="font-mono text-slate-200">{track.duration}</span>
                   </div>
 
-                  <h3 className="font-cinzel text-xl font-bold text-white mb-1 group-hover:text-amber-200 transition-colors">
+                  <h3 className="font-[family-name:var(--cmc-font-body)] text-xl font-bold text-white mb-1 group-hover:text-amber-200 transition-colors">
                     {track.title}
                   </h3>
                   <p className="cmc-label mb-4">
@@ -127,7 +127,7 @@ export const MusicPage: React.FC<MusicPageProps> = ({ onNavigate, onOpenCinemaMo
         {/* Sync Licensing Inquiry */}
         <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="max-w-2xl">
-            <h3 className="font-cinzel text-xl font-bold text-white mb-2">
+            <h3 className="font-[family-name:var(--cmc-font-body)] text-xl font-bold text-white mb-2">
               Sync Licensing & Publishing Inquiries
             </h3>
             <p className="text-slate-200 text-lg md:text-xl font-normal">

@@ -88,7 +88,7 @@ export const OfficialMoviePoster: React.FC<OfficialMoviePosterProps> = ({
             <Film className="w-6 h-6" />
           </div>
 
-          <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white tracking-wider">
+          <h3 className="font-[family-name:var(--cmc-font-body)] text-lg sm:text-xl font-bold text-white tracking-wider">
             IIT KRISHNAMURTHY
           </h3>
           <p className="text-base text-amber-200 font-sans font-semibold">

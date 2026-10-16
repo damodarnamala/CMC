@@ -84,7 +84,7 @@ export const BusinessCapabilities: React.FC<BusinessCapabilitiesProps> = ({ onNa
                   </span>
                 </div>
 
-                <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-1.5 group-hover:text-amber-200 transition-colors">
+                <h3 className="font-[family-name:var(--cmc-font-body)] text-xl sm:text-2xl font-bold text-white mb-1.5 group-hover:text-amber-200 transition-colors">
                   {cap.title}
                 </h3>
                 <p className="cmc-eyebrow mb-4">

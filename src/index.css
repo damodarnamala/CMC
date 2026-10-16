@@ -399,3 +399,17 @@ html {
 #leadership-header {
   scroll-snap-align: start;
 }
+
+/* Phones in portrait: shorter wallpaper so the content below shows sooner */
+@media (orientation: portrait) and (max-width: 767px) {
+  #hero {
+    height: 60svh;
+  }
+}
+
+/* Stop accidental sideways scrolling/shift on phones */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}

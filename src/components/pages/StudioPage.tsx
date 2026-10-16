@@ -56,7 +56,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
             </div>
 
             <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-black/60 border border-white/5 space-y-4">
-              <h3 className="font-cinzel text-lg font-bold text-white pb-3 cmc-rule-bottom">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-lg font-bold text-white pb-3 cmc-rule-bottom">
                 Institutional Facts
               </h3>
 
@@ -108,7 +108,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
                 <Lightbulb className="w-5 h-5" />
               </div>
-              <h3 className="font-cinzel text-lg font-bold text-white mb-2">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-lg font-bold text-white mb-2">
                 01. Creative Excellence
               </h3>
               <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
@@ -120,7 +120,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="font-cinzel text-lg font-bold text-white mb-2">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-lg font-bold text-white mb-2">
                 02. Financial Discipline
               </h3>
               <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
@@ -132,7 +132,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
                 <TrendingUp className="w-5 h-5" />
               </div>
-              <h3 className="font-cinzel text-lg font-bold text-white mb-2">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-lg font-bold text-white mb-2">
                 03. Rights Ownership
               </h3>
               <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
@@ -144,7 +144,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
                 <Globe2 className="w-5 h-5" />
               </div>
-              <h3 className="font-cinzel text-lg font-bold text-white mb-2">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-lg font-bold text-white mb-2">
                 04. Global Ambition
               </h3>
               <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
@@ -158,7 +158,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({ onNavigate }) => {
         {/* Navigation CTAs */}
         <div className="flex flex-wrap items-center justify-between gap-6 p-8 rounded-3xl glass-card border border-white/10">
           <div>
-            <h3 className="font-cinzel text-xl font-bold text-white mb-1">
+            <h3 className="font-[family-name:var(--cmc-font-body)] text-xl font-bold text-white mb-1">
               Explore Our Expanding Operations
             </h3>
             <p className="text-slate-200 text-lg md:text-xl font-normal">

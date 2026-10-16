@@ -107,7 +107,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                   <span className="cmc-label px-3 py-1 rounded-md bg-amber-400 text-black inline-block mb-2">
                     Official Feature Debut
                   </span>
-                  <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-1">
+                  <h3 className="font-[family-name:var(--cmc-font-body)] text-2xl sm:text-3xl font-bold text-white mb-1">
                     IIT KRISHNAMURTHY <span className="text-slate-200 text-lg font-normal">({FEATURE_FILM.teluguTitle})</span>
                   </h3>
                   <p className="text-base text-amber-200 font-sans font-semibold">
@@ -240,7 +240,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
               <span className="cmc-eyebrow block mb-1">
                 CINEMATIC RELEASES
               </span>
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-2xl sm:text-3xl font-bold text-white">
                 Trailers, Teasers & Music
               </h3>
             </div>
@@ -291,7 +291,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 {/* Card Content */}
                 <div className="p-4 flex flex-col justify-between flex-1">
                   <div>
-                    <h4 className="font-cinzel text-sm sm:text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1.5 leading-snug">
+                    <h4 className="font-[family-name:var(--cmc-font-body)] text-sm sm:text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1.5 leading-snug">
                       {vid.title}
                     </h4>
                     <p className="text-slate-200 text-base font-normal line-clamp-2 leading-relaxed mb-4">
@@ -331,7 +331,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
               <span className="cmc-eyebrow block mb-1">
                 OFFICIAL ARTWORK & PUBLICITY
               </span>
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-2xl sm:text-3xl font-bold text-white">
                 Theatrical Posters Gallery
               </h3>
             </div>
@@ -374,7 +374,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 {/* Poster Caption */}
                 <div className="p-4 sm:p-5 flex flex-col justify-between flex-1 cmc-rule-top">
                   <div>
-                    <h4 className="font-cinzel text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1">
+                    <h4 className="font-[family-name:var(--cmc-font-body)] text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-1">
                       {poster.title}
                     </h4>
                     <p className="text-slate-200 text-base font-normal">
@@ -410,7 +410,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 <Trophy className="w-4 h-4 text-amber-400" />
                 <span>ACCOLADES & INDUSTRY RECOGNITION</span>
               </div>
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-2xl sm:text-3xl font-bold text-white">
                 Awards & SIIMA Nominations
               </h3>
             </div>
@@ -434,7 +434,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 <span className="cmc-eyebrow block mb-1">
                   Golden Cape Awards 2021
                 </span>
-                <h4 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
+                <h4 className="font-[family-name:var(--cmc-font-body)] text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
                   The Nail Biting Category Award
                 </h4>
                 <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
@@ -522,7 +522,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
                 <span className="cmc-eyebrow block mb-1">
                   9th South Indian International Movie Awards
                 </span>
-                <h4 className="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
+                <h4 className="font-[family-name:var(--cmc-font-body)] text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
                   Best Debut Actor (Telugu)
                 </h4>
                 <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-6">
@@ -531,7 +531,7 @@ export const FeatureFilmSpotlight: React.FC<FeatureFilmSpotlightProps> = ({ onOp
 
                 {/* Nominee Details Card with Dot Bullet Points */}
                 <div className="rounded-xl bg-[#08090d]/90 border border-white/10 p-5 mb-4">
-                  <h5 className="font-cinzel text-sm font-bold text-amber-400 uppercase tracking-widest mb-3.5 flex items-center gap-2">
+                  <h5 className="font-[family-name:var(--cmc-font-body)] text-sm font-bold text-amber-400 uppercase tracking-widest mb-3.5 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
                     <span>Nominee Details</span>
                   </h5>

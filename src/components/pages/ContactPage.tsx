@@ -99,7 +99,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
             {/* Department Email Matrix */}
             <div className="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 space-y-4">
-              <h3 className="font-cinzel text-base font-bold text-white mb-2">
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-base font-bold text-white mb-2">
                 Departmental Inquiries
               </h3>
 
@@ -132,7 +132,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               {submitted ? (
                 <div className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-4">
                   <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
-                  <h3 className="font-cinzel text-2xl font-bold text-white">
+                  <h3 className="font-[family-name:var(--cmc-font-body)] text-2xl font-bold text-white">
                     Message Dispatched
                   </h3>
                   <p className="text-slate-200 text-base max-w-md mx-auto">

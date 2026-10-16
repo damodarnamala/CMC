@@ -55,7 +55,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
           {/* Right Panel: Approach & Governance */}
           <div className="lg:col-span-5">
             <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/10 relative">
-              <h3 className="font-cinzel text-xl font-bold text-white mb-3">Our Core Mandate</h3>
+              <h3 className="font-[family-name:var(--cmc-font-body)] text-xl font-bold text-white mb-3">Our Core Mandate</h3>
               <p className="text-slate-200 text-lg md:text-xl leading-relaxed font-normal mb-6">
                 {STUDIO_INFO.vision}
               </p>
@@ -96,7 +96,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
             <div className="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
               <Lightbulb className="w-5 h-5" />
             </div>
-            <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">Original Storytelling</h4>
+            <h4 className="font-[family-name:var(--cmc-font-body)] text-base sm:text-lg font-bold text-white mb-2">Original Storytelling</h4>
             <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               Cultivating authorial voices and intricate screenplays that balance regional specificity with global narrative momentum.
             </p>
@@ -106,7 +106,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
             <div className="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
               <Film className="w-5 h-5" />
             </div>
-            <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">Production Discipline</h4>
+            <h4 className="font-[family-name:var(--cmc-font-body)] text-base sm:text-lg font-bold text-white mb-2">Production Discipline</h4>
             <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               Enforcing transparent financial budgeting and tier-one technical execution across 4K UHD color science, sound design, and master delivery.
             </p>
@@ -116,7 +116,7 @@ export const AboutStudio: React.FC<AboutStudioProps> = ({ onNavigate }) => {
             <div className="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h4 className="font-cinzel text-base sm:text-lg font-bold text-white mb-2">IP & Rights Ownership</h4>
+            <h4 className="font-[family-name:var(--cmc-font-body)] text-base sm:text-lg font-bold text-white mb-2">IP & Rights Ownership</h4>
             <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed">
               Structuring long-term enterprise value by owning core intellectual property, remake rights, episodic adaptations, and music publishing.
             </p>

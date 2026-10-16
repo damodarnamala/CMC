@@ -207,12 +207,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCinemaModal, onNavigate, varia
         <div className="cmc-rise mb-10" style={{ '--d': '1.7s' } as React.CSSProperties}>
           <button
             onClick={() => onOpenCinemaModal('ez6iLxDgdBU')}
-            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-slate-200 hover:text-white transition-colors cursor-pointer group"
+            className="inline-flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-sm font-semibold uppercase tracking-wider text-slate-200 hover:text-white transition-colors cursor-pointer group"
           >
             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-amber-400 group-hover:text-black transition-colors">
               <Play className="w-3 h-3 fill-current ml-0.5" />
             </span>
-            <span>Watch IIT Krishnamurthy Trailer (Official 4K)</span>
+            <span className="leading-snug">Watch IIT Krishnamurthy Trailer (Official 4K)</span>
           </button>
         </div>
 
